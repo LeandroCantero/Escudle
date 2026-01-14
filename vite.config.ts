@@ -19,7 +19,7 @@ export default defineConfig({
                 }
             }
         },
-        // Increase chunk size warning limit to 600kb
-        chunkSizeWarningLimit: 600,
+        // Set limit back to default 500kb since index.js will be tiny now
+        chunkSizeWarningLimit: 500,
     }
 })

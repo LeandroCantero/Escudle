@@ -8,8 +8,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const SITEMAP_URL = 'https://football-logos.cc/image-sitemap.xml';
-// We update the source of truth for the app
-const OUTPUT_FILE = path.join(__dirname, 'src', 'data', 'logos.json');
+// Point to the new public data directory
+const OUTPUT_FILE = path.join(__dirname, 'public', 'data', 'logos.json');
 const LOGOS_DIR = path.join(__dirname, 'public', 'logos');
 
 // Limitar a cuántos logos descargar (puedes aumentar después)

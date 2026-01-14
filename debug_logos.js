@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const dataPath = path.join('d:', 'Study', 'Real Projects', 'Escudle', 'src', 'data', 'logos.json');
+const dataPath = path.join('d:', 'Study', 'Real Projects', 'Escudle', 'public', 'data', 'logos.json');
 
 try {
     const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));

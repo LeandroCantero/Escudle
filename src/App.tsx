@@ -3,7 +3,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { CheckCircle2, ChevronRight, RotateCcw, Search, Trophy, XCircle } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import allLogos from './data/logos.json';
+// Removed static import to reduce bundle size
+// import allLogos from './data/logos.json';
 
 // --- Utility ---
 function cn(...inputs: ClassValue[]) {
@@ -31,6 +32,8 @@ export default function App() {
     const [gameState, setGameState] = useState<'playing' | 'won' | 'lost'>('playing');
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [showHelp, setShowHelp] = useState(false);
+    const [allLogos, setAllLogos] = useState<Logo[]>([]);
+    const [loading, setLoading] = useState(true);
 
     // Filtered logos based on mode
     const filteredLogos = useMemo(() => {
@@ -45,12 +48,12 @@ export default function App() {
     });
 
     // Start/Restart Game
-    const startNewGame = (newMode?: 'easy' | 'hard') => {
+    const startNewGame = (newMode?: 'easy' | 'hard', logosPool?: Logo[]) => {
         const activeMode = newMode || mode;
-        const pool = allLogos.filter(l => activeMode === 'easy' ? !l.isHistorical : l.isHistorical) as Logo[];
+        const pool = logosPool || allLogos.filter(l => activeMode === 'easy' ? !l.isHistorical : l.isHistorical);
 
         if (pool.length === 0) {
-            console.warn(`No hay logos para el modo ${activeMode}`);
+            if (allLogos.length > 0) console.warn(`No hay logos para el modo ${activeMode}`);
             return;
         }
 
@@ -63,8 +66,19 @@ export default function App() {
         if (newMode) setMode(newMode);
     };
 
+    // Load logos on mount
     useEffect(() => {
-        startNewGame();
+        fetch('/data/logos.json')
+            .then(res => res.json())
+            .then(data => {
+                setAllLogos(data);
+                setLoading(false);
+                startNewGame(mode, data.filter((l: Logo) => mode === 'easy' ? !l.isHistorical : l.isHistorical));
+            })
+            .catch(err => {
+                console.error("Error loading logos:", err);
+                setLoading(false);
+            });
     }, []);
 
     // Handle Guess
@@ -83,9 +97,12 @@ export default function App() {
         }
     };
 
-    if (!targetLogo) return (
-        <div className="min-h-screen flex items-center justify-center bg-neo-green">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-neo-black"></div>
+    if (loading || !targetLogo) return (
+        <div className="min-h-screen flex items-center justify-center bg-neo-green text-center p-4">
+            <div className="space-y-4">
+                <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-neo-black mx-auto"></div>
+                <p className="font-black text-neo-black uppercase tracking-widest animate-pulse">Cargando Escuadra...</p>
+            </div>
         </div>
     );
 
