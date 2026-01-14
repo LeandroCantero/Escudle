@@ -11,6 +11,7 @@ Este documento centraliza todas las funcionalidades del proyecto, separando lo q
 ## ✅ Features Implementados
 
 ### Mecánica de Juego
+- **Refactor de Arquitectura**: `App.tsx` dividido en componentes modulares siguiendo SRP.
 - **Modo Dual**: Selección entre Modo Fácil (logos actuales) y Modo Difícil (logos históricos).
 - **Sistema de Intentos**: Máximo de 6 intentos por escudo con feedback visual inmediato.
 - **Validación Case-Insensitive**: Los nombres se comparan ignorando mayúsculas/minúsculas.
@@ -36,7 +37,6 @@ Este documento centraliza todas las funcionalidades del proyecto, separando lo q
 
 ### Alta Prioridad
 1. **Normalización de Nombres**: Implementar eliminación de acentos/tildes en la búsqueda (ej: "São Paulo" match con "Sao Paulo").
-2. **Refactor de Arquitectura**: Dividir `App.tsx` en componentes más pequeños (`GameBoard`, `SearchInput`, `useGameState`).
 3. **Compartido de Resultados**: Botón para copiar el "grid" de intentos al clipboard (estilo Wordle) para redes sociales.
 
 ### Contenido y Datos

@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const dataPath = path.join('d:', 'Study', 'Real Projects', 'Escudle', 'public', 'data', 'logos.json');
+const dataPath = path.join(__dirname, 'public', 'data', 'logos.json');
 
 try {
     const rawData = fs.readFileSync(dataPath, 'utf8');

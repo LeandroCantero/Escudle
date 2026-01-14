@@ -121,7 +121,7 @@ npm run download-logos
 
 **Output:**
 - `/public/logos/*.png` (~1976 archivos)
-- `/src/data/logos.json` (933KB)
+- `/public/data/logos.json` (933KB)
 
 ### 2. sanitize-logos.js
 

@@ -11,8 +11,6 @@ export interface Logo {
     pngUrl?: string | null;
     localPath?: string;
     pageUrl: string;
-    // Allow for other properties if needed
-    [key: string]: any;
 }
 
 interface UseLogoSearchOptions {

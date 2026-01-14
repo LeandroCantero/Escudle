@@ -87,13 +87,15 @@ npm run download-logos  # Re-scrapea logos desde football-logos.cc
 ```
 Escudle/
 ├── src/
-│   ├── App.tsx              # Componente principal del juego
+│   ├── app.tsx              # Componente principal (Orquestador)
 │   ├── main.tsx             # Entry point
 │   ├── index.css            # Design system + estilos globales
+│   ├── components/          # Componentes modulares
 │   ├── hooks/
-│   │   └── useLogoSearch.ts # Hook de búsqueda con Fuse.js
-│   └── data/
-│       └── logos.json       # Base de datos de logos (933KB)
+│   │   ├── use-game-logic.ts   # Lógica central del juego
+│   │   └── use-logo-search.ts  # Hook de búsqueda con Fuse.js
+│   └── utils/
+│       └── cn.ts               # Utilidad de Tailwind merge
 ├── public/
 │   └── logos/               # 1976 logos descargados localmente
 ├── docs/                    # 📚 Documentación técnica
@@ -103,7 +105,7 @@ Escudle/
 │   └── scraper-sistema.md   # Sistema de scraping
 ├── scraper-download.js      # Script de scraping
 ├── sanitize-logos.js        # Validación de datos
-└── debug_logos.js           # Debugging utilities
+└── debug-logos.js           # Debugging utilities
 ```
 
 ## 📚 Documentación Técnica
@@ -148,7 +150,7 @@ npm run download-logos
 node sanitize-logos.js
 
 # 3. Debuggear (opcional)
-node debug_logos.js
+node debug-logos.js
 
 # 4. Testear el juego
 npm run dev

@@ -1,7 +1,7 @@
 ---
 last_update: 14-01-2026
 context: Arquitectura del Proyecto Escudle
-purpose: Documento maestro que define la arquitectura, stack tecnológico, estructura y decisiones de diseño del proyecto
+purpose: Documento maestro que define la arquitectura modular, stack tecnológico y estructura siguiendo los Global Engineering Standards
 ---
 
 # Arquitectura - Escudle
@@ -45,14 +45,23 @@ purpose: Documento maestro que define la arquitectura, stack tecnológico, estru
 ```
 Escudle/
 ├── src/
-│   ├── App.tsx              # Componente principal del juego (413 líneas)
+│   ├── app.tsx              # Componente principal (Orquestador)
 │   ├── main.tsx             # Entry point de React
 │   ├── index.css            # Estilos globales + design tokens
+│   ├── components/          # UI Components modulares
+│   │   ├── game-header.tsx
+│   │   ├── logo-display.tsx
+│   │   ├── guess-input.tsx
+│   │   ├── guess-list.tsx
+│   │   └── game-footer.tsx
 │   ├── hooks/
-│   │   └── useLogoSearch.ts # Hook de búsqueda con Fuse.js
-│   └── data/
-│       └── logos.json       # Base de datos de ~3200 logos (933KB)
+│   │   ├── use-game-logic.ts   # Lógica central del estado del juego
+│   │   └── use-logo-search.ts  # Hook de búsqueda con Fuse.js
+│   ├── utils/
+│   │   └── cn.ts               # Utilidad de Tailwind merge
 ├── public/
+│   ├── data/
+│   │   └── logos.json       # Base de datos de ~3200 logos (933KB)
 │   └── logos/               # ~1976 archivos de logos locales
 ├── scraper-download.js      # Script para descargar logos desde football-logos.cc
 ├── sanitize-logos.js        # Script para limpiar y validar logos
@@ -89,21 +98,19 @@ npm run download-logos → scraper-download.js → fetch sitemap XML →
 
 ## Componentes Principales
 
-### `App.tsx` (God Component - 413 líneas)
+### `app.tsx` (Orquestador)
 **Responsabilidades:**
-- Estado del juego (mode, targetLogo, guesses, gameState)
-- Lógica de adivinanza
-- UI completa (header, logo display, input, attempts list, modals)
+- Orquestar la interacción entre el estado del juego y la UI modular.
+- Renderizar los componentes principales (`GameHeader`, `LogoDisplay`, etc.).
 
-> **NOTA DE REFACTOR**: Este componente viola SRP (Single Responsibility Principle). Triggers para refactor:
-> - Actualmente 413 líneas → umbral de 300 líneas superado
-> - Candidatos para extracción:
->   1. `GameBoard` component (logo display + attempts)
->   2. `SearchInput` component (input + suggestions dropdown)
->   3. `GameModal` component (help + win/lose overlays)
->   4. `useGameState` hook (lógica de estado del juego)
+### `use-game-logic.ts`
+Hook central que maneja todo el estado del juego:
+- Modo de juego (easy/hard)
+- Selección de logo target
+- Registro de intentos (guesses)
+- Estado de victoria/derrota (gameState)
 
-### `useLogoSearch.ts`
+### `use-logo-search.ts`
 Hook puro que encapsula la lógica de búsqueda fuzzy. Ver [busqueda-logos.md](./busqueda-logos.md) para detalles.
 
 ## Data Shapes
@@ -125,21 +132,21 @@ interface Logo {
 
 ## Boundary Rules
 
-**App.tsx debe:**
+**app.tsx debe:**
 - Manejar el estado global del juego
 - Orquestar la interacción entre búsqueda y lógica de guess
 - Renderizar la UI completa
 
-**App.tsx NO debe:**
-- ❌ Implementar lógica de búsqueda (está en useLogoSearch)
-- ❌ Hacer fetch de datos (logos.json se importa estáticamente)
+**app.tsx NO debe:**
+- ❌ Implementar lógica de búsqueda (está en use-logo-search)
+- ❌ Hacer fetch de datos (logos.json se carga dinámicamente)
 - ❌ Mutar directamente el DOM (usar React state)
 
-**useLogoSearch debe:**
+**use-logo-search debe:**
 - Encapsular Fuse.js configuration
 - Retornar resultados filtrados y ordenados
 
-**useLogoSearch NO debe:**
+**use-logo-search NO debe:**
 - ❌ Conocer el estado del juego (guesses, gameState)
 - ❌ Renderizar UI
 

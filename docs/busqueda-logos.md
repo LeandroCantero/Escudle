@@ -38,7 +38,6 @@ interface Logo {
   period: string | null;   
   localPath?: string;      
   pageUrl: string;
-  [key: string]: any;      // Allows extensibility
 }
 ```
 
@@ -162,7 +161,7 @@ const suggestions = useLogoSearch(filteredLogos, inputValue, {
 **Estado actual**: El JSON de logos usa nombres oficiales tal cual vienen del scraper. La normalización de acentos está contemplada como feature futuro en [features.md](./features.md).
 
 ### 4. Dependencia de filteredLogos
-**IMPORTANTE**: En App.tsx, el hook recibe `filteredLogos` (ya filtrado por modo):
+**IMPORTANTE**: En app.tsx, el hook recibe `filteredLogos` (ya filtrado por modo):
 
 ```typescript
 const filteredLogos = useMemo(() => {
