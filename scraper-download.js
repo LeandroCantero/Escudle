@@ -8,28 +8,28 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const SITEMAP_URL = 'https://football-logos.cc/image-sitemap.xml';
-const OUTPUT_FILE = 'football-logos.json';
+// We update the source of truth for the app
+const OUTPUT_FILE = path.join(__dirname, 'src', 'data', 'logos.json');
 const LOGOS_DIR = path.join(__dirname, 'public', 'logos');
 
 // Limitar a cuántos logos descargar (puedes aumentar después)
-const MAX_LOGOS = 10000; // Suficiente para cubrir los ~2400 del sitemap
+const MAX_LOGOS = 10000;
 
 /**
  * Crea el directorio de logos si no existe
  */
-async function ensureLogosDirectory() {
+async function ensureDirectory(dirPath) {
     try {
-        await fs.mkdir(LOGOS_DIR, { recursive: true });
-        console.log(`📁 Directorio creado: ${LOGOS_DIR}`);
+        await fs.mkdir(dirPath, { recursive: true });
     } catch (error) {
-        console.error('Error creando directorio:', error.message);
+        console.error(`Error creando directorio ${dirPath}:`, error.message);
     }
 }
 
 /**
  * Descarga una imagen y la guarda localmente
  */
-async function downloadImage(url, filename) {
+async function downloadImage(url, filepath) {
     try {
         const response = await axios.get(url, {
             responseType: 'arraybuffer',
@@ -40,11 +40,11 @@ async function downloadImage(url, filename) {
             timeout: 10000
         });
 
-        const filepath = path.join(LOGOS_DIR, filename);
         await fs.writeFile(filepath, response.data);
         return true;
     } catch (error) {
-        console.error(`   ❌ Error descargando ${filename}: ${error.message}`);
+        // Ignorar 404s silenciosamente o loguear
+        // console.error(`   ❌ Error descargando ${path.basename(filepath)}: ${error.message}`);
         return false;
     }
 }
@@ -125,9 +125,8 @@ async function parseSitemapAndDownload() {
                 console.log(`📊 Procesando primeros ${MAX_LOGOS} escudos de ${urls.length} totales...`);
                 console.log('⏳ Esto tomará varios minutos...\n');
 
-                await ensureLogosDirectory();
-
                 let processed = 0;
+                let downloaded = 0;
 
                 for (const urlEntry of urls.slice(0, MAX_LOGOS)) {
                     try {
@@ -153,35 +152,54 @@ async function parseSitemapAndDownload() {
 
                         const filename = generateFilename(id, imageUrl);
 
-                        console.log(`[${processed + 1}/${MAX_LOGOS}] Descargando: ${title} (${country})...`);
-                        const success = await downloadImage(imageUrl, filename);
+                        // New structure: public/logos/{country}/{filename}
+                        const countryDir = path.join(LOGOS_DIR, country);
+                        await ensureDirectory(countryDir);
 
-                        if (success) {
-                            const logo = {
-                                id: id,
-                                name: title,
-                                country: country,
-                                isHistorical: historicalInfo.isHistorical,
-                                period: historicalInfo.period,
-                                startYear: historicalInfo.startYear,
-                                endYear: historicalInfo.endYear,
-                                localPath: `/logos/${filename}`,
-                                pageUrl: pageUrl
-                            };
+                        const filepath = path.join(countryDir, filename);
 
-                            logos.push(logo);
+                        // Check if file exists to skip download
+                        let exists = false;
+                        try {
+                            await fs.access(filepath);
+                            exists = true;
+                        } catch { }
+
+                        if (!exists) {
+                            console.log(`[${processed + 1}/${MAX_LOGOS}] Descargando: ${title} (${country})...`);
+                            const success = await downloadImage(imageUrl, filepath);
+                            if (success) downloaded++;
                         }
 
+                        // Always add to JSON
+                        const logo = {
+                            id: id,
+                            name: title,
+                            country: country,
+                            isHistorical: historicalInfo.isHistorical,
+                            period: historicalInfo.period,
+                            startYear: historicalInfo.startYear,
+                            endYear: historicalInfo.endYear,
+                            localPath: `/logos/${country}/${filename}`,
+                            pageUrl: pageUrl,
+                            league: null,
+                            type: null
+                        };
+
+                        logos.push(logo);
                         processed++;
 
-                        // Rate limiting para no sobrecargar el servidor
-                        await new Promise(resolve => setTimeout(resolve, 100));
+                        // Rate limiting solo si estamos descargando
+                        if (!exists) {
+                            await new Promise(resolve => setTimeout(resolve, 100));
+                        }
 
                     } catch (error) {
                         console.error(`⚠️  Error procesando entrada: ${error.message}`);
                     }
                 }
 
+                console.log(`\n📥 Descargados ${downloaded} nuevos archivos.`);
                 resolve(logos);
             });
         });
@@ -220,15 +238,13 @@ async function saveToFile(logos) {
  * Función principal
  */
 async function main() {
-    console.log('🚀 Iniciando scraper de football-logos.cc con descarga local\n');
+    console.log('🚀 Iniciando scraper de football-logos.cc (Moderna estructura)\n');
 
     try {
         const logos = await parseSitemapAndDownload();
         await saveToFile(logos);
 
         console.log('\n✨ Proceso completado exitosamente!');
-        console.log(`📁 Archivo generado: ${OUTPUT_FILE}`);
-        console.log(`📁 Logos guardados en: ${LOGOS_DIR}`);
     } catch (error) {
         console.error('\n❌ Error fatal:', error.message);
         process.exit(1);
