@@ -6,27 +6,39 @@
 
 @layer base {
   body {
-    @apply bg-brand-dark text-slate-100 font-outfit min-h-screen selection:bg-brand-accent/30;
+    /* Exact background from reference (Pan y Queso) */
+    background-color: #15803d;
+    /* rgb(21, 128, 61) */
+    background-image: radial-gradient(#000000 1px, transparent 1px);
+    background-size: 20px 20px;
+
+    @apply text-neo-black font-outfit min-h-screen selection:bg-neo-yellow;
   }
 }
 
-.glass {
-  @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl;
+.neo-card {
+  @apply bg-neo-white border-[3px] border-neo-black shadow-neo;
 }
 
-.input-glass {
-  @apply bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-accent/50 focus:border-brand-accent/50 transition-all;
+.neo-input {
+  @apply bg-neo-white border-[3px] border-neo-black rounded-lg focus:outline-none focus:shadow-neo transition-all;
+}
+
+.neo-btn {
+  @apply border-[3px] border-neo-black shadow-neo hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-neo-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-transparent;
+  background-color: #15803d;
+  background-image: radial-gradient(#000000 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-white/10 rounded-full hover:bg-white/20;
+  @apply bg-neo-white border-2 border-neo-black hover:bg-neo-yellow;
 }

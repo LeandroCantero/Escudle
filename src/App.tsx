@@ -11,17 +11,14 @@ function cn(...inputs: ClassValue[]) {
 }
 
 // --- Types ---
-interface Logo {
-    id: string;
-    name: string;
-    country: string;
-    isHistorical: boolean;
-    period: string | null;
-    svgUrl?: string | null;
-    pngUrl?: string | null;
-    localPath?: string;
-    pageUrl: string;
-}
+import { useLogoSearch, type Logo } from './hooks/useLogoSearch';
+
+// --- Types ---
+// Re-using Logo from hook or keeping local if preferred, but let's use the imported one for consistency
+// define local one to avoid major refactors if I can't import properly, but I can.
+// Actually, to minimize diff, let's just comment out the local interface or remove it.
+// Removing it is cleaner.
+
 
 const MAX_ATTEMPTS = 6;
 
@@ -33,6 +30,7 @@ export default function App() {
     const [inputValue, setInputValue] = useState('');
     const [gameState, setGameState] = useState<'playing' | 'won' | 'lost'>('playing');
     const [showSuggestions, setShowSuggestions] = useState(false);
+    const [showHelp, setShowHelp] = useState(false);
 
     // Filtered logos based on mode
     const filteredLogos = useMemo(() => {
@@ -40,12 +38,11 @@ export default function App() {
     }, [mode]);
 
     // Suggestions logic
-    const suggestions = useMemo(() => {
-        if (!inputValue.trim() || inputValue.length < 2) return [];
-        return filteredLogos
-            .filter(l => l.name.toLowerCase().includes(inputValue.toLowerCase()))
-            .slice(0, 5);
-    }, [inputValue, filteredLogos]);
+    // Suggestions logic (Fuse.js)
+    const suggestions = useLogoSearch(filteredLogos, inputValue, {
+        limit: 10,
+        threshold: 0.3
+    });
 
     // Start/Restart Game
     const startNewGame = (newMode?: 'easy' | 'hard') => {
@@ -87,61 +84,149 @@ export default function App() {
     };
 
     if (!targetLogo) return (
-        <div className="min-h-screen flex items-center justify-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-brand-accent"></div>
+        <div className="min-h-screen flex items-center justify-center bg-neo-green">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-neo-black"></div>
         </div>
     );
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-start p-4 md:p-8 space-y-8">
+        <div className="min-h-screen flex flex-col items-center justify-start p-4 md:p-8 space-y-8 max-w-lg mx-auto">
             {/* Header */}
             <motion.header
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-center space-y-4"
+                className="text-center w-full space-y-6"
             >
-                <h1 className="text-5xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-brand-accent to-emerald-400">
-                    ESCUDLE
-                </h1>
 
-                {/* Mode Selector */}
-                <div className="flex bg-white/5 p-1 rounded-xl glass border border-white/5">
+                {/* Header Row */}
+                <div className="flex items-center justify-between w-full relative z-20">
+                    {/* Left: Dopartis */}
+                    <a
+                        href="https://dopartis.com"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:scale-105 transition-transform"
+                    >
+                        <img
+                            src="/hecho por dopartis - white.png"
+                            alt="Hecho por dopartis"
+                            className="h-8 md:h-10 w-auto drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]"
+                        />
+                    </a>
+
+                    {/* Center: Escudle Logo */}
+                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <img
+                            src="/escudle-logo.png"
+                            alt="ESCUDLE"
+                            className="h-12 md:h-16 w-auto drop-shadow-[4px_4px_0px_#000] rotate-[-5deg]"
+                        />
+                    </div>
+
+                    {/* Right: Help Button */}
+                    <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ x: 2, y: 2 }}
+                        onClick={() => setShowHelp(true)}
+                        className="bg-white text-neo-black rounded-full border-[3px] border-neo-black shadow-[2px_2px_0px_#000] hover:bg-neo-yellow transition-colors active:shadow-none active:translate-x-[2px] active:translate-y-[2px] w-10 h-10 flex items-center justify-center font-['Permanent_Marker'] text-2xl"
+                    >
+                        ?
+                    </motion.button>
+                </div>
+
+
+                {/* Help Modal */}
+                <AnimatePresence>
+                    {showHelp && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+                            onClick={() => setShowHelp(false)}
+                        >
+                            <motion.div
+                                initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                                animate={{ scale: 1, opacity: 1, y: 0 }}
+                                exit={{ scale: 0.9, opacity: 0, y: 20 }}
+                                onClick={(e) => e.stopPropagation()}
+                                className="bg-white border-4 border-neo-black rounded-3xl p-6 md:p-8 max-w-md w-full shadow-neo relative"
+                            >
+                                <button
+                                    onClick={() => setShowHelp(false)}
+                                    className="absolute top-4 right-4 text-neo-black hover:scale-110 transition-transform"
+                                >
+                                    <XCircle className="w-8 h-8" />
+                                </button>
+
+                                <h2 className="text-3xl font-black text-neo-black mb-4 uppercase text-center border-b-4 border-neo-yellow inline-block px-4 -rotate-2">
+                                    Cómo Jugar
+                                </h2>
+
+                                <div className="space-y-4 text-neo-black font-medium text-lg text-center">
+                                    <p>
+                                        ¡Adiviná el equipo de fútbol oculto detrás de la silueta!
+                                    </p>
+                                    <ul className="text-left space-y-2 bg-gray-100 p-4 rounded-xl border-2 border-neo-black/10">
+                                        <li className="flex items-start gap-2">
+                                            <span className="bg-neo-green text-neo-black w-6 h-6 flex items-center justify-center rounded-full text-xs font-bold border border-neo-black shrink-0">1</span>
+                                            <span>Tenés <strong>6 intentos</strong> para adivinar el escudo.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="bg-neo-yellow text-neo-black w-6 h-6 flex items-center justify-center rounded-full text-xs font-bold border border-neo-black shrink-0">2</span>
+                                            <span>En <strong>Modo Fácil</strong> el escudo se ve normal.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="bg-neo-purple text-white w-6 h-6 flex items-center justify-center rounded-full text-xs font-bold border border-neo-black shrink-0">3</span>
+                                            <span>En <strong>Modo Difícil</strong> está oscuro y borroso.</span>
+                                        </li>
+                                    </ul>
+                                    <p className="text-sm opacity-75">
+                                        ¡Demostrá cuánto sabés de fútbol!
+                                    </p>
+                                </div>
+                            </motion.div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+
+                {/* Mode Selector - Moved below header */}
+                <div className="flex bg-neo-white p-1.5 rounded-xl border-[3px] border-neo-black shadow-neo w-full max-w-md mx-auto">
+
                     <button
                         onClick={() => startNewGame('easy')}
                         className={cn(
-                            "px-6 py-2 rounded-lg text-sm font-bold transition-all",
-                            mode === 'easy' ? "bg-brand-accent text-brand-dark shadow-lg shadow-brand-accent/20" : "text-slate-400 hover:text-white"
+                            "flex-1 px-4 py-2 rounded-lg text-sm font-bold uppercase transition-all border-2",
+                            mode === 'easy'
+                                ? "bg-neo-yellow border-neo-black text-neo-black shadow-neo-sm translate-x-[1px] translate-y-[1px]"
+                                : "bg-transparent border-transparent text-gray-500 hover:bg-gray-100"
                         )}
                     >
-                        MODO FÁCIL
+                        Modo Fácil
                     </button>
                     <button
                         onClick={() => startNewGame('hard')}
                         className={cn(
-                            "px-6 py-2 rounded-lg text-sm font-bold transition-all",
-                            mode === 'hard' ? "bg-brand-accent text-brand-dark shadow-lg shadow-brand-accent/20" : "text-slate-400 hover:text-white"
+                            "flex-1 px-4 py-2 rounded-lg text-sm font-bold uppercase transition-all border-2",
+                            mode === 'hard'
+                                ? "bg-neo-purple border-neo-black text-white shadow-neo-sm translate-x-[1px] translate-y-[1px]"
+                                : "bg-transparent border-transparent text-gray-500 hover:bg-gray-100"
                         )}
                     >
-                        MODO DIFÍCIL
+                        Modo Difícil
                     </button>
                 </div>
-
-                <p className="text-slate-400 font-medium">
-                    {mode === 'easy' ? 'Escudos actuales' : 'Escudos históricos (Retro)'}
-                </p>
             </motion.header>
 
             {/* Main Game Card */}
-            <main className="w-full max-w-md space-y-6">
+            <main className="w-full space-y-6">
                 {/* Logo Display */}
-                <div className="glass rounded-3xl p-8 flex flex-col items-center justify-center relative aspect-square overflow-hidden group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-brand-accent/5 to-transparent opacity-50" />
-
-                    {/* Period Badge - Show always in Hard Mode, or as hint */}
+                <div className="neo-card rounded-3xl p-8 flex flex-col items-center justify-center relative aspect-square overflow-hidden bg-white">
+                    {/* Period Badge */}
                     {mode === 'hard' && (
                         <div className="absolute top-4 right-4 z-20">
-                            <span className="bg-brand-gold/20 text-brand-gold text-xs font-bold px-3 py-1 rounded-full border border-brand-gold/30">
-                                {targetLogo.period || 'Histórico'}
+                            <span className="bg-neo-orange text-neo-black text-xs font-black px-3 py-1 rounded-md border-2 border-neo-black shadow-neo-sm">
+                                {targetLogo.period || 'RETRO'}
                             </span>
                         </div>
                     )}
@@ -149,23 +234,23 @@ export default function App() {
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={`${targetLogo.id}-${mode}`}
-                            initial={{ scale: 0.8, opacity: 0, rotate: -10 }}
+                            initial={{ scale: 0.8, opacity: 0, rotate: -5 }}
                             animate={{ scale: 1, opacity: 1, rotate: 0 }}
                             exit={{ scale: 1.1, opacity: 0 }}
-                            transition={{ type: "spring", damping: 15 }}
+                            transition={{ type: "spring", damping: 12, stiffness: 100 }}
                             className="relative z-10 w-full h-full flex items-center justify-center"
                         >
                             <img
                                 src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
                                 alt="Escudo a adivinar"
                                 className={cn(
-                                    "w-48 h-48 object-contain transition-all duration-700",
-                                    gameState === 'playing' ? "brightness-0 invert-[0.1] opacity-90" : "brightness-100 invert-0"
+                                    "w-48 h-48 object-contain transition-all duration-700 filter",
+                                    (mode === 'easy' || gameState !== 'playing') ? "brightness-100 blur-0 grayscale-0" : "brightness-0 opacity-10 blur-md grayscale"
                                 )}
                             />
-                            {gameState === 'playing' && (
+                            {gameState === 'playing' && mode !== 'easy' && (
                                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                    <div className="text-white/10 text-9xl font-bold select-none">?</div>
+                                    <div className="text-neo-black/20 text-9xl font-black select-none">?</div>
                                 </div>
                             )}
                         </motion.div>
@@ -174,40 +259,34 @@ export default function App() {
                     {/* Winning Overlay */}
                     {gameState === 'won' && (
                         <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            className="absolute inset-0 bg-emerald-500/10 backdrop-blur-sm flex flex-col items-center justify-center z-20"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="absolute inset-x-4 bottom-4 bg-neo-success border-2 border-neo-black p-4 rounded-xl shadow-neo text-center z-20"
                         >
-                            <motion.div
-                                initial={{ scale: 0 }}
-                                animate={{ scale: 1 }}
-                                className="bg-emerald-500 p-4 rounded-full mb-4 shadow-lg shadow-emerald-500/50"
-                            >
-                                <Trophy className="text-white w-8 h-8" />
-                            </motion.div>
-                            <h2 className="text-2xl font-bold text-emerald-400">¡Victoria!</h2>
-                            <p className="text-white font-medium text-center px-4">{targetLogo.name}</p>
-                            {mode === 'hard' && <p className="text-brand-gold text-sm font-bold mt-1">{targetLogo.period}</p>}
+                            <div className="flex justify-center mb-2">
+                                <div className="bg-white p-2 rounded-full border-2 border-neo-black">
+                                    <Trophy className="text-neo-black w-6 h-6" />
+                                </div>
+                            </div>
+                            <h2 className="text-2xl font-black text-neo-black uppercase">¡Correcto!</h2>
+                            <p className="text-neo-black font-bold">{targetLogo.name}</p>
                         </motion.div>
                     )}
 
                     {/* Losing Overlay */}
                     {gameState === 'lost' && (
                         <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            className="absolute inset-0 bg-rose-500/10 backdrop-blur-sm flex flex-col items-center justify-center z-20"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="absolute inset-x-4 bottom-4 bg-neo-orange border-2 border-neo-black p-4 rounded-xl shadow-neo text-center z-20"
                         >
-                            <motion.div
-                                initial={{ scale: 0 }}
-                                animate={{ scale: 1 }}
-                                className="bg-rose-500 p-4 rounded-full mb-4 shadow-lg shadow-rose-500/50"
-                            >
-                                <XCircle className="text-white w-8 h-8" />
-                            </motion.div>
-                            <h2 className="text-2xl font-bold text-rose-400">Fin del juego</h2>
-                            <p className="text-slate-300">Era el {targetLogo.name}</p>
-                            {mode === 'hard' && <p className="text-brand-gold text-sm font-bold mt-1">{targetLogo.period}</p>}
+                            <div className="flex justify-center mb-2">
+                                <div className="bg-white p-2 rounded-full border-2 border-neo-black">
+                                    <XCircle className="text-neo-black w-6 h-6" />
+                                </div>
+                            </div>
+                            <h2 className="text-xl font-black text-neo-black uppercase">¡Fin del juego!</h2>
+                            <p className="text-neo-black font-medium">Era: <span className="font-bold">{targetLogo.name}</span></p>
                         </motion.div>
                     )}
                 </div>
@@ -215,17 +294,17 @@ export default function App() {
                 {/* Input Area */}
                 <div className="relative">
                     <div className="relative group">
-                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500 group-focus-within:text-brand-accent transition-colors" />
+                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-neo-black transition-colors" />
                         <input
                             type="text"
-                            placeholder="Escribe el nombre del equipo..."
+                            placeholder="ESCRIBÍ EL EQUIPO..."
                             value={inputValue}
                             onChange={(e) => {
                                 setInputValue(e.target.value);
                                 setShowSuggestions(true);
                             }}
                             disabled={gameState !== 'playing'}
-                            className="w-full h-14 pl-12 pr-4 input-glass text-lg font-medium placeholder:text-slate-600 focus:bg-white/10"
+                            className="w-full h-16 pl-14 pr-4 neo-input text-xl font-bold placeholder:text-gray-400 placeholder:font-medium uppercase"
                             onKeyDown={(e) => {
                                 if (e.key === 'Enter' && inputValue.trim()) {
                                     handleGuess(inputValue);
@@ -241,24 +320,24 @@ export default function App() {
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
-                                className="absolute top-full left-0 right-0 mt-2 glass rounded-2xl overflow-hidden z-50 p-1 border-brand-accent/20 shadow-2xl"
+                                className="absolute top-full left-0 right-0 mt-3 bg-white border-[3px] border-neo-black rounded-xl overflow-hidden z-50 shadow-neo max-h-[300px] overflow-y-auto"
                             >
                                 {suggestions.map((logo) => (
                                     <button
                                         key={logo.id}
                                         onClick={() => handleGuess(logo.name)}
-                                        className="w-full flex items-center justify-between p-3 hover:bg-white/5 rounded-xl transition-colors group"
+                                        className="w-full flex items-center justify-between p-3 hover:bg-neo-yellow/20 border-b-2 border-neo-black/10 last:border-0 transition-colors group text-left"
                                     >
                                         <div className="flex items-center space-x-3">
-                                            <div className="w-10 h-10 flex items-center justify-center bg-white/5 rounded-lg overflow-hidden p-1">
+                                            <div className="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-lg border-2 border-neo-black overflow-hidden p-1">
                                                 <img src={logo.localPath || logo.pngUrl || ''} className="max-w-full max-h-full object-contain" alt="" />
                                             </div>
                                             <div className="flex flex-col items-start">
-                                                <span className="font-medium text-slate-200">{logo.name}</span>
-                                                {logo.isHistorical && <span className="text-[10px] text-brand-gold font-bold uppercase">{logo.period}</span>}
+                                                <span className="font-bold text-neo-black uppercase">{logo.name}</span>
+                                                {logo.isHistorical && <span className="text-[10px] bg-neo-purple text-white px-2 py-0.5 rounded-full font-bold uppercase">{logo.period}</span>}
                                             </div>
                                         </div>
-                                        <ChevronRight className="w-4 h-4 text-slate-600 group-hover:text-brand-accent transition-colors" />
+                                        <ChevronRight className="w-5 h-5 text-neo-black group-hover:translate-x-1 transition-transform" />
                                     </button>
                                 ))}
                             </motion.div>
@@ -267,7 +346,7 @@ export default function App() {
                 </div>
 
                 {/* Attempts List */}
-                <div className="space-y-2">
+                <div className="space-y-3">
                     {Array.from({ length: MAX_ATTEMPTS }).map((_, i) => {
                         const guess = guesses[i];
                         const isCorrect = guess?.toLowerCase() === targetLogo.name.toLowerCase();
@@ -276,25 +355,24 @@ export default function App() {
                             <div
                                 key={i}
                                 className={cn(
-                                    "h-12 rounded-xl flex items-center px-4 justify-between transition-all duration-500",
+                                    "h-12 rounded-lg flex items-center px-4 justify-between transition-all duration-300 border-2 font-bold",
                                     guess
-                                        ? isCorrect ? "bg-emerald-500/20 border border-emerald-500/30 shadow-inner shadow-emerald-500/10" : "bg-white/5 border border-white/10"
-                                        : "border border-dashed border-white/5"
+                                        ? isCorrect
+                                            ? "bg-neo-success border-neo-black text-neo-black shadow-neo-sm"
+                                            : "bg-neo-white border-neo-black text-neo-black"
+                                        : "bg-white/50 border-neo-black/20 text-gray-400 border-dashed"
                                 )}
                             >
                                 <div className="flex items-center space-x-3">
-                                    <span className="text-xs font-bold text-slate-600 w-4">{i + 1}</span>
-                                    <span className={cn(
-                                        "font-medium",
-                                        guess ? "text-slate-200" : "text-slate-700"
-                                    )}>
+                                    <span className="text-sm font-black text-neo-black w-6 bg-neo-yellow rounded-full h-6 flex items-center justify-center border border-neo-black">{i + 1}</span>
+                                    <span className="uppercase truncate">
                                         {guess || '......'}
                                     </span>
                                 </div>
                                 {guess && (
                                     isCorrect
-                                        ? <CheckCircle2 className="w-5 h-5 text-emerald-500" />
-                                        : <XCircle className="w-5 h-5 text-rose-500" />
+                                        ? <CheckCircle2 className="w-6 h-6 text-neo-black fill-neo-success" />
+                                        : <XCircle className="w-6 h-6 text-neo-black fill-neo-orange" />
                                 )}
                             </div>
                         );
@@ -304,37 +382,31 @@ export default function App() {
                 {/* Controls */}
                 {gameState !== 'playing' && (
                     <motion.button
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
                         onClick={() => startNewGame()}
-                        className="w-full h-14 bg-brand-accent hover:bg-brand-accent/80 text-brand-dark font-bold rounded-2xl flex items-center justify-center space-x-2 transition-all shadow-lg shadow-brand-accent/20"
+                        className="w-full h-16 bg-neo-blue text-white font-black text-xl uppercase rounded-xl flex items-center justify-center space-x-3 neo-btn"
                     >
-                        <RotateCcw className="w-5 h-5" />
+                        <RotateCcw className="w-6 h-6" />
                         <span>Siguiente Escudo</span>
                     </motion.button>
                 )}
             </main>
 
             {/* Footer / Info */}
-            <footer className="mt-auto pt-12 text-slate-600 text-sm flex flex-col items-center space-y-4">
-                <div className="flex items-center space-x-6">
-                    <div className="flex flex-col items-center">
-                        <span className="font-bold text-slate-400">{filteredLogos.length}</span>
-                        <span>{mode === 'easy' ? 'Escudos' : 'Históricos'}</span>
+            <footer className="mt-auto py-8 text-neo-black text-sm font-bold flex flex-col items-center space-y-4">
+                <div className="flex divide-x-2 divide-neo-black bg-neo-white border-[3px] border-neo-black rounded-xl shadow-neo p-2">
+                    <div className="px-4 text-center">
+                        <div className="text-xl font-black">{filteredLogos.length}</div>
+                        <div className="text-xs uppercase">Escudos</div>
                     </div>
-                    <div className="w-px h-8 bg-slate-800" />
-                    <div className="flex flex-col items-center">
-                        <span className="font-bold text-slate-400 capitalize">{mode}</span>
-                        <span>Modo</span>
-                    </div>
-                    <div className="w-px h-8 bg-slate-800" />
-                    <div className="flex flex-col items-center">
-                        <span className="font-bold text-slate-400">{new Set(filteredLogos.map(l => l.country)).size}</span>
-                        <span>Países</span>
+                    <div className="px-4 text-center">
+                        <div className="text-xl font-black">{new Set(filteredLogos.map(l => l.country)).size}</div>
+                        <div className="text-xs uppercase">Países</div>
                     </div>
                 </div>
-                <p>© 2026 Escudle • Hecho con pasión</p>
+                <p className="opacity-90 text-white font-medium">© 2026 Escudle</p>
             </footer>
-        </div>
+        </div >
     );
 }

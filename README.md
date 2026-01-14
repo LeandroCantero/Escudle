@@ -1,111 +1,202 @@
-# ⚽ Football Logos Scraper
+# ⚽ Escudle
 
-Script para obtener todos los logos de fútbol (actuales + históricos) desde football-logos.cc.
+**Escudle** es un juego web de adivinanza de escudos de fútbol, inspirado en Wordle. Poné a prueba tus conocimientos futbolísticos identificando equipos por su escudo en 6 intentos.
 
-## 🎯 Características
+## 🎮 Demo
 
-- ✅ Descarga y parsea el sitemap XML completo
-- ✅ Extrae metadata completa de cada logo
-- ✅ Detecta automáticamente logos históricos
-- ✅ Separa URLs de SVG y PNG
-- ✅ Identifica país/liga
-- ✅ Genera IDs únicos
-- ✅ Guarda todo en JSON estructurado
+[**Jugá ahora →**](https://escudle.netlify.app) *(si está deployado)*
 
-## 📦 Instalación
+## ✨ Características
+
+- 🎯 **Dos modos de juego**
+  - **Modo Fácil**: Escudos actuales completamente visibles
+  - **Modo Difícil**: Escudos históricos oscurecidos y borrosos
+  
+- 🔍 **Búsqueda inteligente**
+  - Fuzzy search con Fuse.js para tolerar typos
+  - Sugerencias en tiempo real con vista previa de logos
+  - Búsqueda case-insensitive
+  
+- 🎨 **Diseño Neobrutalism**
+  - Estética vibrante con colores bold
+  - Animaciones fluidas con Framer Motion
+  - Bordes gruesos y sombras hard
+  
+- 📊 **Base de datos masiva**
+  - ~3200 logos de equipos de todo el mundo
+  - Logos históricos desde 1900+
+  - Metadata completa (país, período, URLs)
+
+## 🚀 Instalación
+
+### Requisitos
+- Node.js 18+ y npm
+
+### Setup
 
 ```bash
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/escudle.git
+cd escudle
+
+# Instalar dependencias
 npm install
+
+# Iniciar servidor de desarrollo
+npm run dev
 ```
 
-## 🚀 Uso
+El juego estará disponible en `http://localhost:5173`
+
+## 📜 Scripts Disponibles
 
 ```bash
-npm run scrape
+# Desarrollo
+npm run dev          # Inicia servidor de desarrollo con HMR
+
+# Producción
+npm run build        # Compila TypeScript + build de Vite
+npm run preview      # Preview del build de producción
+
+# Scraping (opcional)
+npm run download-logos  # Re-scrapea logos desde football-logos.cc
 ```
 
-El script generará un archivo `football-logos.json` con todos los logos.
+## 🏗️ Stack Tecnológico
 
-## 📊 Estructura del JSON
+### Core
+- **React 18** - UI library con hooks
+- **TypeScript 5** - Type safety estricta
+- **Vite 5** - Build tool ultra-rápido
 
-```json
-[
-  {
-    "id": "england-arsenal-1930-1936",
-    "name": "Arsenal",
-    "country": "england",
-    "isHistorical": true,
-    "period": "1930-1936",
-    "startYear": 1930,
-    "endYear": 1936,
-    "svgUrl": "https://assets.football-logos.cc/logos/england/arsenal-1930-1936.abc123.svg",
-    "pngUrl": "https://assets.football-logos.cc/logos/england/3000x3000/arsenal-1930-1936.abc123.png",
-    "pageUrl": "https://football-logos.cc/england/arsenal/1930-1936/"
-  },
-  {
-    "id": "england-arsenal",
-    "name": "Arsenal",
-    "country": "england",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "svgUrl": "https://assets.football-logos.cc/logos/england/arsenal.def456.svg",
-    "pngUrl": "https://assets.football-logos.cc/logos/england/3000x3000/arsenal.def456.png",
-    "pageUrl": "https://football-logos.cc/england/arsenal/"
-  }
-]
+### Styling & Animaciones
+- **TailwindCSS 3** - Utility-first CSS framework
+- **Framer Motion 11** - Animaciones declarativas
+- **Custom Neobrutalism Design System** - Paleta y componentes propios
+
+### Búsqueda & Datos
+- **Fuse.js 7** - Fuzzy search algorithm
+- **3200+ logos** - Dataset local pre-scraped
+
+### Utilidades
+- **clsx + tailwind-merge** - Composición de clases
+- **Lucide React** - Iconos modernos
+
+## 📁 Estructura del Proyecto
+
+```
+Escudle/
+├── src/
+│   ├── App.tsx              # Componente principal del juego
+│   ├── main.tsx             # Entry point
+│   ├── index.css            # Design system + estilos globales
+│   ├── hooks/
+│   │   └── useLogoSearch.ts # Hook de búsqueda con Fuse.js
+│   └── data/
+│       └── logos.json       # Base de datos de logos (933KB)
+├── public/
+│   └── logos/               # 1976 logos descargados localmente
+├── docs/                    # 📚 Documentación técnica
+│   ├── arquitectura.md      # Arquitectura y stack
+│   ├── busqueda-logos.md    # Sistema de búsqueda
+│   ├── sistema-diseno.md    # Design system neobrutalism
+│   └── scraper-sistema.md   # Sistema de scraping
+├── scraper-download.js      # Script de scraping
+├── sanitize-logos.js        # Validación de datos
+└── debug_logos.js           # Debugging utilities
 ```
 
-## 🎮 Uso para Logodle
+## 📚 Documentación Técnica
 
-### Filtrar por modo de juego
+La documentación completa del proyecto está en [`/docs`](./docs):
 
-```javascript
-import logos from './football-logos.json' assert { type: 'json' };
+- **[Arquitectura](./docs/arquitectura.md)** - Stack, estructura, flujos de datos, decisiones técnicas
+- **[Sistema de Búsqueda](./docs/busqueda-logos.md)** - Hook `useLogoSearch`, configuración de Fuse.js, casos edge
+- **[Sistema de Diseño](./docs/sistema-diseno.md)** - Paleta neo, componentes, tokens, animaciones
+- **[Scraper](./docs/scraper-sistema.md)** - Proceso de descarga, estructura del JSON, mantenimiento
 
-// Modo Normal: Solo logos actuales
-const currentLogos = logos.filter(logo => !logo.isHistorical);
+## 🎲 Cómo Jugar
 
-// Modo Difícil: Solo logos históricos
-const historicalLogos = logos.filter(logo => logo.isHistorical);
+1. **Elegí un modo**: Fácil (logos actuales) o Difícil (logos históricos)
+2. **Observá el escudo**: En modo fácil está visible, en difícil está oscurecido
+3. **Escribí el nombre del equipo**: Usa el buscador con sugerencias
+4. **Tenés 6 intentos**: Cada intento incorrecto se marca en rojo
+5. **¡Adiviná el equipo!**: Gana descubriendo el escudo correcto
 
-// Modo Experto: Logos anteriores a 1970
-const oldLogos = logos.filter(logo => 
-  logo.isHistorical && logo.startYear && logo.startYear < 1970
-);
+### Ejemplo de Búsqueda
 
-// Por liga específica
-const premierLeague = logos.filter(logo => logo.country === 'england');
+```
+Escribís: "real"
+Sugerencias:
+  → Real Madrid
+  → Real Sociedad
+  → Real Betis
+  → ...
 ```
 
-### Obtener logo aleatorio
+## 🛠️ Desarrollo
 
-```javascript
-function getRandomLogo(logoArray) {
-  return logoArray[Math.floor(Math.random() * logoArray.length)];
-}
+### Agregar Nuevos Logos
 
-const randomLogo = getRandomLogo(currentLogos);
-console.log(randomLogo.name, randomLogo.svgUrl);
+Si querés actualizar la base de datos con logos nuevos:
+
+```bash
+# 1. Ejecutar el scraper
+npm run download-logos
+
+# 2. Sanitizar y validar
+node sanitize-logos.js
+
+# 3. Debuggear (opcional)
+node debug_logos.js
+
+# 4. Testear el juego
+npm run dev
 ```
 
-## 📈 Estadísticas
+### Modificar el Design System
 
-El script muestra automáticamente:
-- Total de logos extraídos
-- Logos actuales vs históricos
-- Número de países/ligas
+Todos los tokens de diseño están en:
+- **Colores**: `tailwind.config.js` → `theme.extend.colors.neo`
+- **Sombras**: `tailwind.config.js` → `theme.extend.boxShadow`
+- **Componentes**: `src/index.css` → `.neo-card`, `.neo-btn`, `.neo-input`
 
-## 🛠️ Dependencias
+Ver [`docs/sistema-diseno.md`](./docs/sistema-diseno.md) para detalles completos.
 
-- `axios` - Para descargar el sitemap XML
-- `xml2js` - Para parsear el XML
+## 🤝 Contribuir
 
-## 📝 Notas
+Las contribuciones son bienvenidas! Para cambios mayores:
 
-- El scraper respeta la estructura del sitemap oficial
-- Los IDs son únicos y válidos para uso en base de datos
-- Las URLs de SVG son ideales para web (escalables)
-- Las URLs de PNG son de alta resolución (3000x3000)
-# Escudle
+1. Fork el proyecto
+2. Creá un branch para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add AmazingFeature'`)
+4. Push al branch (`git push origin feature/AmazingFeature`)
+5. Abrí un Pull Request
+
+### Estándares de Código
+
+- **TypeScript estricto**: NO usar `any`
+- **DRY**: Extraer lógica repetida a hooks/utils
+- **SRP**: Una responsabilidad por componente/función
+- **Nombrado**: kebab-case para archivos, PascalCase para componentes
+
+Ver [`MEMORY[user_global]`](./docs/arquitectura.md#global-engineering-standards) para estándares completos.
+
+## 📄 Licencia
+
+Este proyecto es de código abierto bajo licencia MIT.
+
+**Nota sobre logos**: Los logos de equipos son propiedad de sus respectivos clubes. Este proyecto usa logos de [football-logos.cc](https://football-logos.cc) únicamente con fines educativos y de entretenimiento no comercial.
+
+## 🙏 Créditos
+
+- **Logos**: [football-logos.cc](https://football-logos.cc)
+- **Tipografía**: [Outfit](https://fonts.google.com/specimen/Outfit) por Google Fonts
+- **Inspiración de diseño**: [Pan y Queso](https://panyqueso.com), Brutalist Web Design
+- **Concepto de juego**: Wordle por Josh Wardle
+
+---
+
+**Hecho con ⚽ y ❤️ por [Dopartis](https://dopartis.com)**
+
+© 2026 Escudle
