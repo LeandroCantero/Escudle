@@ -1,5 +1,6 @@
 import Fuse from 'fuse.js';
 import { useMemo } from 'react';
+import { normalizeString } from '../utils/string-utils';
 
 export interface Logo {
     id: string;
@@ -28,16 +29,26 @@ export function useLogoSearch(
     const fuse = useMemo(() => {
         return new Fuse(items, {
             keys: ['name'],
-            threshold: threshold, // 0.0 requires a perfect match, 1.0 matches anything
-            ignoreLocation: true, // Finds matches anywhere in the string
-            includeScore: true
+            threshold: threshold,
+            ignoreLocation: true,
+            includeScore: true,
+            // Custom get function to normalize names before searching
+            getFn: (item, key) => {
+                const value = item[key as keyof Logo];
+                if (typeof value === 'string') {
+                    return normalizeString(value);
+                }
+                return (value as unknown) as string;
+            }
         });
     }, [items, threshold]);
 
     const results = useMemo(() => {
         if (!searchTerm || searchTerm.trim().length < 2) return [];
 
-        const fuseResults = fuse.search(searchTerm);
+        // Normalize the search term before searching
+        const normalizedSearchTerm = normalizeString(searchTerm);
+        const fuseResults = fuse.search(normalizedSearchTerm);
 
         // Return just the items, sliced to limit
         return fuseResults

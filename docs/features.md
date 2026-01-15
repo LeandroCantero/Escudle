@@ -1,5 +1,5 @@
 ---
-last_update: 14-01-2026
+last_update: 15-01-2026
 context: Registro de Features e Ideas (Backlog)
 purpose: Listado centralizado de funcionalidades implementadas e ideas para desarrollo futuro (DRY alignment)
 ---
@@ -20,6 +20,7 @@ Este documento centraliza todas las funcionalidades del proyecto, separando lo q
 ### Interface & UX
 - **Design System Neobrutalist**: Paleta de colores vibrantes, bordes gruesos y sombras sólidas.
 - **Búsqueda Fuzzy (Fuzzy Search)**: Sugerencias inteligentes mientras el usuario escribe, tolerando typos.
+- **Normalización de Nombres**: Comparación insensible a acentos y tildes (ej: "São" match con "sao").
 - **Feedback Visual**: 
   - Overlays de victoria y derrota.
   - Lista de intentos con iconos de check/error.
@@ -36,7 +37,6 @@ Este documento centraliza todas las funcionalidades del proyecto, separando lo q
 ## 🚀 Ideas y Futuro (Backlog)
 
 ### Alta Prioridad
-1. **Normalización de Nombres**: Implementar eliminación de acentos/tildes en la búsqueda (ej: "São Paulo" match con "Sao Paulo").
 3. **Compartido de Resultados**: Botón para copiar el "grid" de intentos al clipboard (estilo Wordle) para redes sociales.
 
 ### Contenido y Datos

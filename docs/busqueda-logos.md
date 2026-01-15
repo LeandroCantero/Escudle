@@ -19,6 +19,7 @@ Durante el juego, el usuario necesita escribir el nombre de un equipo de fútbol
 **Solución: Fuzzy Search con Fuse.js**
 - ✅ Matching aproximado basado en Levenshtein distance
 - ✅ Case-insensitive por defecto
+- ✅ Accent-insensitive (Normalización NFD)
 - ✅ Configurable con threshold de similaridad
 - ✅ Performance optimizada para búsquedas en tiempo real
 
@@ -76,9 +77,16 @@ new Fuse(items, {
   keys: ['name'],           // Solo buscar en nombre del equipo
   threshold: 0.3,           // Sweet spot entre precisión y flexibilidad
   ignoreLocation: true,     // Match en cualquier parte del string
-  includeScore: true        // Permite ordenar por relevancia
+  includeScore: true,       // Permite ordenar por relevancia
+  getFn: (item, key) => {   // Normalización personalizada
+    const value = item[key];
+    return normalizeString(value);
+  }
 })
 ```
+
+**Normalización (`string-utils.ts`):** 
+Usa `.normalize("NFD").replace(/[\u0300-\u036f]/g, "")` para remover diacríticos.
 
 **Parámetros clave:**
 - `keys: ['name']` - Si en el futuro se quiere buscar por país, agregar `'country'`
@@ -158,7 +166,7 @@ const suggestions = useLogoSearch(filteredLogos, inputValue, {
 **Alternativa considerada pero NO implementada**: Autocomplete agresivo (auto-seleccionar el primero). Rechazado porque limita exploración del usuario.
 
 ### 3. Acentos y Caracteres Especiales
-**Estado actual**: El JSON de logos usa nombres oficiales tal cual vienen del scraper. La normalización de acentos está contemplada como feature futuro en [features.md](./features.md).
+**Estado actual**: Implementado mediante `normalizeString`. La búsqueda es insensible a acentos ("São Paulo" == "sao paulo").
 
 ### 4. Dependencia de filteredLogos
 **IMPORTANTE**: En app.tsx, el hook recibe `filteredLogos` (ya filtrado por modo):

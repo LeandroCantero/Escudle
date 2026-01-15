@@ -8,6 +8,7 @@ import { GameFooter } from './components/game-footer';
 import { GameHeader } from './components/game-header';
 import { GuessInput } from './components/guess-input';
 import { GuessList } from './components/guess-list';
+import { HelpModal } from './components/help-modal';
 import { LogoDisplay } from './components/logo-display';
 
 export const App = () => {
@@ -47,7 +48,7 @@ export const App = () => {
     }
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-start p-4 md:p-8 space-y-8 max-w-lg mx-auto">
+        <div className="min-h-screen flex flex-col items-center justify-start p-4 md:p-8 space-y-4 max-w-lg mx-auto">
             <GameHeader
                 mode={mode}
                 showHelp={showHelp}
@@ -55,7 +56,7 @@ export const App = () => {
                 startNewGame={startNewGame}
             />
 
-            <main className="w-full space-y-6">
+            <main className="w-full space-y-10">
                 <LogoDisplay
                     targetLogo={targetLogo}
                     mode={mode}
@@ -93,6 +94,12 @@ export const App = () => {
             <GameFooter
                 logosCount={filteredLogos.length}
                 countriesCount={new Set(filteredLogos.map(l => l.country)).size}
+            />
+
+            {/* Modal rendered at root level */}
+            <HelpModal
+                isOpen={showHelp}
+                onClose={() => setShowHelp(false)}
             />
         </div>
     );
