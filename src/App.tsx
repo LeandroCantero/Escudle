@@ -1,19 +1,16 @@
-import { motion } from 'framer-motion';
-import { RotateCcw } from 'lucide-react';
-import { useGameLogic } from './hooks/use-game-logic';
-import { useLogoSearch } from './hooks/use-logo-search';
-
-// Components
+import { CountrySelector } from './components/country-selector';
 import { GameFooter } from './components/game-footer';
 import { GameHeader } from './components/game-header';
-import { GuessInput } from './components/guess-input';
-import { GuessList } from './components/guess-list';
 import { HelpModal } from './components/help-modal';
-import { LogoDisplay } from './components/logo-display';
+import { MainLayout } from './components/layout/main-layout';
+import { GameScreen } from './components/screens/game-screen';
+import { StartScreen } from './components/screens/start-screen';
+import { GameMode, useGameLogic } from './hooks/use-game-logic';
 
 export const App = () => {
     const {
-        mode,
+        gameMode,
+        difficulty,
         targetLogo,
         guesses,
         inputValue,
@@ -26,81 +23,88 @@ export const App = () => {
         filteredLogos,
         loading,
         startNewGame,
-        handleGuess
+        handleGuess,
+        selectedCountries,
+        setSelectedCountries,
+        showCountrySelector,
+        setShowCountrySelector,
+        availableCountries,
+        exitGame
     } = useGameLogic();
 
-    const suggestions = useLogoSearch(filteredLogos, inputValue, {
-        limit: 10,
-        threshold: 0.3
-    });
-
-    if (loading || !targetLogo) {
+    if (loading) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-neo-green text-center p-4">
-                <div className="space-y-4">
-                    <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-neo-black mx-auto"></div>
-                    <p className="font-black text-neo-black uppercase tracking-widest animate-pulse">
-                        Cargando Escuadra...
-                    </p>
-                </div>
+                <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-neo-black mx-auto"></div>
             </div>
         );
     }
 
+    const logosCount = filteredLogos.length;
+    const countriesCount = new Set(filteredLogos.map(l => l.country)).size;
+
     return (
-        <div className="min-h-screen flex flex-col items-center justify-start p-4 md:p-8 space-y-4 max-w-lg mx-auto">
-            <GameHeader
-                mode={mode}
-                showHelp={showHelp}
-                setShowHelp={setShowHelp}
-                startNewGame={startNewGame}
-            />
-
-            <main className="w-full space-y-10">
-                <LogoDisplay
-                    targetLogo={targetLogo}
-                    mode={mode}
-                    gameState={gameState}
-                />
-
-                <GuessInput
-                    inputValue={inputValue}
-                    setInputValue={setInputValue}
-                    showSuggestions={showSuggestions}
-                    setShowSuggestions={setShowSuggestions}
-                    suggestions={suggestions}
-                    gameState={gameState}
-                    handleGuess={handleGuess}
-                />
-
-                <GuessList
-                    guesses={guesses}
-                    targetLogo={targetLogo}
-                />
-
-                {gameState !== 'playing' && (
-                    <motion.button
-                        initial={{ opacity: 0, scale: 0.9, y: 10 }}
-                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                        onClick={() => startNewGame()}
-                        className="w-full h-16 bg-neo-blue text-white font-black text-xl uppercase rounded-xl flex items-center justify-center space-x-3 neo-btn"
-                    >
-                        <RotateCcw className="w-6 h-6" />
-                        <span>Siguiente Escudo</span>
-                    </motion.button>
+        <>
+            <MainLayout
+                header={
+                    gameState !== 'not_started' ? (
+                        <GameHeader
+                            onExitGame={exitGame}
+                            showHelp={showHelp}
+                            setShowHelp={setShowHelp} mode={'daily'} startNewGame={function (_newMode?: GameMode): void {
+                                throw new Error('Function not implemented.');
+                            }} onOpenCountrySelector={function (): void {
+                                throw new Error('Function not implemented.');
+                            }} />
+                    ) : null
+                }
+                footer={
+                    <GameFooter
+                        logosCount={logosCount}
+                        countriesCount={countriesCount}
+                    />
+                }
+            >
+                {gameState === 'not_started' ? (
+                    <StartScreen
+                        onStartGame={startNewGame}
+                        onOpenCountrySelector={() => setShowCountrySelector(true)}
+                        selectedCountriesCount={selectedCountries.length}
+                        setShowHelp={setShowHelp}
+                    />
+                ) : (
+                    targetLogo && (
+                        <GameScreen
+                            targetLogo={targetLogo}
+                            mode={gameMode}
+                            difficulty={difficulty}
+                            gameState={gameState}
+                            inputValue={inputValue}
+                            setInputValue={setInputValue}
+                            showSuggestions={showSuggestions}
+                            setShowSuggestions={setShowSuggestions}
+                            filteredLogos={filteredLogos}
+                            handleGuess={handleGuess}
+                            guesses={guesses}
+                            onNextGame={() => startNewGame()}
+                        />
+                    )
                 )}
-            </main>
+            </MainLayout>
 
-            <GameFooter
-                logosCount={filteredLogos.length}
-                countriesCount={new Set(filteredLogos.map(l => l.country)).size}
-            />
-
-            {/* Modal rendered at root level */}
             <HelpModal
                 isOpen={showHelp}
                 onClose={() => setShowHelp(false)}
+                isInGame={gameState !== 'not_started'}
             />
-        </div>
+
+            <CountrySelector
+                isOpen={showCountrySelector}
+                onClose={() => setShowCountrySelector(false)}
+                availableCountries={availableCountries}
+                selectedCountries={selectedCountries}
+                onApply={(countries) => setSelectedCountries(countries)}
+            />
+        </>
     );
 };

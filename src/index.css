@@ -30,15 +30,14 @@
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 14px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #15803d;
-  background-image: radial-gradient(#000000 1px, transparent 1px);
-  background-size: 20px 20px;
+  background-color: #0f172a; /* brand-dark for better contrast */
+  border-left: 2px solid #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-neo-white border-2 border-neo-black hover:bg-neo-yellow;
+  @apply bg-neo-yellow border-[3px] border-neo-black hover:bg-neo-orange;
 }

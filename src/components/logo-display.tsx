@@ -1,19 +1,43 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { Trophy, XCircle } from 'lucide-react';
-import { GameMode, GameState } from '../hooks/use-game-logic';
+import { Difficulty, GameState } from '../hooks/use-game-logic';
 import { Logo } from '../hooks/use-logo-search';
 import { cn } from '../utils/cn';
 
 interface LogoDisplayProps {
     targetLogo: Logo;
-    mode: GameMode;
+    difficulty: Difficulty;
     gameState: GameState;
+    guesses?: string[];
 }
 
-export const LogoDisplay = ({ targetLogo, mode, gameState }: LogoDisplayProps) => {
+export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }: LogoDisplayProps) => {
+    // Determine how many tiles to reveal for Medium mode
+    // guesses.length = number of wrong attempts (usually).
+    // We want to reveal 1 tile per wrong guess?
+    // Max attempts = 6. 2x3 grid = 6 tiles.
+    // If guesses.length = 0, 0 tiles revealed.
+    // If guesses.length = 1, 1 tile revealed.
+    // ...
+    // Note: We need a deterministic but "random-looking" way to reveal tiles so they don't always open in order 1,2,3...
+    // We can use a seeded shuffle based on targetLogo.id to keep it consistent for that logo?
+    // Or just simple index mapping since the grid is abstract.
+    // Let's just reveal in order 0-5 for simplicity first, or shuffle indices.
+
+    // Simple shuffle based on logo name length to be pseudo-random but consistent per logo
+    const getRevealOrder = (id: string) => {
+        const order = [0, 1, 2, 3, 4, 5];
+        const seed = id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+        // Simple distinct shuffle
+        return order.sort((a, b) => ((seed * (a + 1)) % 7) - ((seed * (b + 1)) % 7));
+    };
+
+    const revealOrder = getRevealOrder(targetLogo.name); // Using name as ID proxy
+    const tilesToReveal = revealOrder.slice(0, guesses.length);
+
     return (
-        <div className="neo-card rounded-3xl p-8 flex flex-col items-center justify-center relative aspect-square overflow-hidden bg-white">
-            {mode === 'hard' && (
+        <div className="neo-card rounded-3xl p-6 flex flex-col items-center justify-center relative aspect-square overflow-hidden bg-white max-w-xs mx-auto">
+            {targetLogo.isHistorical && (
                 <div className="absolute top-4 right-4 z-20">
                     <span className="bg-neo-orange text-neo-black text-xs font-black px-3 py-1 rounded-md border-2 border-neo-black shadow-neo-sm">
                         {targetLogo.period || 'RETRO'}
@@ -23,24 +47,105 @@ export const LogoDisplay = ({ targetLogo, mode, gameState }: LogoDisplayProps) =
 
             <AnimatePresence mode="wait">
                 <motion.div
-                    key={`${targetLogo.id}-${mode}`}
-                    initial={{ scale: 0.8, opacity: 0, rotate: -5 }}
-                    animate={{ scale: 1, opacity: 1, rotate: 0 }}
+                    key={`${targetLogo.id}-${difficulty}`}
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 1.1, opacity: 0 }}
                     transition={{ type: "spring", damping: 12, stiffness: 100 }}
-                    className="relative z-10 w-full h-full flex items-center justify-center"
+                    className="relative z-10 w-full h-full flex items-center justify-center p-4"
                 >
-                    <img
-                        src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
-                        alt="Escudo a adivinar"
-                        className={cn(
-                            "w-48 h-48 object-contain transition-all duration-700 filter",
-                            (mode === 'easy' || gameState !== 'playing') ? "brightness-100 blur-0 grayscale-0" : "brightness-0 opacity-10 blur-md grayscale"
-                        )}
-                    />
-                    {gameState === 'playing' && mode !== 'easy' && (
-                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                            <div className="text-neo-black/20 text-9xl font-black select-none">?</div>
+                    {/* EASY MODE: Just the color logo */}
+                    {difficulty === 'easy' && (
+                        <img
+                            src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
+                            alt="Escudo a adivinar"
+                            className="w-48 h-48 object-contain filter drop-shadow-lg"
+                        />
+                    )}
+
+                    {/* HARD MODE: Just the silhouette with blur */}
+                    {difficulty === 'hard' && (
+                        <div className="relative">
+                            <img
+                                src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
+                                alt="Silueta"
+                                className={cn(
+                                    "w-48 h-48 object-contain transition-all duration-700",
+                                    (gameState === 'won' || gameState === 'lost') ? "filter-none" : "brightness-0 opacity-100 blur-sm"
+                                )}
+                            />
+                        </div>
+                    )}
+
+                    {/* MEDIUM MODE: Silhouette Base + Grid Reveal */}
+                    {difficulty === 'medium' && (
+                        <div className="relative w-48 h-48">
+                            {/* Base Layer: Silhouette (Always visible) */}
+                            <img
+                                src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
+                                alt="Silueta Base"
+                                className={cn(
+                                    "absolute inset-0 w-full h-full object-contain transition-all duration-700",
+                                    (gameState === 'won' || gameState === 'lost') ? "opacity-0" : "brightness-0" // Hide base when revealing full result
+                                )}
+                            />
+
+                            {/* Reveal Layer: Grid of Color segments */}
+                            {(gameState === 'playing') && (
+                                <div className="absolute inset-0 w-full h-full grid grid-cols-2 grid-rows-3">
+                                    {[0, 1, 2, 3, 4, 5].map((index) => {
+                                        const isRevealed = tilesToReveal.includes(index);
+                                        // Calculate position for the inner image to align strictly
+                                        // Grid: 2 cols (50% w), 3 rows (33.33% h)
+                                        // Index 0: Row 0, Col 0 -> top: 0, left: 0
+                                        // Index 1: Row 0, Col 1 -> top: 0, left: -100%
+                                        // Index 2: Row 1, Col 0 -> top: -100%, left: 0
+                                        // ...
+                                        const row = Math.floor(index / 2); // 0, 1, 2
+                                        const col = index % 2; // 0, 1
+
+                                        return (
+                                            <div key={index} className="relative overflow-hidden w-full h-full">
+                                                {isRevealed && (
+                                                    <img
+                                                        src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
+                                                        alt={`Segment ${index}`}
+                                                        className="absolute max-w-none w-[200%] h-[300%] object-contain" // 2 cols = 200% width, 3 rows = 300% height?
+                                                        // Wait, object-contain makes this tricky because the image has aspect ratio inside the 48x48 box.
+                                                        // If we use W-48 H-48 (fixed), then:
+                                                        // The simplified approach: Just use one image and clip-path?
+                                                        // But clip-path is hard to animate or segment easily without complex polygons.
+                                                        // Let's try the positioning approach.
+                                                        // Container is w-full h-full of the CELL.
+                                                        // Image needs to be the SIZE OF THE PARENT (48x48 equiv).
+                                                        // If parent is 48x48 (12rem), 
+                                                        // Cell is 24x16 (approx).
+                                                        // Image must be positioned at Top: -Row*CellHeight, Left: -Col*CellWidth.
+                                                        // Width must be ParentWidth, Height ParentHeight.
+                                                        style={{
+                                                            width: '200%', // Relative to Cell Width (50% of parent) -> 200% = Parent Width
+                                                            height: '300%', // Relative to Cell Height (33% of parent) -> 300% = Parent Height
+                                                            top: `${-row * 100}%`,
+                                                            left: `${-col * 100}%`
+                                                        }}
+                                                    />
+                                                )}
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            )}
+
+                            {/* Full Reveal on End Game */}
+                            {(gameState === 'won' || gameState === 'lost') && (
+                                <motion.img
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
+                                    alt="Resultado"
+                                    className="absolute inset-0 w-full h-full object-contain z-30"
+                                />
+                            )}
                         </div>
                     )}
                 </motion.div>
@@ -50,7 +155,7 @@ export const LogoDisplay = ({ targetLogo, mode, gameState }: LogoDisplayProps) =
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="absolute inset-x-4 bottom-4 bg-neo-success border-2 border-neo-black p-4 rounded-xl shadow-neo text-center z-20"
+                    className="absolute inset-x-4 bottom-4 bg-[#4ade80] border-2 border-neo-black p-4 rounded-xl shadow-neo text-center z-20"
                 >
                     <div className="flex justify-center mb-2">
                         <div className="bg-white p-2 rounded-full border-2 border-neo-black">

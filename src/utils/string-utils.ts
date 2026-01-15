@@ -14,3 +14,12 @@ export function normalizeString(text: string): string {
         .replace(/[\u0300-\u036f]/g, "")
         .trim();
 }
+
+/**
+ * Clean logo name by removing common suffixes like "PNG", "SVG", etc.
+ */
+export const cleanLogoName = (name: string): string => {
+    return name
+        .replace(/\s+(PNG|SVG|JPEG|JPG)$/i, '') // Remove image format suffixes
+        .trim();
+};

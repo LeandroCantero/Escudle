@@ -25,6 +25,7 @@ Este documento centraliza todas las funcionalidades del proyecto, separando lo q
   - Overlays de victoria y derrota.
   - Lista de intentos con iconos de check/error.
 - **Modales Informativos**: Guía de "Cómo Jugar" integrada.
+- **Filtro por País (Multi-selección)**: Modal con buscador y checkboxes para filtrar escudos por uno o múltiples países.
 - **Responsive Design**: Optimizado para dispositivos móviles y desktop.
 
 ### Datos y Backend (Offline)
@@ -40,7 +41,6 @@ Este documento centraliza todas las funcionalidades del proyecto, separando lo q
 3. **Compartido de Resultados**: Botón para copiar el "grid" de intentos al clipboard (estilo Wordle) para redes sociales.
 
 ### Contenido y Datos
-4. **Filtros por Liga/País**: Permitir jugar solo con equipos de una liga específica (ej: Premier League, Liga Argentina).
 5. **Detección de Colores Dominantes**: Usar los colores del escudo para cambiar dinámicamente el background del modo fácil.
 6. **Alias de Equipos**: Mapear nombres alternativos (ej: "Man Utd" -> "Manchester United") para mejorar el matching.
 
@@ -51,8 +51,6 @@ Este documento centraliza todas las funcionalidades del proyecto, separando lo q
 
 ### Técnica / DevOps
 10. **PWA (Progressive Web App)**: Permitir instalación en el móvil y juego offline completo usando cache de assets.
-11. **Git LFS**: Migrar los logos de `/public` a Git LFS para mantener el repo ligero.
-12. **Tests de Integración**: Agregar tests para el flujo principal del juego y el hook de búsqueda.
 
 ---
 

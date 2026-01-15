@@ -10,7 +10,7 @@ interface GuessListProps {
 
 export const GuessList = ({ guesses, targetLogo }: GuessListProps) => {
     return (
-        <div className="space-y-3">
+        <div className="w-full space-y-3">
             {Array.from({ length: MAX_ATTEMPTS }).map((_, i) => {
                 const guess = guesses[i];
                 const isCorrect = guess?.toLowerCase() === targetLogo.name.toLowerCase();
@@ -22,7 +22,7 @@ export const GuessList = ({ guesses, targetLogo }: GuessListProps) => {
                             "h-12 rounded-lg flex items-center px-4 justify-between transition-all duration-300 border-2 font-bold",
                             guess
                                 ? isCorrect
-                                    ? "bg-neo-success border-neo-black text-neo-black shadow-neo-sm"
+                                    ? "bg-[#4ade80] border-neo-black text-neo-black shadow-neo-sm"
                                     : "bg-neo-white border-neo-black text-neo-black"
                                 : "bg-white/50 border-neo-black/20 text-gray-400 border-dashed"
                         )}

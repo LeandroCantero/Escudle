@@ -8,10 +8,14 @@ export interface Logo {
     country: string;
     isHistorical: boolean;
     period: string | null;
+    startYear: number | null;
+    endYear: number | null;
     svgUrl?: string | null;
     pngUrl?: string | null;
     localPath?: string;
     pageUrl: string;
+    league: string | null;
+    type: string | null;
 }
 
 interface UseLogoSearchOptions {
