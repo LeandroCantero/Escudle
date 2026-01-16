@@ -76,7 +76,7 @@ export const GameScreen = ({
                 targetLogo={targetLogo}
             />
 
-            {gameState !== 'playing' && (
+            {gameState !== 'playing' && mode !== 'daily' && (
                 <motion.button
                     initial={{ opacity: 0, scale: 0.9, y: 10 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -86,6 +86,14 @@ export const GameScreen = ({
                     <RotateCcw className="w-6 h-6" />
                     <span>{gameState === 'won' || mode === 'practice' ? 'Siguiente Escudo' : 'Reintentar'}</span>
                 </motion.button>
+            )}
+
+            {gameState !== 'playing' && mode === 'daily' && (
+                <div className="w-full space-y-4 pt-4">
+                    <p className="text-center font-bold text-neo-black bg-neo-white border-2 border-neo-black p-4 rounded-xl shadow-neo-sm">
+                        ¡Vuelve mañana para el próximo escudo!
+                    </p>
+                </div>
             )}
         </div>
     );

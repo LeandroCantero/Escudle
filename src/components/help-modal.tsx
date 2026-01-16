@@ -69,39 +69,39 @@ export const HelpModal = ({ isOpen, onClose, isInGame = false }: HelpModalProps)
                         ) : (
                             // Content on start screen
                             <>
-                                <h2 className="text-3xl font-black text-neo-black mb-4 uppercase text-center border-b-4 border-neo-yellow inline-block px-4 -rotate-2">
+                                <h2 className="text-4xl font-black text-neo-black mb-6 uppercase text-center border-b-[6px] border-neo-yellow inline-block px-4 -rotate-3 bg-neo-yellow/10">
                                     Guía de Juego
                                 </h2>
 
-                                <div className="space-y-4 text-neo-black font-medium">
-                                    <div className="bg-neo-blue/10 p-4 rounded-xl border-2 border-neo-blue">
-                                        <h3 className="font-black uppercase text-sm mb-2">🎮 Modos de Juego</h3>
+                                <div className="space-y-6 text-neo-black font-bold">
+                                    <div className="bg-neo-blue p-4 rounded-none border-4 border-neo-black shadow-neo-sm">
+                                        <h3 className="font-black uppercase text-base mb-2 px-2 bg-neo-black text-white inline-block">🎮 Modos de Juego</h3>
                                         <ul className="text-sm space-y-1">
-                                            <li><strong>Diario:</strong> Mismo escudo para todos cada día</li>
-                                            <li><strong>Infinito:</strong> Jugás hasta errar, ¡cuidá tu racha!</li>
-                                            <li><strong>Práctica:</strong> Juego libre sin límites</li>
+                                            <li><span className="bg-white px-1">Diario:</span> Mismo escudo para todos cada día</li>
+                                            <li><span className="bg-white px-1">Infinito:</span> Jugás hasta errar, ¡cuidá tu racha!</li>
+                                            <li><span className="bg-white px-1">Práctica:</span> Juego libre sin límites</li>
                                         </ul>
                                     </div>
 
-                                    <div className="bg-neo-orange/10 p-4 rounded-xl border-2 border-neo-orange">
-                                        <h3 className="font-black uppercase text-sm mb-2">⚡ Dificultad</h3>
+                                    <div className="bg-neo-orange p-4 rounded-none border-4 border-neo-black shadow-neo-sm">
+                                        <h3 className="font-black uppercase text-base mb-2 px-2 bg-neo-black text-white inline-block">⚡ Dificultad</h3>
                                         <ul className="text-sm space-y-1">
-                                            <li><strong>Fácil:</strong> Escudo visible completo</li>
-                                            <li><strong>Medio:</strong> Silueta que se revela con errores</li>
-                                            <li><strong>Difícil:</strong> Solo silueta, sin ayuda</li>
+                                            <li><span className="bg-white px-1">Fácil:</span> Escudo visible completo</li>
+                                            <li><span className="bg-white px-1">Medio:</span> Silueta que se revela con errores</li>
+                                            <li><span className="bg-white px-1">Difícil:</span> Solo silueta, sin ayuda</li>
                                         </ul>
                                     </div>
 
-                                    <div className="bg-neo-green/10 p-4 rounded-xl border-2 border-neo-green">
-                                        <h3 className="font-black uppercase text-sm mb-2">🏆 Colección</h3>
+                                    <div className="bg-neo-green p-4 rounded-none border-4 border-neo-black shadow-neo-sm">
+                                        <h3 className="font-black uppercase text-base mb-2 px-2 bg-neo-black text-white inline-block">🏆 Colección</h3>
                                         <ul className="text-sm space-y-1">
-                                            <li><strong>Todos:</strong> Actuales + Retros</li>
-                                            <li><strong>Actuales:</strong> Escudos vigentes</li>
-                                            <li><strong>Retros:</strong> Escudos históricos</li>
+                                            <li><span className="bg-white px-1">Todos:</span> Actuales + Retros</li>
+                                            <li><span className="bg-white px-1">Actuales:</span> Escudos vigentes</li>
+                                            <li><span className="bg-white px-1">Retros:</span> Escudos históricos</li>
                                         </ul>
                                     </div>
 
-                                    <p className="text-center text-sm font-bold bg-neo-yellow/30 p-2 rounded border-2 border-neo-yellow">
+                                    <p className="text-center text-sm font-black bg-neo-yellow p-3 rounded-none border-4 border-neo-black shadow-neo-sm rotate-1">
                                         💡 Podés filtrar por países para jugar solo con tus ligas favoritas
                                     </p>
                                 </div>

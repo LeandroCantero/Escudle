@@ -1,16 +1,20 @@
+import { useState } from 'react';
 import { CountrySelector } from './components/country-selector';
+import { DailyStatsModal } from './components/daily-stats-modal';
 import { GameFooter } from './components/game-footer';
 import { GameHeader } from './components/game-header';
 import { HelpModal } from './components/help-modal';
 import { MainLayout } from './components/layout/main-layout';
 import { GameScreen } from './components/screens/game-screen';
 import { StartScreen } from './components/screens/start-screen';
-import { GameMode, useGameLogic } from './hooks/use-game-logic';
+import { useGameLogic } from './hooks/use-game-logic';
 
 export const App = () => {
+    const [showStats, setShowStats] = useState(false);
     const {
         gameMode,
         difficulty,
+        dataset,
         targetLogo,
         guesses,
         inputValue,
@@ -29,7 +33,11 @@ export const App = () => {
         showCountrySelector,
         setShowCountrySelector,
         availableCountries,
-        exitGame
+        exitGame,
+        dailyStats,
+        timeUntilNext,
+        isTodayDone,
+        dailyState
     } = useGameLogic();
 
     if (loading) {
@@ -51,11 +59,11 @@ export const App = () => {
                         <GameHeader
                             onExitGame={exitGame}
                             showHelp={showHelp}
-                            setShowHelp={setShowHelp} mode={'daily'} startNewGame={function (_newMode?: GameMode): void {
-                                throw new Error('Function not implemented.');
-                            }} onOpenCountrySelector={function (): void {
-                                throw new Error('Function not implemented.');
-                            }} />
+                            setShowHelp={setShowHelp}
+                            mode={gameMode}
+                            startNewGame={startNewGame}
+                            onOpenCountrySelector={() => setShowCountrySelector(true)}
+                        />
                     ) : null
                 }
                 footer={
@@ -67,10 +75,20 @@ export const App = () => {
             >
                 {gameState === 'not_started' ? (
                     <StartScreen
-                        onStartGame={startNewGame}
+                        onStartGame={(m, d, ds) => {
+                            if (m === 'daily' && isTodayDone) {
+                                setShowStats(true);
+                                return;
+                            }
+                            startNewGame(m, d, ds);
+                        }}
                         onOpenCountrySelector={() => setShowCountrySelector(true)}
                         selectedCountriesCount={selectedCountries.length}
                         setShowHelp={setShowHelp}
+                        dailyState={dailyState}
+                        dailyStats={dailyStats}
+                        timeUntilNext={timeUntilNext}
+                        isTodayDone={isTodayDone}
                     />
                 ) : (
                     targetLogo && (
@@ -104,6 +122,16 @@ export const App = () => {
                 availableCountries={availableCountries}
                 selectedCountries={selectedCountries}
                 onApply={(countries) => setSelectedCountries(countries)}
+            />
+
+            <DailyStatsModal
+                isOpen={showStats}
+                onClose={() => setShowStats(false)}
+                stats={{
+                    ...dailyStats,
+                    targetName: targetLogo?.name || ''
+                }}
+                timeUntilNext={timeUntilNext}
             />
         </>
     );

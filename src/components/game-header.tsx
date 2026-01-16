@@ -14,7 +14,10 @@ interface GameHeaderProps {
 export const GameHeader = ({
     onExitGame,
     showHelp,
-    setShowHelp
+    setShowHelp,
+    mode,
+    startNewGame,
+    onOpenCountrySelector
 }: GameHeaderProps) => {
     return (
         <motion.header

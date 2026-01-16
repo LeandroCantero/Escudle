@@ -36,7 +36,10 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
     const tilesToReveal = revealOrder.slice(0, guesses.length);
 
     return (
-        <div className="neo-card rounded-3xl p-6 flex flex-col items-center justify-center relative aspect-square overflow-hidden bg-white max-w-xs mx-auto">
+        <div
+            className="neo-card rounded-3xl p-6 flex flex-col items-center justify-center relative aspect-square overflow-hidden bg-white max-w-xs mx-auto select-none"
+            onContextMenu={(e) => e.preventDefault()}
+        >
             {targetLogo.isHistorical && (
                 <div className="absolute top-4 right-4 z-20">
                     <span className="bg-neo-orange text-neo-black text-xs font-black px-3 py-1 rounded-md border-2 border-neo-black shadow-neo-sm">
@@ -59,20 +62,40 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
                         <img
                             src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
                             alt="Escudo a adivinar"
-                            className="w-48 h-48 object-contain filter drop-shadow-lg"
+                            className="w-48 h-48 object-contain filter drop-shadow-lg pointer-events-none select-none"
+                            draggable={false}
                         />
                     )}
 
-                    {/* HARD MODE: Just the silhouette with blur */}
+                    {/* HARD MODE: Perfect Silhouette using Masking */}
                     {difficulty === 'hard' && (
-                        <div className="relative">
+                        <div className="relative w-48 h-48 flex items-center justify-center">
+                            {/* The Silhouette Layer */}
+                            <div
+                                className={cn(
+                                    "absolute inset-0 bg-neo-black pointer-events-none select-none transition-opacity duration-700",
+                                    (gameState === 'won' || gameState === 'lost') ? "opacity-0" : "opacity-100 blur-sm"
+                                )}
+                                style={{
+                                    maskImage: `url(${targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl})`,
+                                    WebkitMaskImage: `url(${targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl})`,
+                                    maskSize: 'contain',
+                                    WebkitMaskSize: 'contain',
+                                    maskRepeat: 'no-repeat',
+                                    WebkitMaskRepeat: 'no-repeat',
+                                    maskPosition: 'center',
+                                    WebkitMaskPosition: 'center'
+                                }}
+                            />
+                            {/* The Result Layer (Colors) */}
                             <img
                                 src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
-                                alt="Silueta"
+                                alt="Resultado"
                                 className={cn(
-                                    "w-48 h-48 object-contain transition-all duration-700",
-                                    (gameState === 'won' || gameState === 'lost') ? "filter-none" : "brightness-0 opacity-100 blur-sm"
+                                    "w-full h-full object-contain pointer-events-none select-none transition-opacity duration-700",
+                                    (gameState === 'won' || gameState === 'lost') ? "opacity-100" : "opacity-0"
                                 )}
+                                draggable={false}
                             />
                         </div>
                     )}
@@ -80,14 +103,22 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
                     {/* MEDIUM MODE: Silhouette Base + Grid Reveal */}
                     {difficulty === 'medium' && (
                         <div className="relative w-48 h-48">
-                            {/* Base Layer: Silhouette (Always visible) */}
-                            <img
-                                src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
-                                alt="Silueta Base"
+                            {/* Base Layer: Perfect Silhouette using Masking */}
+                            <div
                                 className={cn(
-                                    "absolute inset-0 w-full h-full object-contain transition-all duration-700",
-                                    (gameState === 'won' || gameState === 'lost') ? "opacity-0" : "brightness-0" // Hide base when revealing full result
+                                    "absolute inset-0 bg-neo-black pointer-events-none select-none transition-opacity duration-700",
+                                    (gameState === 'won' || gameState === 'lost') ? "opacity-0" : "opacity-100"
                                 )}
+                                style={{
+                                    maskImage: `url(${targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl})`,
+                                    WebkitMaskImage: `url(${targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl})`,
+                                    maskSize: 'contain',
+                                    WebkitMaskSize: 'contain',
+                                    maskRepeat: 'no-repeat',
+                                    WebkitMaskRepeat: 'no-repeat',
+                                    maskPosition: 'center',
+                                    WebkitMaskPosition: 'center'
+                                }}
                             />
 
                             {/* Reveal Layer: Grid of Color segments */}
@@ -110,24 +141,14 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
                                                     <img
                                                         src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
                                                         alt={`Segment ${index}`}
-                                                        className="absolute max-w-none w-[200%] h-[300%] object-contain" // 2 cols = 200% width, 3 rows = 300% height?
-                                                        // Wait, object-contain makes this tricky because the image has aspect ratio inside the 48x48 box.
-                                                        // If we use W-48 H-48 (fixed), then:
-                                                        // The simplified approach: Just use one image and clip-path?
-                                                        // But clip-path is hard to animate or segment easily without complex polygons.
-                                                        // Let's try the positioning approach.
-                                                        // Container is w-full h-full of the CELL.
-                                                        // Image needs to be the SIZE OF THE PARENT (48x48 equiv).
-                                                        // If parent is 48x48 (12rem), 
-                                                        // Cell is 24x16 (approx).
-                                                        // Image must be positioned at Top: -Row*CellHeight, Left: -Col*CellWidth.
-                                                        // Width must be ParentWidth, Height ParentHeight.
                                                         style={{
                                                             width: '200%', // Relative to Cell Width (50% of parent) -> 200% = Parent Width
                                                             height: '300%', // Relative to Cell Height (33% of parent) -> 300% = Parent Height
                                                             top: `${-row * 100}%`,
                                                             left: `${-col * 100}%`
                                                         }}
+                                                        className="absolute max-w-none w-[200%] h-[300%] object-contain pointer-events-none select-none"
+                                                        draggable={false}
                                                     />
                                                 )}
                                             </div>
@@ -143,7 +164,8 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
                                     animate={{ opacity: 1 }}
                                     src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
                                     alt="Resultado"
-                                    className="absolute inset-0 w-full h-full object-contain z-30"
+                                    className="absolute inset-0 w-full h-full object-contain z-30 pointer-events-none select-none"
+                                    draggable={false}
                                 />
                             )}
                         </div>

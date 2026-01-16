@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { DailyState, DailyStats } from '../../hooks/use-daily-state';
 import { Dataset, Difficulty, GameMode } from '../../hooks/use-game-logic';
 
 interface StartScreenProps {
@@ -7,17 +8,35 @@ interface StartScreenProps {
     onOpenCountrySelector: () => void;
     selectedCountriesCount: number;
     setShowHelp: (show: boolean) => void;
+    dailyState: DailyState | null;
+    dailyStats: DailyStats;
+    timeUntilNext: number;
+    isTodayDone: boolean;
 }
 
 export const StartScreen = ({
     onStartGame,
     onOpenCountrySelector,
     selectedCountriesCount,
-    setShowHelp
+    setShowHelp,
+    dailyState,
+    dailyStats,
+    timeUntilNext,
+    isTodayDone
 }: StartScreenProps) => {
     const [selectedMode, setSelectedMode] = useState<GameMode>('daily');
     const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty>('easy');
     const [selectedDataset, setSelectedDataset] = useState<Dataset>('all');
+
+    const formatTime = (seconds: number) => {
+        const h = Math.floor(seconds / 3600);
+        const m = Math.floor((seconds % 3600) / 60);
+        const s = seconds % 60;
+        return `${h}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+    };
+
+    const isDailyInProgress = selectedMode === 'daily' && dailyState && dailyState.gameState === 'playing';
+    const isDailyCompleted = selectedMode === 'daily' && isTodayDone;
 
     return (
         <div className="w-full h-full flex flex-col items-center justify-center space-y-8 animate-fade-in py-12 relative">
@@ -135,12 +154,33 @@ export const StartScreen = ({
                     </button>
                 </div>
 
-                <button
-                    onClick={() => onStartGame(selectedMode, selectedDifficulty, selectedDataset)}
-                    className="w-full py-4 bg-neo-green text-white font-black text-2xl uppercase border-[3px] border-neo-black shadow-neo hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-neo-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all mt-4"
-                >
-                    JUGAR AHORA
-                </button>
+                <div className="pt-4">
+                    {isDailyCompleted ? (
+                        <div className="space-y-4">
+                            <div className="bg-neo-blue/10 border-2 border-neo-blue p-4 rounded-xl text-center">
+                                <p className="text-neo-blue font-black uppercase text-xl">¡Completado!</p>
+                                <p className="text-neo-black font-bold">Próximo escudo en:</p>
+                                <p className="text-3xl font-black font-mono text-neo-black mt-2">
+                                    {formatTime(timeUntilNext)}
+                                </p>
+                            </div>
+                            <button
+                                onClick={() => onStartGame('daily', selectedDifficulty, selectedDataset)}
+                                className="w-full py-4 bg-neo-blue text-white font-black text-2xl uppercase border-[3px] border-neo-black shadow-neo hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-neo-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all"
+                            >
+                                VER RESULTADOS
+                            </button>
+                        </div>
+                    ) : (
+                        <button
+                            onClick={() => onStartGame(selectedMode, selectedDifficulty, selectedDataset)}
+                            className={`w-full py-4 font-black text-2xl uppercase border-[3px] border-neo-black shadow-neo hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-neo-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all ${isDailyInProgress ? 'bg-neo-blue text-white' : 'bg-neo-green text-white'
+                                }`}
+                        >
+                            {isDailyInProgress ? 'CONTINUAR' : 'JUGAR AHORA'}
+                        </button>
+                    )}
+                </div>
             </div>
         </div>
     );
