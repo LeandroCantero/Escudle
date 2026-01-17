@@ -8,12 +8,7 @@ import { LogoDisplay } from '../logo-display';
 
 interface GameScreenProps {
     targetLogo: Logo;
-    mode: GameMode; // Using new GameMode type, but LogoDisplay references Difficulty mainly? 
-    // Wait, LogoDisplay used 'mode' which was old 'easy'/'hard'.
-    // Now we have 'difficulty'. LogoDisplay needs update too.
-    // For now, I'll pass difficulty as 'mode' if I haven't updated LogoDisplay yet, 
-    // OR I should update LogoDisplay props to accept 'difficulty'.
-    // I will update LogoDisplay in the next step.
+    mode: GameMode;
     difficulty: Difficulty;
     gameState: GameState;
     inputValue: string;
@@ -24,6 +19,9 @@ interface GameScreenProps {
     handleGuess: (name: string) => void;
     guesses: string[];
     onNextGame: () => void;
+    // New props for Infinite Mode feedback
+    infiniteModeScore?: number;
+    infiniteModeHighScore?: number;
 }
 
 export const GameScreen = ({
@@ -38,7 +36,9 @@ export const GameScreen = ({
     filteredLogos,
     handleGuess,
     guesses,
-    onNextGame
+    onNextGame,
+    infiniteModeScore,
+    infiniteModeHighScore
 }: GameScreenProps) => {
 
     const suggestions = useLogoSearch(filteredLogos, inputValue, {
@@ -48,12 +48,30 @@ export const GameScreen = ({
 
     return (
         <div className="w-full flex-1 flex flex-col items-center justify-start space-y-4">
-            {/* We need to pass difficulty to LogoDisplay. 
-                 StartScreen passes difficulty. 
-                 LogoDisplay currently takes 'mode' (old). 
-                 I'll pass difficulty as a prop named 'difficulty' and update LogoDisplay simultaneously or after.
-                 For now, I'll pass it. 
-             */}
+
+            {/* Infinite Mode Score Indicator */}
+            {mode === 'infinite' && infiniteModeScore !== undefined && (
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="flex items-center gap-4 bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full border-2 border-neo-black/10"
+                >
+                    <div className="flex items-center gap-2">
+                        <span className="text-neo-orange font-black text-xl">{infiniteModeScore}</span>
+                        <span className="text-xs font-bold uppercase opacity-60">Aciertos</span>
+                    </div>
+                    {infiniteModeHighScore !== undefined && infiniteModeHighScore > 0 && (
+                        <div className="w-px h-6 bg-neo-black/20" />
+                    )}
+                    {infiniteModeHighScore !== undefined && infiniteModeHighScore > 0 && (
+                        <div className="flex items-center gap-2">
+                            <span className="text-xs font-bold uppercase opacity-60">Récord:</span>
+                            <span className="text-neo-black font-black">{Math.max(infiniteModeScore, infiniteModeHighScore)}</span>
+                        </div>
+                    )}
+                </motion.div>
+            )}
+
             <LogoDisplay
                 targetLogo={targetLogo}
                 difficulty={difficulty}

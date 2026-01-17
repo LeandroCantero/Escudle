@@ -4,6 +4,7 @@ import { DailyStatsModal } from './components/daily-stats-modal';
 import { GameFooter } from './components/game-footer';
 import { GameHeader } from './components/game-header';
 import { HelpModal } from './components/help-modal';
+import { InfiniteStatsModal } from './components/infinite-stats-modal';
 import { MainLayout } from './components/layout/main-layout';
 import { GameScreen } from './components/screens/game-screen';
 import { StartScreen } from './components/screens/start-screen';
@@ -37,7 +38,12 @@ export const App = () => {
         dailyStats,
         timeUntilNext,
         isTodayDone,
-        dailyState
+        dailyState,
+        infiniteStats,
+        infiniteSession,
+        showInfiniteStats,
+        setShowInfiniteStats,
+        infiniteNewHighScore
     } = useGameLogic();
 
     if (loading) {
@@ -105,6 +111,8 @@ export const App = () => {
                             handleGuess={handleGuess}
                             guesses={guesses}
                             onNextGame={() => startNewGame()}
+                            infiniteModeScore={infiniteSession?.score}
+                            infiniteModeHighScore={infiniteStats?.highScore}
                         />
                     )
                 )}
@@ -132,6 +140,19 @@ export const App = () => {
                     targetName: targetLogo?.name || ''
                 }}
                 timeUntilNext={timeUntilNext}
+            />
+
+            <InfiniteStatsModal
+                isOpen={showInfiniteStats}
+                onClose={() => setShowInfiniteStats(false)}
+                stats={infiniteStats}
+                currentScore={infiniteSession?.score || 0}
+                isNewHighScore={infiniteNewHighScore}
+                targetLogo={targetLogo}
+                onPlayAgain={() => {
+                    setShowInfiniteStats(false);
+                    startNewGame();
+                }}
             />
         </>
     );

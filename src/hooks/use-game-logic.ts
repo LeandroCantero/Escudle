@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { cleanLogoName } from '../utils/string-utils';
 import { useDailyState } from './use-daily-state';
+import { useInfiniteState } from './use-infinite-state';
 import { Logo } from './use-logo-search';
 
 export type GameState = 'not_started' | 'playing' | 'won' | 'lost';
@@ -26,6 +27,7 @@ export function useGameLogic() {
     const [loading, setLoading] = useState(true);
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [showHelp, setShowHelp] = useState(false);
+    const [showInfiniteStats, setShowInfiniteStats] = useState(false);
 
     const {
         dailyState,
@@ -36,6 +38,15 @@ export function useGameLogic() {
         completeGame,
         isTodayDone
     } = useDailyState();
+
+    const {
+        infiniteStats,
+        currentSession: infiniteSession,
+        resetSession: resetInfiniteSession,
+        incrementScore: incrementInfiniteScore,
+        endSession: endInfiniteSession,
+        isNewHighScore: infiniteNewHighScore
+    } = useInfiniteState();
 
     const availableCountries = useMemo<{ name: string, count: number }[]>(() => {
         const counts: Record<string, number> = {};
@@ -114,14 +125,25 @@ export function useGameLogic() {
             setTargetLogo(seededTarget);
             initDailyGame(seededTarget!, activeDifficulty, activeDataset);
         } else {
+            // Infinite / Practice
             setTargetLogo(pool[Math.floor(Math.random() * pool.length)]);
+
+            // Handle Infinite Session
+            if (activeGameMode === 'infinite') {
+                const isManualRestart = newGameMode !== undefined;
+                const isRetryAfterLoss = gameState === 'lost';
+
+                if (isManualRestart || isRetryAfterLoss) {
+                    resetInfiniteSession();
+                }
+            }
         }
 
         setGuesses([]);
         setInputValue('');
         setGameState('playing');
         setShowSuggestions(false);
-    }, [allLogos, gameMode, difficulty, dataset, selectedCountries, dailyState, initDailyGame]);
+    }, [allLogos, gameMode, difficulty, dataset, selectedCountries, dailyState, initDailyGame, gameState, resetInfiniteSession]);
 
     useEffect(() => {
         fetch('/data/logos.json')
@@ -154,11 +176,16 @@ export function useGameLogic() {
         if (isWin) {
             setGameState('won');
             if (gameMode === 'daily') completeGame(true);
+            if (gameMode === 'infinite') incrementInfiniteScore();
         } else if (newGuesses.length >= MAX_ATTEMPTS) {
             setGameState('lost');
             if (gameMode === 'daily') completeGame(false);
+            if (gameMode === 'infinite') {
+                endInfiniteSession(infiniteSession.score);
+                setShowInfiniteStats(true);
+            }
         }
-    }, [gameState, guesses, targetLogo, gameMode, recordGuess, completeGame]);
+    }, [gameState, guesses, targetLogo, gameMode, recordGuess, completeGame, infiniteSession, incrementInfiniteScore, endInfiniteSession]);
 
     const exitGame = useCallback(() => {
         setGameState('not_started');
@@ -193,6 +220,11 @@ export function useGameLogic() {
         dailyStats,
         timeUntilNext,
         isTodayDone,
-        dailyState
+        dailyState,
+        infiniteStats,
+        infiniteSession,
+        showInfiniteStats,
+        setShowInfiniteStats,
+        infiniteNewHighScore
     };
 }
