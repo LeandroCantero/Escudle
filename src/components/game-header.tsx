@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { LogOut } from 'lucide-react';
+import { BarChart2, LogOut } from 'lucide-react';
 import { GameMode } from '../hooks/use-game-logic';
 
 interface GameHeaderProps {
@@ -9,6 +9,7 @@ interface GameHeaderProps {
     startNewGame: (newMode?: GameMode) => void;
     onOpenCountrySelector: () => void;
     onExitGame: () => void;
+    onShowStats: () => void;
 }
 
 export const GameHeader = ({
@@ -17,7 +18,8 @@ export const GameHeader = ({
     setShowHelp,
     mode,
     startNewGame,
-    onOpenCountrySelector
+    onOpenCountrySelector,
+    onShowStats
 }: GameHeaderProps) => {
     return (
         <motion.header
@@ -40,10 +42,19 @@ export const GameHeader = ({
                 <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ x: 2, y: 2 }}
-                    onClick={() => setShowHelp(true)}
-                    className="bg-white text-neo-black rounded-full border-[3px] border-neo-black shadow-[2px_2px_0px_#000] hover:bg-neo-yellow transition-colors active:shadow-none active:translate-x-[2px] active:translate-y-[2px] w-10 h-10 flex items-center justify-center font-['Permanent_Marker'] text-xl"
+                    onClick={onShowStats}
+                    className="bg-neo-blue text-white rounded-full border-[3px] border-neo-black shadow-[2px_2px_0px_#000] hover:bg-neo-blue/80 transition-colors active:shadow-none active:translate-x-[2px] active:translate-y-[2px] w-10 h-10 flex items-center justify-center -rotate-2"
                 >
-                    ?
+                    <BarChart2 className="w-5 h-5" />
+                </motion.button>
+
+                <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ x: 2, y: 2 }}
+                    onClick={() => setShowHelp(true)}
+                    className="bg-white text-neo-black rounded-full border-[3px] border-neo-black shadow-[2px_2px_0px_#000] hover:bg-neo-yellow transition-colors active:shadow-none active:translate-x-[2px] active:translate-y-[2px] w-10 h-10 flex items-center justify-center"
+                >
+                    <span className="font-['Permanent_Marker'] text-2xl">?</span>
                 </motion.button>
 
                 <motion.button

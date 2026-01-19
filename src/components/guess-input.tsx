@@ -35,7 +35,7 @@ export const GuessInput = ({
                         setShowSuggestions(true);
                     }}
                     disabled={gameState !== 'playing'}
-                    className="w-full h-16 pl-14 pr-4 neo-input text-xl font-bold placeholder:text-gray-400 placeholder:font-medium uppercase"
+                    className="w-full h-16 pl-14 pr-4 neo-input text-xl font-bold placeholder:text-gray-400 placeholder:font-medium uppercase disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-100"
                     onKeyDown={(e) => {
                         if (e.key === 'Enter' && inputValue.trim()) {
                             handleGuess(inputValue);

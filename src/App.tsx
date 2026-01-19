@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { CountrySelector } from './components/country-selector';
 import { DailyStatsModal } from './components/daily-stats-modal';
 import { GameFooter } from './components/game-footer';
@@ -11,7 +10,6 @@ import { StartScreen } from './components/screens/start-screen';
 import { useGameLogic } from './hooks/use-game-logic';
 
 export const App = () => {
-    const [showStats, setShowStats] = useState(false);
     const {
         gameMode,
         difficulty,
@@ -38,12 +36,13 @@ export const App = () => {
         dailyStats,
         timeUntilNext,
         isTodayDone,
-        dailyState,
         infiniteStats,
         infiniteSession,
         showInfiniteStats,
         setShowInfiniteStats,
-        infiniteNewHighScore
+        infiniteNewHighScore,
+        showDailyStats,
+        setShowDailyStats
     } = useGameLogic();
 
     if (loading) {
@@ -69,6 +68,10 @@ export const App = () => {
                             mode={gameMode}
                             startNewGame={startNewGame}
                             onOpenCountrySelector={() => setShowCountrySelector(true)}
+                            onShowStats={() => {
+                                if (gameMode === 'daily') setShowDailyStats(true);
+                                if (gameMode === 'infinite') setShowInfiniteStats(true);
+                            }}
                         />
                     ) : null
                 }
@@ -81,20 +84,16 @@ export const App = () => {
             >
                 {gameState === 'not_started' ? (
                     <StartScreen
-                        onStartGame={(m, d, ds) => {
-                            if (m === 'daily' && isTodayDone) {
-                                setShowStats(true);
-                                return;
-                            }
+                        onStartGame={(m, d, ds, showStats) => {
                             startNewGame(m, d, ds);
+                            if (showStats) {
+                                setShowDailyStats(true);
+                            }
                         }}
                         onOpenCountrySelector={() => setShowCountrySelector(true)}
                         selectedCountriesCount={selectedCountries.length}
                         setShowHelp={setShowHelp}
-                        dailyState={dailyState}
-                        dailyStats={dailyStats}
                         timeUntilNext={timeUntilNext}
-                        isTodayDone={isTodayDone}
                     />
                 ) : (
                     targetLogo && (
@@ -133,13 +132,20 @@ export const App = () => {
             />
 
             <DailyStatsModal
-                isOpen={showStats}
-                onClose={() => setShowStats(false)}
+                isOpen={showDailyStats}
+                onClose={() => setShowDailyStats(false)}
                 stats={{
                     ...dailyStats,
                     targetName: targetLogo?.name || ''
                 }}
                 timeUntilNext={timeUntilNext}
+                difficulty={difficulty}
+                onNextDifficulty={() => {
+                    if (difficulty === 'hard') return;
+                    const nextDiff = difficulty === 'easy' ? 'medium' : 'hard';
+                    setShowDailyStats(false);
+                    startNewGame('daily', nextDiff, dataset);
+                }}
             />
 
             <InfiniteStatsModal
@@ -149,6 +155,7 @@ export const App = () => {
                 currentScore={infiniteSession?.score || 0}
                 isNewHighScore={infiniteNewHighScore}
                 targetLogo={targetLogo}
+                difficulty={difficulty}
                 onPlayAgain={() => {
                     setShowInfiniteStats(false);
                     startNewGame();

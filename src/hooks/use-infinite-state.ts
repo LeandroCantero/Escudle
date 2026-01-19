@@ -11,9 +11,10 @@ export interface InfiniteStats {
 export interface InfiniteSession {
     score: number;
     startedAt: number;
+    playedLogos: string[]; // Track IDs of logos played in this session
 }
 
-const INFINITE_STATS_KEY = 'escudle_infinite_stats';
+
 
 const defaultStats: InfiniteStats = {
     highScore: 0,
@@ -23,32 +24,42 @@ const defaultStats: InfiniteStats = {
     lastPlayedAt: ''
 };
 
-export function useInfiniteState() {
+export function useInfiniteState(difficulty: string) {
     const [infiniteStats, setInfiniteStats] = useState<InfiniteStats>(defaultStats);
-    const [currentSession, setCurrentSession] = useState<InfiniteSession>({ score: 0, startedAt: Date.now() });
+    const [currentSession, setCurrentSession] = useState<InfiniteSession>({
+        score: 0,
+        startedAt: Date.now(),
+        playedLogos: []
+    });
     const [isNewHighScore, setIsNewHighScore] = useState(false);
 
-    // Load stats on mount
+    const statsKey = `escudle_infinite_stats_${difficulty}`;
+
+    // Load stats on mount or when difficulty changes
     useEffect(() => {
-        const savedStats = localStorage.getItem(INFINITE_STATS_KEY);
+        const savedStats = localStorage.getItem(statsKey);
         if (savedStats) {
             try {
                 setInfiniteStats(JSON.parse(savedStats));
             } catch (e) {
                 console.error("Error parsing infinite stats", e);
+                setInfiniteStats(defaultStats);
             }
+        } else {
+            setInfiniteStats(defaultStats);
         }
-    }, []);
+    }, [difficulty, statsKey]);
 
     const saveStats = useCallback((stats: InfiniteStats) => {
         setInfiniteStats(stats);
-        localStorage.setItem(INFINITE_STATS_KEY, JSON.stringify(stats));
-    }, []);
+        localStorage.setItem(statsKey, JSON.stringify(stats));
+    }, [statsKey]);
 
     const resetSession = useCallback(() => {
         setCurrentSession({
             score: 0,
-            startedAt: Date.now()
+            startedAt: Date.now(),
+            playedLogos: []
         });
         setIsNewHighScore(false);
     }, []);
@@ -57,6 +68,13 @@ export function useInfiniteState() {
         setCurrentSession(prev => ({
             ...prev,
             score: prev.score + 1
+        }));
+    }, []);
+
+    const addPlayedLogo = useCallback((id: string) => {
+        setCurrentSession(prev => ({
+            ...prev,
+            playedLogos: [...prev.playedLogos, id]
         }));
     }, []);
 
@@ -78,16 +96,17 @@ export function useInfiniteState() {
                 setIsNewHighScore(false);
             }
 
-            localStorage.setItem(INFINITE_STATS_KEY, JSON.stringify(newStats));
+            localStorage.setItem(statsKey, JSON.stringify(newStats));
             return newStats;
         });
-    }, []);
+    }, [statsKey]);
 
     return {
         infiniteStats,
         currentSession,
         resetSession,
         incrementScore,
+        addPlayedLogo,
         endSession,
         isNewHighScore
     };

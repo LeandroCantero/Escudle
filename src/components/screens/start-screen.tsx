@@ -1,17 +1,14 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { DailyState, DailyStats } from '../../hooks/use-daily-state';
+import { useDailyState } from '../../hooks/use-daily-state';
 import { Dataset, Difficulty, GameMode } from '../../hooks/use-game-logic';
 
 interface StartScreenProps {
-    onStartGame: (mode: GameMode, difficulty: Difficulty, dataset: Dataset) => void;
+    onStartGame: (mode: GameMode, difficulty: Difficulty, dataset: Dataset, showStats?: boolean) => void;
     onOpenCountrySelector: () => void;
     selectedCountriesCount: number;
     setShowHelp: (show: boolean) => void;
-    dailyState: DailyState | null;
-    dailyStats: DailyStats;
     timeUntilNext: number;
-    isTodayDone: boolean;
 }
 
 export const StartScreen = ({
@@ -19,14 +16,13 @@ export const StartScreen = ({
     onOpenCountrySelector,
     selectedCountriesCount,
     setShowHelp,
-    dailyState,
-    dailyStats,
-    timeUntilNext,
-    isTodayDone
+    timeUntilNext
 }: StartScreenProps) => {
     const [selectedMode, setSelectedMode] = useState<GameMode>('daily');
     const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty>('easy');
     const [selectedDataset, setSelectedDataset] = useState<Dataset>('all');
+
+    const { dailyState, isTodayDone } = useDailyState(selectedDifficulty);
 
     const formatTime = (seconds: number) => {
         const h = Math.floor(seconds / 3600);
@@ -59,9 +55,9 @@ export const StartScreen = ({
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ x: 2, y: 2 }}
                     onClick={() => setShowHelp(true)}
-                    className="bg-white text-neo-black rounded-full border-[3px] border-neo-black shadow-[2px_2px_0px_#000] hover:bg-neo-yellow transition-colors active:shadow-none active:translate-x-[2px] active:translate-y-[2px] w-10 h-10 flex items-center justify-center font-['Permanent_Marker'] text-2xl rotate-[10deg]"
+                    className="bg-white text-neo-black rounded-full border-[3px] border-neo-black shadow-[2px_2px_0px_#000] hover:bg-neo-yellow transition-colors active:shadow-none active:translate-x-[2px] active:translate-y-[2px] w-10 h-10 flex items-center justify-center rotate-[10deg]"
                 >
-                    ?
+                    <span className="font-['Permanent_Marker'] text-2xl">?</span>
                 </motion.button>
             </div>
 
@@ -120,13 +116,16 @@ export const StartScreen = ({
                 </div>
 
                 {/* Dataset Selector */}
-                <div className="space-y-2">
-                    <label className="text-lg font-black uppercase tracking-wider block text-center">Colección</label>
+                <div className={`space-y-2 transition-opacity ${selectedMode === 'daily' ? 'opacity-50 pointer-events-none' : ''}`}>
+                    <label className="text-lg font-black uppercase tracking-wider block text-center">
+                        Colección {selectedMode === 'daily' && <span className="text-[10px] lowercase font-normal">(desactivados en diario)</span>}
+                    </label>
                     <div className="grid grid-cols-3 gap-2">
                         {(['all', 'current', 'historic'] as Dataset[]).map((ds) => (
                             <button
                                 key={ds}
                                 onClick={() => setSelectedDataset(ds)}
+                                tabIndex={selectedMode === 'daily' ? -1 : 0}
                                 className={`p-2 text-sm font-bold border-2 border-neo-black transition-all capitalize ${selectedDataset === ds
                                     ? 'bg-neo-green text-white shadow-neo-sm translate-x-[1px] translate-y-[1px]'
                                     : 'bg-white hover:bg-gray-50'
@@ -139,10 +138,13 @@ export const StartScreen = ({
                 </div>
 
                 {/* Filters */}
-                <div className="space-y-2">
-                    <label className="text-lg font-black uppercase tracking-wider block text-center">Filtros</label>
+                <div className={`space-y-2 transition-opacity ${selectedMode === 'daily' ? 'opacity-50 pointer-events-none' : ''}`}>
+                    <label className="text-lg font-black uppercase tracking-wider block text-center">
+                        Filtros {selectedMode === 'daily' && <span className="text-[10px] lowercase font-normal">(desactivados en diario)</span>}
+                    </label>
                     <button
                         onClick={onOpenCountrySelector}
+                        tabIndex={selectedMode === 'daily' ? -1 : 0}
                         className="w-full p-4 flex items-center justify-between border-2 border-neo-black bg-white hover:bg-gray-50 transition-all font-bold"
                     >
                         <span>
@@ -165,7 +167,7 @@ export const StartScreen = ({
                                 </p>
                             </div>
                             <button
-                                onClick={() => onStartGame('daily', selectedDifficulty, selectedDataset)}
+                                onClick={() => onStartGame('daily', selectedDifficulty, selectedDataset, true)}
                                 className="w-full py-4 bg-neo-blue text-white font-black text-2xl uppercase border-[3px] border-neo-black shadow-neo hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-neo-sm active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all"
                             >
                                 VER RESULTADOS

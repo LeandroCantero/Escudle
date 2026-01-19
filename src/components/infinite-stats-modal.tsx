@@ -11,6 +11,7 @@ interface InfiniteStatsModalProps {
     isNewHighScore: boolean;
     onPlayAgain: () => void;
     targetLogo: Logo | null;
+    difficulty: string;
 }
 
 export const InfiniteStatsModal = ({
@@ -20,8 +21,18 @@ export const InfiniteStatsModal = ({
     currentScore,
     isNewHighScore,
     onPlayAgain,
-    targetLogo
+    targetLogo,
+    difficulty
 }: InfiniteStatsModalProps) => {
+
+    const getDifficultyLabel = (d: string) => {
+        switch (d) {
+            case 'easy': return 'Fácil';
+            case 'medium': return 'Medio';
+            case 'hard': return 'Difícil';
+            default: return d;
+        }
+    };
 
     return (
         <AnimatePresence>
@@ -59,7 +70,9 @@ export const InfiniteStatsModal = ({
 
                         <div className="p-8 space-y-6">
                             <div className="text-center pt-4">
-                                <h2 className="text-2xl font-black uppercase tracking-tighter text-neo-black mb-1">Modo Infinito</h2>
+                                <h2 className="text-2xl font-black uppercase tracking-tighter text-neo-black mb-1">
+                                    Modo Infinito <span className="text-base text-neo-blue block">({getDifficultyLabel(difficulty)})</span>
+                                </h2>
                                 <p className="text-neo-purple font-bold">Resumen de sesión</p>
                             </div>
 

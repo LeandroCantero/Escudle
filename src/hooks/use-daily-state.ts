@@ -26,8 +26,8 @@ export interface DailyStats {
     };
 }
 
-const DAILY_STATE_KEY = 'escudle_daily_state';
-const DAILY_STATS_KEY = 'escudle_daily_stats';
+const DAILY_STATE_KEY_PREFIX = 'escudle_daily_state_';
+const DAILY_STATS_KEY_PREFIX = 'escudle_daily_stats_';
 
 const defaultStats: DailyStats = {
     currentStreak: 0,
@@ -43,7 +43,7 @@ const defaultStats: DailyStats = {
     gameState: 'playing'
 };
 
-export function useDailyState() {
+export function useDailyState(selectedDifficulty: 'easy' | 'medium' | 'hard' = 'easy') {
     const [dailyState, setDailyState] = useState<DailyState | null>(null);
     const [stats, setStats] = useState<DailyStats>(defaultStats);
     const [timeUntilNext, setTimeUntilNext] = useState<number>(0);
@@ -51,28 +51,35 @@ export function useDailyState() {
     // Get today's date string in UTC
     const getTodayStr = () => new Date().toISOString().split('T')[0];
 
-    // Load state and stats on mount
-    useEffect(() => {
-        const savedStats = localStorage.getItem(DAILY_STATS_KEY);
-        if (savedStats) {
-            setStats(JSON.parse(savedStats));
-        }
+    const getDailyStateKey = useCallback((diff: string) => `${DAILY_STATE_KEY_PREFIX}${diff}`, []);
+    const getDailyStatsKey = useCallback((diff: string) => `${DAILY_STATS_KEY_PREFIX}${diff}`, []);
 
-        const savedState = localStorage.getItem(DAILY_STATE_KEY);
+    // Load state when difficulty changes or on mount
+    useEffect(() => {
+        const today = getTodayStr();
+        const savedState = localStorage.getItem(getDailyStateKey(selectedDifficulty));
+
         if (savedState) {
             const parsed = JSON.parse(savedState) as DailyState;
-            const today = getTodayStr();
-
-            // Only keep state if it's from today
             if (parsed.date === today) {
                 setDailyState(parsed);
             } else {
-                // If it's a new day and was NOT completed yesterday, streak might reset
-                // But we handle streak reset only when they actually play the next game
-                // or when we detect a gap in days.
+                setDailyState(null);
             }
+        } else {
+            setDailyState(null);
         }
-    }, []);
+    }, [selectedDifficulty, getDailyStateKey]);
+
+    // Load stats when difficulty changes or on mount
+    useEffect(() => {
+        const savedStats = localStorage.getItem(getDailyStatsKey(selectedDifficulty));
+        if (savedStats) {
+            setStats(JSON.parse(savedStats));
+        } else {
+            setStats(defaultStats);
+        }
+    }, [selectedDifficulty, getDailyStatsKey]);
 
     // Update countdown timer
     useEffect(() => {
@@ -89,8 +96,8 @@ export function useDailyState() {
 
     const saveState = useCallback((state: DailyState) => {
         setDailyState(state);
-        localStorage.setItem(DAILY_STATE_KEY, JSON.stringify(state));
-    }, []);
+        localStorage.setItem(getDailyStateKey(state.difficulty), JSON.stringify(state));
+    }, [getDailyStateKey]);
 
     const updateStats = useCallback((won: boolean, numGuesses: number, date: string) => {
         setStats(prev => {
@@ -123,12 +130,12 @@ export function useDailyState() {
             }
 
             newStats.lastPlayedDate = date;
-            localStorage.setItem(DAILY_STATS_KEY, JSON.stringify(newStats));
+            localStorage.setItem(getDailyStatsKey(selectedDifficulty), JSON.stringify(newStats));
             return newStats;
         });
-    }, []);
+    }, [selectedDifficulty, getDailyStatsKey]);
 
-    const initDailyGame = useCallback((logo: Logo, difficulty: any, dataset: any) => {
+    const initDailyGame = useCallback((logo: Logo, difficulty: 'easy' | 'medium' | 'hard', dataset: any) => {
         const today = getTodayStr();
         const newState: DailyState = {
             date: today,
@@ -151,15 +158,19 @@ export function useDailyState() {
         saveState(newState);
     }, [dailyState, saveState]);
 
-    const completeGame = useCallback((won: boolean) => {
+    const completeGame = useCallback((won: boolean, finalGuesses?: string[]) => {
         if (!dailyState) return;
+
+        const currentGuesses = finalGuesses || dailyState.guesses;
+
         const newState: DailyState = {
             ...dailyState,
+            guesses: currentGuesses,
             gameState: won ? 'won' : 'lost',
             completedAt: Date.now()
         };
         saveState(newState);
-        updateStats(won, newState.guesses.length, dailyState.date);
+        updateStats(won, currentGuesses.length, dailyState.date);
     }, [dailyState, saveState, updateStats]);
 
     return {

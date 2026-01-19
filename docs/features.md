@@ -1,5 +1,5 @@
 ---
-last_update: 15-01-2026
+last_update: 19-01-2026
 context: Registro de Features e Ideas (Backlog)
 purpose: Listado centralizado de funcionalidades implementadas e ideas para desarrollo futuro (DRY alignment)
 ---
@@ -27,15 +27,19 @@ Este documento centraliza todas las funcionalidades del proyecto, separando lo q
 - **Modales Informativos**: Guía de "Cómo Jugar" integrada.
 - **Filtro por País (Multi-selección)**: Modal con buscador y checkboxes para filtrar escudos por uno o múltiples países.
 - **Responsive Design**: Optimizado para dispositivos móviles y desktop.
+- **Iconografía Moderna**: Reemplazo de emojis por iconos de Lucide React para una estética más profesional y coherente.
+- **Auto-Open Stats**: El modal de estadísticas se abre automáticamente tras finalizar una partida diaria.
+- **Silhouette Rendering Fix**: Mejora en el renderizado de siluetas (dificultad media y difícil) usando filtros CSS para eliminar líneas internas.
 
 ### Modos de Juego
-- **Modo Diario (Daily Challenge)**: Un escudo único por día. (Base implementada, falta ranking global).
-- **Modo Infinito**: Juego continuo sin límites.
+- **Modo Diario (Daily Challenge)**: Un escudo único por día con persistencia total de intentos y estado, incluso al cambiar de dificultad o recargar la página.
+- **Modo Infinito**: Juego continuo sin límites. **[NUEVO]** Sistema de Puntos y High Score persistente.
 - **Modo Práctica**: Jugar sin afectar estadísticas.
 - **Dificultad**: Fácil, Medio, Difícil.
 
 ### Stats & Social
 - **Estadísticas**: Win rate, Rachas (Streaks), Distribución de intentos.
+- **Stats Modo Infinito**: Score de sesión y Récord Personal (High Score) guardado localmente.
 - **Compartir Resultados**: Copiar al portapapeles con emojis (estilo Wordle).
 - **Cuenta Regresiva**: Timer para el próximo escudo diario.
 
@@ -127,7 +131,7 @@ Este documento centraliza todas las funcionalidades del proyecto, separando lo q
   - **Sistema de Comentarios**: Moderación y community management.
 - **🏆 Gamificación Global**
   - **Ranking por Categorías**: Leaderboards complejos y segmentados.
-  - **Temporadas (Seasons)**: Reset masivo y versionado de datos.
+- **Temporadas (Seasons)**: Reset masivo y versionado de datos.
 - **🔍 Búsqueda Avanzada**
   - **Búsqueda Inversa**: Reconocimiento de imágenes (ML/AI).
   - **Favoritos Cloud**: Sincronización multi-dispositivo.
@@ -144,4 +148,6 @@ Este documento centraliza todas las funcionalidades del proyecto, separando lo q
 ---
 
 ## Decision Log (Feature Level)
+- **19-01-2026**: Implementación de sistema de puntaje y persistencia para Modo Infinito. Feedback inmediato y modal de estadísticas. Se corrigió la persistencia del Modo Diario al cambiar dificultad y se automatizó la apertura de estadísticas.
+- **19-01-2026**: Reemplazo global de emojis por iconos de Lucide y mejora en el renderizado de siluetas de escudos.
 - **14-01-2026**: Centralización de features y roadmap en este documento para seguir el principio DRY en la documentación técnica.

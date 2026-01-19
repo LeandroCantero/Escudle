@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { XCircle } from 'lucide-react';
+import { Gamepad2, Lightbulb, Trophy, XCircle, Zap } from 'lucide-react';
 
 interface HelpModalProps {
     isOpen: boolean;
@@ -75,7 +75,9 @@ export const HelpModal = ({ isOpen, onClose, isInGame = false }: HelpModalProps)
 
                                 <div className="space-y-6 text-neo-black font-bold">
                                     <div className="bg-neo-blue p-4 rounded-none border-4 border-neo-black shadow-neo-sm">
-                                        <h3 className="font-black uppercase text-base mb-2 px-2 bg-neo-black text-white inline-block">🎮 Modos de Juego</h3>
+                                        <h3 className="font-black uppercase text-base mb-2 px-2 bg-neo-black text-white inline-flex items-center gap-2">
+                                            <Gamepad2 size={16} /> Modos de Juego
+                                        </h3>
                                         <ul className="text-sm space-y-1">
                                             <li><span className="bg-white px-1">Diario:</span> Mismo escudo para todos cada día</li>
                                             <li><span className="bg-white px-1">Infinito:</span> Jugás hasta errar, ¡cuidá tu racha!</li>
@@ -84,7 +86,9 @@ export const HelpModal = ({ isOpen, onClose, isInGame = false }: HelpModalProps)
                                     </div>
 
                                     <div className="bg-neo-orange p-4 rounded-none border-4 border-neo-black shadow-neo-sm">
-                                        <h3 className="font-black uppercase text-base mb-2 px-2 bg-neo-black text-white inline-block">⚡ Dificultad</h3>
+                                        <h3 className="font-black uppercase text-base mb-2 px-2 bg-neo-black text-white inline-flex items-center gap-2">
+                                            <Zap size={16} /> Dificultad
+                                        </h3>
                                         <ul className="text-sm space-y-1">
                                             <li><span className="bg-white px-1">Fácil:</span> Escudo visible completo</li>
                                             <li><span className="bg-white px-1">Medio:</span> Silueta que se revela con errores</li>
@@ -93,7 +97,9 @@ export const HelpModal = ({ isOpen, onClose, isInGame = false }: HelpModalProps)
                                     </div>
 
                                     <div className="bg-neo-green p-4 rounded-none border-4 border-neo-black shadow-neo-sm">
-                                        <h3 className="font-black uppercase text-base mb-2 px-2 bg-neo-black text-white inline-block">🏆 Colección</h3>
+                                        <h3 className="font-black uppercase text-base mb-2 px-2 bg-neo-black text-white inline-flex items-center gap-2">
+                                            <Trophy size={16} /> Colección
+                                        </h3>
                                         <ul className="text-sm space-y-1">
                                             <li><span className="bg-white px-1">Todos:</span> Actuales + Retros</li>
                                             <li><span className="bg-white px-1">Actuales:</span> Escudos vigentes</li>
@@ -101,8 +107,9 @@ export const HelpModal = ({ isOpen, onClose, isInGame = false }: HelpModalProps)
                                         </ul>
                                     </div>
 
-                                    <p className="text-center text-sm font-black bg-neo-yellow p-3 rounded-none border-4 border-neo-black shadow-neo-sm rotate-1">
-                                        💡 Podés filtrar por países para jugar solo con tus ligas favoritas
+                                    <p className="text-center text-sm font-black bg-neo-yellow p-3 rounded-none border-4 border-neo-black shadow-neo-sm rotate-1 flex items-center justify-center gap-2">
+                                        <Lightbulb size={18} className="shrink-0" />
+                                        <span>Podés filtrar por países para jugar solo con tus ligas favoritas</span>
                                     </p>
                                 </div>
                             </>

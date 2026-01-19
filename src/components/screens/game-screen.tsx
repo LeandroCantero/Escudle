@@ -109,7 +109,7 @@ export const GameScreen = ({
             {gameState !== 'playing' && mode === 'daily' && (
                 <div className="w-full space-y-4 pt-4">
                     <p className="text-center font-bold text-neo-black bg-neo-white border-2 border-neo-black p-4 rounded-xl shadow-neo-sm">
-                        ¡Vuelve mañana para el próximo escudo!
+                        ¡Volvé mañana para el próximo escudo!
                     </p>
                 </div>
             )}

@@ -1,5 +1,5 @@
 ---
-last_update: 14-01-2026
+last_update: 19-01-2026
 context: Sistema de Diseño Neobrutalism
 purpose: Documentación del design system, paleta de colores, componentes reutilizables y tokens de diseño
 ---
@@ -275,9 +275,15 @@ whileTap={{ x: 2, y: 2 }}
 "bg-neo-success border-neo-black text-neo-black shadow-neo-sm"
 ```
 
-**Iconos:**
+**Iconos (Lucide React):**
 - ✅ Correcto: `<CheckCircle2 className="fill-neo-success" />`
 - ❌ Incorrecto: `<XCircle className="fill-neo-orange" />`
+- ❓ Ayuda: `<HelpCircle />`
+- 🎮 Modo Juego: `<Gamepad2 />`
+- ⚡ Racha/Infinite: `<Zap />`
+- 🏆 Récord/Trophy: `<Trophy />`
+- 💡 Tips/Context: `<Lightbulb />`
+- 📊 Stats: `<BarChart2 />`
 
 ### Estados del Logo (Modos)
 
@@ -285,8 +291,8 @@ whileTap={{ x: 2, y: 2 }}
 // Modo Fácil (visible)
 "brightness-100 blur-0 grayscale-0"
 
-// Modo Difícil (oculto)
-"brightness-0 opacity-10 blur-md grayscale"
+// Modo Difícil (oculto / silueta)
+"brightness-0" // Se complementa con drop-shadow en el filter para evitar líneas internas de SVG/PNG.
 ```
 
 **Overlay**: Signo de interrogación gigante (`text-9xl`) en modo difícil.
@@ -313,6 +319,21 @@ whileTap={{ x: 2, y: 2 }}
 - Evita confusión con colores de Tailwind (`blue-500` vs `neo-blue`)
 - Permite cambiar toda la paleta desde un solo lugar
 - Semántica clara: "neo" = neobrutalism
+
+### 19-01-2026: Reemplazo de Emojis por Lucide React
+**Decisión**: Migrar todos los emojis informativos a iconos vectoriales de Lucide.
+
+**Razón**: 
+- Coherencia visual con el resto del design system.
+- Mejor escalado y control de color (stroke/fill).
+- Evita variaciones de renderizado entre sistemas operativos (Windows vs iOS/Android).
+
+### 19-01-2026: Silhouette Rendering (Filter vs Mask)
+**Decisión**: Usar `filter: brightness(0)` y `drop-shadow` en lugar de `mask-image`.
+
+**Razón**: 
+- `mask-image` revelaba líneas internas de los escudos en algunos navegadores.
+- `brightness(0)` crea un negro absoluto y sólido, perfecto para el modo difícil/silueta.
 
 ### 13-01-2026: Background Pattern de Fútbol
 **Decisión**: Usar `radial-gradient` con puntos negros sobre verde.

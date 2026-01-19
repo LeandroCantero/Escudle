@@ -28,25 +28,26 @@ export function useGameLogic() {
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [showHelp, setShowHelp] = useState(false);
     const [showInfiniteStats, setShowInfiniteStats] = useState(false);
+    const [showDailyStats, setShowDailyStats] = useState(false);
 
     const {
-        dailyState,
         stats: dailyStats,
         timeUntilNext,
         initDailyGame,
         recordGuess,
         completeGame,
         isTodayDone
-    } = useDailyState();
+    } = useDailyState(difficulty);
 
     const {
         infiniteStats,
         currentSession: infiniteSession,
         resetSession: resetInfiniteSession,
         incrementScore: incrementInfiniteScore,
+        addPlayedLogo,
         endSession: endInfiniteSession,
         isNewHighScore: infiniteNewHighScore
-    } = useInfiniteState();
+    } = useInfiniteState(difficulty);
 
     const availableCountries = useMemo<{ name: string, count: number }[]>(() => {
         const counts: Record<string, number> = {};
@@ -81,25 +82,28 @@ export function useGameLogic() {
         if (newDataset) setDataset(newDataset);
 
         let pool = allLogos;
-        if (activeDataset === 'current') pool = pool.filter(l => !l.isHistorical);
-        if (activeDataset === 'historic') pool = pool.filter(l => l.isHistorical);
-        if (selectedCountries.length > 0) {
-            pool = pool.filter(l => selectedCountries.includes(l.country));
+        if (activeGameMode === 'daily') {
+            pool = allLogos;
+        } else {
+            if (activeDataset === 'current') pool = pool.filter(l => !l.isHistorical);
+            if (activeDataset === 'historic') pool = pool.filter(l => l.isHistorical);
+            if (selectedCountries.length > 0) {
+                pool = pool.filter(l => selectedCountries.includes(l.country));
+            }
         }
 
         if (pool.length === 0) {
-            console.warn(`No logos for the current configuration`);
+            console.warn(`No logos for current configuration`);
             return;
         }
 
         const today = new Date().toISOString().split('T')[0];
-
-        // Seeded selection for daily
         let seededTarget: Logo | null = null;
         if (activeGameMode === 'daily') {
+            const seedString = `${today}-${activeDifficulty}`;
             let hash = 0;
-            for (let i = 0; i < today.length; i++) {
-                hash = ((hash << 5) - hash) + today.charCodeAt(i);
+            for (let i = 0; i < seedString.length; i++) {
+                hash = ((hash << 5) - hash) + seedString.charCodeAt(i);
                 hash |= 0;
             }
             const seed = Math.abs(hash);
@@ -107,28 +111,59 @@ export function useGameLogic() {
             seededTarget = pool[index];
         }
 
+        // Common Resets
+        setInputValue('');
+        setShowSuggestions(false);
+
         if (activeGameMode === 'daily') {
-            if (dailyState && dailyState.date === today) {
-                // Restore saved game
-                const savedTarget = allLogos.find(l => l.id.toString() === dailyState.logoId);
-                setTargetLogo(savedTarget || seededTarget);
-                setGuesses(dailyState.guesses);
-                setGameState(dailyState.gameState);
-                setDifficulty(dailyState.difficulty);
-                setDataset(dailyState.dataset);
-                setInputValue('');
-                setShowSuggestions(false);
-                return;
+            const stateKey = `escudle_daily_state_${activeDifficulty}`;
+            const savedStateStr = localStorage.getItem(stateKey);
+            let restored = false;
+
+            if (savedStateStr) {
+                try {
+                    const savedState = JSON.parse(savedStateStr);
+                    if (savedState.date === today) {
+                        // Restore saved game
+                        const savedTarget = allLogos.find(l => l.id.toString() === savedState.logoId);
+                        setTargetLogo(savedTarget || seededTarget);
+                        setGuesses(savedState.guesses);
+                        setGameState(savedState.gameState);
+                        setDifficulty(savedState.difficulty);
+                        setDataset(savedState.dataset);
+                        restored = true;
+                    }
+                } catch (e) {
+                    console.error("Error parsing daily state", e);
+                }
             }
 
-            // Start fresh daily game
-            setTargetLogo(seededTarget);
-            initDailyGame(seededTarget!, activeDifficulty, activeDataset);
+            if (!restored) {
+                // Start fresh daily game
+                setTargetLogo(seededTarget);
+                setGuesses([]);
+                setGameState('playing');
+                initDailyGame(seededTarget!, activeDifficulty, activeDataset);
+            }
         } else {
             // Infinite / Practice
-            setTargetLogo(pool[Math.floor(Math.random() * pool.length)]);
+            let gamePool = pool;
+            if (activeGameMode === 'infinite') {
+                const playedIds = infiniteSession.playedLogos;
+                const availableLogos = pool.filter(l => !playedIds.includes(l.id.toString()));
 
-            // Handle Infinite Session
+                if (availableLogos.length > 0) {
+                    gamePool = availableLogos;
+                } else {
+                    resetInfiniteSession();
+                    gamePool = pool;
+                }
+            }
+
+            setTargetLogo(gamePool[Math.floor(Math.random() * gamePool.length)]);
+            setGuesses([]);
+            setGameState('playing');
+
             if (activeGameMode === 'infinite') {
                 const isManualRestart = newGameMode !== undefined;
                 const isRetryAfterLoss = gameState === 'lost';
@@ -138,12 +173,7 @@ export function useGameLogic() {
                 }
             }
         }
-
-        setGuesses([]);
-        setInputValue('');
-        setGameState('playing');
-        setShowSuggestions(false);
-    }, [allLogos, gameMode, difficulty, dataset, selectedCountries, dailyState, initDailyGame, gameState, resetInfiniteSession]);
+    }, [allLogos, gameMode, difficulty, dataset, selectedCountries, initDailyGame, gameState, infiniteSession, resetInfiniteSession]);
 
     useEffect(() => {
         fetch('/data/logos.json')
@@ -175,17 +205,26 @@ export function useGameLogic() {
 
         if (isWin) {
             setGameState('won');
-            if (gameMode === 'daily') completeGame(true);
-            if (gameMode === 'infinite') incrementInfiniteScore();
+            if (gameMode === 'daily') {
+                completeGame(true, newGuesses);
+                setTimeout(() => setShowDailyStats(true), 1500); // Small delay for user to see result
+            }
+            if (gameMode === 'infinite') {
+                incrementInfiniteScore();
+                addPlayedLogo(targetLogo.id.toString());
+            }
         } else if (newGuesses.length >= MAX_ATTEMPTS) {
             setGameState('lost');
-            if (gameMode === 'daily') completeGame(false);
+            if (gameMode === 'daily') {
+                completeGame(false, newGuesses);
+                setTimeout(() => setShowDailyStats(true), 1500);
+            }
             if (gameMode === 'infinite') {
                 endInfiniteSession(infiniteSession.score);
                 setShowInfiniteStats(true);
             }
         }
-    }, [gameState, guesses, targetLogo, gameMode, recordGuess, completeGame, infiniteSession, incrementInfiniteScore, endInfiniteSession]);
+    }, [gameState, guesses, targetLogo, gameMode, recordGuess, completeGame, infiniteSession, incrementInfiniteScore, endInfiniteSession, addPlayedLogo, setShowDailyStats, setShowInfiniteStats]);
 
     const exitGame = useCallback(() => {
         setGameState('not_started');
@@ -220,11 +259,12 @@ export function useGameLogic() {
         dailyStats,
         timeUntilNext,
         isTodayDone,
-        dailyState,
         infiniteStats,
         infiniteSession,
         showInfiniteStats,
         setShowInfiniteStats,
-        infiniteNewHighScore
+        infiniteNewHighScore,
+        showDailyStats,
+        setShowDailyStats
     };
 }

@@ -67,25 +67,21 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
                         />
                     )}
 
-                    {/* HARD MODE: Perfect Silhouette using Masking */}
+                    {/* HARD MODE: Perfect Silhouette using Filters */}
                     {difficulty === 'hard' && (
                         <div className="relative w-48 h-48 flex items-center justify-center">
                             {/* The Silhouette Layer */}
-                            <div
+                            <img
+                                src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
+                                alt="Silhouette"
                                 className={cn(
-                                    "absolute inset-0 bg-neo-black pointer-events-none select-none transition-opacity duration-700",
+                                    "absolute inset-0 w-full h-full object-contain pointer-events-none select-none transition-opacity duration-700",
                                     (gameState === 'won' || gameState === 'lost') ? "opacity-0" : "opacity-100 blur-sm"
                                 )}
                                 style={{
-                                    maskImage: `url(${targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl})`,
-                                    WebkitMaskImage: `url(${targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl})`,
-                                    maskSize: 'contain',
-                                    WebkitMaskSize: 'contain',
-                                    maskRepeat: 'no-repeat',
-                                    WebkitMaskRepeat: 'no-repeat',
-                                    maskPosition: 'center',
-                                    WebkitMaskPosition: 'center'
+                                    filter: 'brightness(0) drop-shadow(0 0 1px #000) drop-shadow(0 0 1px #000)'
                                 }}
+                                draggable={false}
                             />
                             {/* The Result Layer (Colors) */}
                             <img
@@ -103,22 +99,18 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
                     {/* MEDIUM MODE: Silhouette Base + Grid Reveal */}
                     {difficulty === 'medium' && (
                         <div className="relative w-48 h-48">
-                            {/* Base Layer: Perfect Silhouette using Masking */}
-                            <div
+                            {/* Base Layer: Perfect Silhouette using Filters */}
+                            <img
+                                src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
+                                alt="Silhouette Base"
                                 className={cn(
-                                    "absolute inset-0 bg-neo-black pointer-events-none select-none transition-opacity duration-700",
+                                    "absolute inset-0 w-full h-full object-contain pointer-events-none select-none transition-opacity duration-700",
                                     (gameState === 'won' || gameState === 'lost') ? "opacity-0" : "opacity-100"
                                 )}
                                 style={{
-                                    maskImage: `url(${targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl})`,
-                                    WebkitMaskImage: `url(${targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl})`,
-                                    maskSize: 'contain',
-                                    WebkitMaskSize: 'contain',
-                                    maskRepeat: 'no-repeat',
-                                    WebkitMaskRepeat: 'no-repeat',
-                                    maskPosition: 'center',
-                                    WebkitMaskPosition: 'center'
+                                    filter: 'brightness(0) drop-shadow(0 0 1px #000) drop-shadow(0 0 1px #000)'
                                 }}
+                                draggable={false}
                             />
 
                             {/* Reveal Layer: Grid of Color segments */}

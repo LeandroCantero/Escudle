@@ -1,5 +1,5 @@
 ---
-last_update: 14-01-2026
+last_update: 19-01-2026
 context: Arquitectura del Proyecto Escudle
 purpose: Documento maestro que define la arquitectura modular, stack tecnológico y estructura siguiendo los Global Engineering Standards
 ---
@@ -55,7 +55,10 @@ Escudle/
 │   │   ├── guess-list.tsx
 │   │   └── game-footer.tsx
 │   ├── hooks/
-│   │   ├── use-game-logic.ts   # Lógica central del estado del juego
+│   ├── hooks/
+│   │   ├── use-daily-state.ts  # Lógica específica del modo diario
+│   │   ├── use-game-logic.ts   # Orquestador del estado del juego
+│   │   ├── use-infinite-state.ts # Lógica del modo infinito (score, persistence)
 │   │   └── use-logo-search.ts  # Hook de búsqueda con Fuse.js
 │   ├── utils/
 │   │   └── cn.ts               # Utilidad de Tailwind merge
@@ -84,9 +87,10 @@ Input onChange → setInputValue → useLogoSearch (Fuse.js) → suggestions →
 ### 3. Guess Submission
 ```
 handleGuess(name) → agregar a guesses[] → comparar con targetLogo.name → 
-  → si match: gameState='won' 
-  → si >= 6 intentos: gameState='lost'
-  → else: continuar
+  → si match: gameState='won' → (Daily: persistir | Infinite: +score, add played)
+  → si >= 6 intentos: gameState='lost' → (Daily: persistir | Infinite: reset session)
+  → else: continuar (y persistir intento en Daily)
+  → En victoria/derrota diaria: Apertura automática de modal de estadísticas tras 1.5s.
 ```
 
 ### 4. Scraping (Offline, no en runtime)
@@ -104,11 +108,22 @@ npm run download-logos → scraper-download.js → fetch sitemap XML →
 - Renderizar los componentes principales (`GameHeader`, `LogoDisplay`, etc.).
 
 ### `use-game-logic.ts`
-Hook central que maneja todo el estado del juego:
-- Modo de juego (easy/hard)
-- Selección de logo target
-- Registro de intentos (guesses)
-- Estado de victoria/derrota (gameState)
+Hook orquestador que unifica la lógica de los modos de juego:
+- Gestiona el estado compartido (`gameMode`, `difficulty`, `targetLogo`, `guesses`).
+- Delega la persistencia y lógica específica a los hooks hijos (`use-daily-state` y `use-infinite-state`).
+- Expone una API unificada para la UI.
+
+### `use-daily-state.ts`
+Maneja la lógica exclusiva del Modo Diario:
+- Persistencia del estado diario en LocalStorage.
+- Cálculo de semilla basada en fecha y dificultad.
+- Control de "ya jugado hoy".
+
+### `use-infinite-state.ts`
+Maneja la lógica del Modo Infinito:
+- Puntuación de sesión (Racha actual).
+- Persistencia del High Score (Récord personal) por cada nivel de dificultad.
+- Reset de sesión al perder.
 
 ### `use-logo-search.ts`
 Hook puro que encapsula la lógica de búsqueda fuzzy. Ver [busqueda-logos.md](./busqueda-logos.md) para detalles.
@@ -151,6 +166,15 @@ interface Logo {
 - ❌ Renderizar UI
 
 ## Decision Log
+
+### 19-01-2026: Refactor de Estado (Hooks Split)
+- **Cambio**: Extracción de lógica específica a `use-daily-state` y `use-infinite-state`.
+- **Razón**: `use-game-logic.ts` estaba creciendo demasiado (Violación de SRP/Complexity). Mejorar mantenibilidad y separar responsabilidades de persistencia y scoring.
+
+### 19-01-2026: Persistencia y Stats por Dificultad
+- **Cambio**: El Modo Infinito ahora separa estadísticas por dificultad (`easy`, `medium`, `hard`) usando keys únicas en LocalStorage.
+- **Cambio**: El Modo Diario ahora lee directamente de LocalStorage al cambiar de dificultad para asegurar que no se pierdan intentos.
+- **Cambio**: Adición de `showDailyStats` y `showInfiniteStats` al orquestador `useGameLogic` para disparar modales automáticamente tras victoria/derrota.
 
 ### 14-01-2026: Arquitectura Inicial
 - Decidido: SPA sin backend para simplicidad y hosting gratuito

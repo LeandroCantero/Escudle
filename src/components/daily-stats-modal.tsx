@@ -8,9 +8,11 @@ interface DailyStatsModalProps {
     onClose: () => void;
     stats: DailyStats;
     timeUntilNext: number;
+    difficulty: string;
+    onNextDifficulty?: () => void;
 }
 
-export const DailyStatsModal = ({ isOpen, onClose, stats, timeUntilNext }: DailyStatsModalProps) => {
+export const DailyStatsModal = ({ isOpen, onClose, stats, timeUntilNext, difficulty, onNextDifficulty }: DailyStatsModalProps) => {
     const [showToast, setShowToast] = useState(false);
 
     useEffect(() => {
@@ -30,6 +32,15 @@ export const DailyStatsModal = ({ isOpen, onClose, stats, timeUntilNext }: Daily
     const winRate = stats.totalPlayed > 0 ? Math.round((stats.totalWins / stats.totalPlayed) * 100) : 0;
 
     const maxDistribution = Math.max(...Object.values(stats.guessDistribution), 1);
+
+    const getDifficultyLabel = (d: string) => {
+        switch (d) {
+            case 'easy': return 'Fácil';
+            case 'medium': return 'Medio';
+            case 'hard': return 'Difícil';
+            default: return d;
+        }
+    };
 
     return (
         <AnimatePresence>
@@ -58,7 +69,9 @@ export const DailyStatsModal = ({ isOpen, onClose, stats, timeUntilNext }: Daily
 
                         <div className="p-8 space-y-8">
                             <div className="text-center">
-                                <h2 className="text-3xl font-black uppercase tracking-tighter text-neo-black">Estadísticas</h2>
+                                <h2 className="text-3xl font-black uppercase tracking-tighter text-neo-black">
+                                    Estadísticas <span className="text-xl block text-neo-blue">({getDifficultyLabel(difficulty)})</span>
+                                </h2>
                             </div>
 
                             {/* Summary Stats */}
@@ -112,33 +125,44 @@ export const DailyStatsModal = ({ isOpen, onClose, stats, timeUntilNext }: Daily
                                     <p className="text-[10px] font-bold uppercase opacity-60">Siguiente Escudo</p>
                                     <p className="text-xl font-black font-mono">{formatTime(timeUntilNext)}</p>
                                 </div>
-                                <button
-                                    onClick={() => {
-                                        // Calculate game number based on a launch date (Day 1)
-                                        // You can set VITE_LAUNCH_DATE in your .env file (e.g., 2026-01-15)
-                                        const launchDateStr = import.meta.env.VITE_LAUNCH_DATE || '2026-01-15';
-                                        const startDate = new Date(launchDateStr).getTime();
-                                        const today = new Date().setHours(0, 0, 0, 0);
-                                        const gameNumber = Math.max(1, Math.floor((today - startDate) / (1000 * 60 * 60 * 24)) + 1);
+                                <div className="flex flex-col gap-2">
+                                    <button
+                                        onClick={() => {
+                                            // Calculate game number based on a launch date (Day 1)
+                                            // You can set VITE_LAUNCH_DATE in your .env file (e.g., 2026-01-15)
+                                            const launchDateStr = import.meta.env.VITE_LAUNCH_DATE || '2026-01-15';
+                                            const startDate = new Date(launchDateStr).getTime();
+                                            const today = new Date().setHours(0, 0, 0, 0);
+                                            const gameNumber = Math.max(1, Math.floor((today - startDate) / (1000 * 60 * 60 * 24)) + 1);
 
-                                        const target = stats.targetName.toLowerCase();
-                                        const emojiGrid = stats.lastGuesses.map(g =>
-                                            g.toLowerCase() === target ? '🟩' : '⬜'
-                                        ).join('\n');
+                                            const target = stats.targetName.toLowerCase();
+                                            const emojiGrid = stats.lastGuesses.map(g =>
+                                                g.toLowerCase() === target ? '🟩' : '⬜'
+                                            ).join('\n');
 
-                                        const result = stats.gameState === 'won' ? `${stats.lastGuesses.length}/6` : 'X/6';
-                                        const text = `Escudle #${gameNumber} ${result}\n${emojiGrid}\n\nhttps://dopartis.com/escudle`;
+                                            const result = stats.gameState === 'won' ? `${stats.lastGuesses.length}/6` : 'X/6';
+                                            const text = `Escudle #${gameNumber} ${result}\n${emojiGrid}\n\nhttps://dopartis.com/escudle`;
 
-                                        navigator.clipboard.writeText(text).then(() => {
-                                            setShowToast(true);
-                                        }).catch(() => {
-                                            // Fallback
-                                        });
-                                    }}
-                                    className="bg-neo-green text-white font-black py-3 rounded-xl border-2 border-neo-black shadow-neo-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all"
-                                >
-                                    COMPARTIR
-                                </button>
+                                            navigator.clipboard.writeText(text).then(() => {
+                                                setShowToast(true);
+                                            }).catch(() => {
+                                                // Fallback
+                                            });
+                                        }}
+                                        className="bg-neo-green text-white font-black py-3 rounded-xl border-2 border-neo-black shadow-neo-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all"
+                                    >
+                                        COMPARTIR
+                                    </button>
+
+                                    {difficulty !== 'hard' && onNextDifficulty && (
+                                        <button
+                                            onClick={onNextDifficulty}
+                                            className="bg-neo-yellow text-neo-black font-black py-3 rounded-xl border-2 border-neo-black shadow-neo-sm hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all flex items-center justify-center gap-2"
+                                        >
+                                            SIGUIENTE NIVEL <Flame size={20} />
+                                        </button>
+                                    )}
+                                </div>
                             </div>
 
                             {/* Custom Toast Notification - Inside modal, positioned over button */}
