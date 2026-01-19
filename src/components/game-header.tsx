@@ -1,24 +1,15 @@
 import { motion } from 'framer-motion';
 import { BarChart2, LogOut } from 'lucide-react';
-import { GameMode } from '../hooks/use-game-logic';
 
 interface GameHeaderProps {
-    mode: GameMode;
-    showHelp: boolean;
     setShowHelp: (show: boolean) => void;
-    startNewGame: (newMode?: GameMode) => void;
-    onOpenCountrySelector: () => void;
     onExitGame: () => void;
     onShowStats: () => void;
 }
 
 export const GameHeader = ({
     onExitGame,
-    showHelp,
     setShowHelp,
-    mode,
-    startNewGame,
-    onOpenCountrySelector,
     onShowStats
 }: GameHeaderProps) => {
     return (

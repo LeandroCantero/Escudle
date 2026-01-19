@@ -44,42 +44,45 @@ const defaultStats: DailyStats = {
 };
 
 export function useDailyState(selectedDifficulty: 'easy' | 'medium' | 'hard' = 'easy') {
-    const [dailyState, setDailyState] = useState<DailyState | null>(null);
-    const [stats, setStats] = useState<DailyStats>(defaultStats);
+    // Helper to get today string
+    const getTodayStr = () => new Date().toISOString().split('T')[0];
+
+    const [dailyState, setDailyState] = useState<DailyState | null>(() => {
+        const today = new Date().toISOString().split('T')[0];
+        const savedState = localStorage.getItem(`${DAILY_STATE_KEY_PREFIX}${selectedDifficulty}`);
+        if (savedState) {
+            const parsed = JSON.parse(savedState) as DailyState;
+            return parsed.date === today ? parsed : null;
+        }
+        return null;
+    });
+
+    const [stats, setStats] = useState<DailyStats>(() => {
+        const savedStats = localStorage.getItem(`${DAILY_STATS_KEY_PREFIX}${selectedDifficulty}`);
+        return savedStats ? JSON.parse(savedStats) : defaultStats;
+    });
+
     const [timeUntilNext, setTimeUntilNext] = useState<number>(0);
 
-    // Get today's date string in UTC
-    const getTodayStr = () => new Date().toISOString().split('T')[0];
+    // Adjust state during render when difficulty changes (React 19 pattern)
+    const [prevDifficulty, setPrevDifficulty] = useState(selectedDifficulty);
+    if (selectedDifficulty !== prevDifficulty) {
+        setPrevDifficulty(selectedDifficulty);
+        const today = getTodayStr();
+        const savedState = localStorage.getItem(`${DAILY_STATE_KEY_PREFIX}${selectedDifficulty}`);
+        if (savedState) {
+            const parsed = JSON.parse(savedState) as DailyState;
+            setDailyState(parsed.date === today ? parsed : null);
+        } else {
+            setDailyState(null);
+        }
+        const savedStats = localStorage.getItem(`${DAILY_STATS_KEY_PREFIX}${selectedDifficulty}`);
+        setStats(savedStats ? JSON.parse(savedStats) : defaultStats);
+    }
 
     const getDailyStateKey = useCallback((diff: string) => `${DAILY_STATE_KEY_PREFIX}${diff}`, []);
     const getDailyStatsKey = useCallback((diff: string) => `${DAILY_STATS_KEY_PREFIX}${diff}`, []);
 
-    // Load state when difficulty changes or on mount
-    useEffect(() => {
-        const today = getTodayStr();
-        const savedState = localStorage.getItem(getDailyStateKey(selectedDifficulty));
-
-        if (savedState) {
-            const parsed = JSON.parse(savedState) as DailyState;
-            if (parsed.date === today) {
-                setDailyState(parsed);
-            } else {
-                setDailyState(null);
-            }
-        } else {
-            setDailyState(null);
-        }
-    }, [selectedDifficulty, getDailyStateKey]);
-
-    // Load stats when difficulty changes or on mount
-    useEffect(() => {
-        const savedStats = localStorage.getItem(getDailyStatsKey(selectedDifficulty));
-        if (savedStats) {
-            setStats(JSON.parse(savedStats));
-        } else {
-            setStats(defaultStats);
-        }
-    }, [selectedDifficulty, getDailyStatsKey]);
 
     // Update countdown timer
     useEffect(() => {
@@ -135,7 +138,7 @@ export function useDailyState(selectedDifficulty: 'easy' | 'medium' | 'hard' = '
         });
     }, [selectedDifficulty, getDailyStatsKey]);
 
-    const initDailyGame = useCallback((logo: Logo, difficulty: 'easy' | 'medium' | 'hard', dataset: any) => {
+    const initDailyGame = useCallback((logo: Logo, difficulty: 'easy' | 'medium' | 'hard', dataset: 'all' | 'current' | 'historic') => {
         const today = getTodayStr();
         const newState: DailyState = {
             date: today,

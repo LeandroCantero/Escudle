@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { Check, Globe, Search, XCircle } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { cn } from '../utils/cn';
 
 interface CountrySelectorProps {
@@ -19,15 +19,20 @@ export const CountrySelector = ({
     onApply
 }: CountrySelectorProps) => {
     const [searchTerm, setSearchTerm] = useState('');
-    const [tempSelected, setTempSelected] = useState<string[]>([]);
+    const [tempSelected, setTempSelected] = useState<string[]>(selectedCountries);
 
-    // Initialize temp selection when modal opens
-    useEffect(() => {
-        if (isOpen) {
-            setTempSelected(selectedCountries);
+    // Sync draft state when modal opens or selectedCountries changes (React 19 pattern)
+    const [prevOpen, setPrevOpen] = useState(isOpen);
+    const [prevSelected, setPrevSelected] = useState(selectedCountries);
+
+    if (isOpen !== prevOpen || selectedCountries !== prevSelected) {
+        setPrevOpen(isOpen);
+        setPrevSelected(selectedCountries);
+        if (isOpen && !prevOpen) {
             setSearchTerm('');
+            setTempSelected(selectedCountries);
         }
-    }, [isOpen, selectedCountries]);
+    }
 
     const filteredCountries = availableCountries.filter(country =>
         country.name.toLowerCase().includes(searchTerm.toLowerCase())

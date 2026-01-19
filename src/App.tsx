@@ -35,7 +35,6 @@ export const App = () => {
         exitGame,
         dailyStats,
         timeUntilNext,
-        isTodayDone,
         infiniteStats,
         infiniteSession,
         showInfiniteStats,
@@ -63,11 +62,7 @@ export const App = () => {
                     gameState !== 'not_started' ? (
                         <GameHeader
                             onExitGame={exitGame}
-                            showHelp={showHelp}
                             setShowHelp={setShowHelp}
-                            mode={gameMode}
-                            startNewGame={startNewGame}
-                            onOpenCountrySelector={() => setShowCountrySelector(true)}
                             onShowStats={() => {
                                 if (gameMode === 'daily') setShowDailyStats(true);
                                 if (gameMode === 'infinite') setShowInfiniteStats(true);

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 
 export interface InfiniteStats {
     highScore: number;
@@ -25,18 +25,32 @@ const defaultStats: InfiniteStats = {
 };
 
 export function useInfiniteState(difficulty: string) {
-    const [infiniteStats, setInfiniteStats] = useState<InfiniteStats>(defaultStats);
-    const [currentSession, setCurrentSession] = useState<InfiniteSession>({
+    const [infiniteStats, setInfiniteStats] = useState<InfiniteStats>(() => {
+        const savedStats = localStorage.getItem(`escudle_infinite_stats_${difficulty}`);
+        if (savedStats) {
+            try {
+                return JSON.parse(savedStats);
+            } catch (e) {
+                console.error("Error parsing infinite stats", e);
+                return defaultStats;
+            }
+        }
+        return defaultStats;
+    });
+
+    const [currentSession, setCurrentSession] = useState<InfiniteSession>(() => ({
         score: 0,
         startedAt: Date.now(),
         playedLogos: []
-    });
+    }));
     const [isNewHighScore, setIsNewHighScore] = useState(false);
 
     const statsKey = `escudle_infinite_stats_${difficulty}`;
 
-    // Load stats on mount or when difficulty changes
-    useEffect(() => {
+    // Adjust state during render when difficulty changes
+    const [prevDiffForStats, setPrevDiffForStats] = useState(difficulty);
+    if (difficulty !== prevDiffForStats) {
+        setPrevDiffForStats(difficulty);
         const savedStats = localStorage.getItem(statsKey);
         if (savedStats) {
             try {
@@ -48,12 +62,10 @@ export function useInfiniteState(difficulty: string) {
         } else {
             setInfiniteStats(defaultStats);
         }
-    }, [difficulty, statsKey]);
+    }
 
-    const saveStats = useCallback((stats: InfiniteStats) => {
-        setInfiniteStats(stats);
-        localStorage.setItem(statsKey, JSON.stringify(stats));
-    }, [statsKey]);
+
+
 
     const resetSession = useCallback(() => {
         setCurrentSession({
