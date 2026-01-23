@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { RotateCcw } from 'lucide-react';
+import { useEffect } from 'react';
 import { Difficulty, GameMode, GameState } from '../../hooks/use-game-logic';
 import { Logo, useLogoSearch } from '../../hooks/use-logo-search';
 import { GuessInput } from '../guess-input';
@@ -45,6 +46,22 @@ export const GameScreen = ({
         limit: 10,
         threshold: 0.3
     });
+
+    // Global keyboard listener for Enter (Next Game)
+    useEffect(() => {
+        const handleGlobalKeyDown = (e: KeyboardEvent) => {
+            if (gameState !== 'playing' && e.key === 'Enter') {
+                // Only trigger if not typing in some input
+                const activeElement = document.activeElement;
+                if (activeElement?.tagName !== 'INPUT' && activeElement?.tagName !== 'TEXTAREA') {
+                    onNextGame();
+                }
+            }
+        };
+
+        window.addEventListener('keydown', handleGlobalKeyDown);
+        return () => window.removeEventListener('keydown', handleGlobalKeyDown);
+    }, [gameState, onNextGame]);
 
     return (
         <div className="w-full flex-1 flex flex-col items-center justify-start space-y-4">

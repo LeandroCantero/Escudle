@@ -10,7 +10,7 @@
     "localPath": "/logos/tournaments/tournaments-fifa-world-cup-2026-logo-unofficial-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/fifa-world-cup-2026/unofficial/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-fifa-world-cup-2026-logo-white-high-res-png",
@@ -23,7 +23,7 @@
     "localPath": "/logos/tournaments/tournaments-fifa-world-cup-2026-logo-white-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/fifa-world-cup-2026/white/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-fifa-world-cup-2026-logo-high-res-png",
@@ -36,7 +36,7 @@
     "localPath": "/logos/tournaments/tournaments-fifa-world-cup-2026-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/fifa-world-cup-2026/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-africa-cup-of-nations-2025-afcon-2025-logo-no-text-high-res-png",
@@ -49,7 +49,7 @@
     "localPath": "/logos/tournaments/tournaments-africa-cup-of-nations-2025-afcon-2025-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/africa-cup-of-nations-2025/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-africa-cup-of-nations-2025-afcon-2025-logo-high-res-png",
@@ -62,7 +62,7 @@
     "localPath": "/logos/tournaments/tournaments-africa-cup-of-nations-2025-afcon-2025-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/africa-cup-of-nations-2025/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-euro-2028-logo-high-res-png",
@@ -75,7 +75,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-euro-2028-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-euro-2028/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-fifa-arab-world-cup-2025-logo-high-res-png",
@@ -88,7 +88,7 @@
     "localPath": "/logos/tournaments/tournaments-fifa-arab-world-cup-2025-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/fifa-arab-world-cup-2025/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-champions-league-ucl-logo-no-text-high-res-png",
@@ -101,7 +101,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-champions-league-ucl-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-champions-league/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-champions-league-ucl-logo-no-text-white-high-res-png",
@@ -114,7 +114,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-champions-league-ucl-logo-no-text-white-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-champions-league/no-text-white/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-champions-league-ucl-logo-high-res-png",
@@ -127,7 +127,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-champions-league-ucl-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-champions-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-europa-league-logo-no-text-high-res-png",
@@ -140,7 +140,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-europa-league-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-europa-league/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-europa-league-logo-high-res-png",
@@ -153,7 +153,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-europa-league-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-europa-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-conference-league-logo-no-text-high-res-png",
@@ -166,7 +166,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-conference-league-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-conference-league/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-conference-league-logo-high-res-png",
@@ -179,7 +179,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-conference-league-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-conference-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-super-cup-logo-white-high-res-png",
@@ -192,7 +192,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-super-cup-logo-white-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-super-cup/white/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-super-cup-logo-high-res-png",
@@ -205,7 +205,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-super-cup-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-super-cup/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-fifa-intercontinental-cup-logo-white-high-res-png",
@@ -218,7 +218,7 @@
     "localPath": "/logos/tournaments/tournaments-fifa-intercontinental-cup-logo-white-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/fifa-intercontinental-cup/white/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-fifa-intercontinental-cup-logo-high-res-png",
@@ -231,7 +231,7 @@
     "localPath": "/logos/tournaments/tournaments-fifa-intercontinental-cup-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/fifa-intercontinental-cup/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-fifa-club-world-cup-logo-high-res-png",
@@ -244,7 +244,7 @@
     "localPath": "/logos/tournaments/tournaments-fifa-club-world-cup-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/fifa-club-world-cup/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-fifa-world-cup-2022-logo-high-res-png",
@@ -257,7 +257,7 @@
     "localPath": "/logos/tournaments/tournaments-fifa-world-cup-2022-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/fifa-world-cup-2022/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-fifa-world-cup-2018-logo-high-res-png",
@@ -270,7 +270,7 @@
     "localPath": "/logos/tournaments/tournaments-fifa-world-cup-2018-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/fifa-world-cup-2018/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-fifa-world-cup-2014-logo-high-res-png",
@@ -283,7 +283,7 @@
     "localPath": "/logos/tournaments/tournaments-fifa-world-cup-2014-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/fifa-world-cup-2014/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-fifa-world-cup-2010-logo-high-res-png",
@@ -296,7 +296,7 @@
     "localPath": "/logos/tournaments/tournaments-fifa-world-cup-2010-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/fifa-world-cup-2010/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-fifa-world-cup-2006-logo-high-res-png",
@@ -309,7 +309,7 @@
     "localPath": "/logos/tournaments/tournaments-fifa-world-cup-2006-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/fifa-world-cup-2006/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-fifa-world-cup-2002-logo-high-res-png",
@@ -322,7 +322,7 @@
     "localPath": "/logos/tournaments/tournaments-fifa-world-cup-2002-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/fifa-world-cup-2002/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-fifa-world-cup-1998-logo-high-res-png",
@@ -335,7 +335,7 @@
     "localPath": "/logos/tournaments/tournaments-fifa-world-cup-1998-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/fifa-world-cup-1998/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-euro-2024-logo-high-res-png",
@@ -348,7 +348,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-euro-2024-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-euro-2024/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-euro-2020-logo-high-res-png",
@@ -361,7 +361,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-euro-2020-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-euro-2020/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-euro-2016-logo-high-res-png",
@@ -374,7 +374,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-euro-2016-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-euro-2016/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-euro-2012-logo-high-res-png",
@@ -387,7 +387,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-euro-2012-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-euro-2012/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-euro-2008-logo-high-res-png",
@@ -400,7 +400,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-euro-2008-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-euro-2008/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-euro-2004-logo-high-res-png",
@@ -413,7 +413,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-euro-2004-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-euro-2004/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-euro-2000-logo-high-res-png",
@@ -426,7 +426,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-euro-2000-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-euro-2000/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-uefa-nations-league-logo-high-res-png",
@@ -439,7 +439,7 @@
     "localPath": "/logos/tournaments/tournaments-uefa-nations-league-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-nations-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-conmebol-libertadores-logo-high-res-png",
@@ -452,7 +452,7 @@
     "localPath": "/logos/tournaments/tournaments-conmebol-libertadores-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/conmebol-libertadores/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-conmebol-copa-amrica-2024-logo-high-res-png",
@@ -465,7 +465,7 @@
     "localPath": "/logos/tournaments/tournaments-conmebol-copa-amrica-2024-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/conmebol-copa-america-2024/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-conmebol-copa-amrica-2021-logo-high-res-png",
@@ -478,7 +478,7 @@
     "localPath": "/logos/tournaments/tournaments-conmebol-copa-amrica-2021-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/conmebol-copa-america-2021/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-conmebol-copa-amrica-2019-logo-high-res-png",
@@ -491,7 +491,7 @@
     "localPath": "/logos/tournaments/tournaments-conmebol-copa-amrica-2019-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/conmebol-copa-america-2019/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-conmebol-copa-amrica-2016-logo-high-res-png",
@@ -504,7 +504,7 @@
     "localPath": "/logos/tournaments/tournaments-conmebol-copa-amrica-2016-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/conmebol-copa-america-2016/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-conmebol-copa-amrica-2015-logo-high-res-png",
@@ -517,7 +517,7 @@
     "localPath": "/logos/tournaments/tournaments-conmebol-copa-amrica-2015-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/conmebol-copa-america-2015/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-conmebol-copa-amrica-2011-logo-high-res-png",
@@ -530,7 +530,7 @@
     "localPath": "/logos/tournaments/tournaments-conmebol-copa-amrica-2011-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/conmebol-copa-america-2011/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-conmebol-copa-amrica-2007-logo-high-res-png",
@@ -543,7 +543,7 @@
     "localPath": "/logos/tournaments/tournaments-conmebol-copa-amrica-2007-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/conmebol-copa-america-2007/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-conmebol-copa-amrica-2004-logo-high-res-png",
@@ -556,7 +556,7 @@
     "localPath": "/logos/tournaments/tournaments-conmebol-copa-amrica-2004-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/conmebol-copa-america-2004/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-conmebol-copa-amrica-2001-logo-high-res-png",
@@ -569,7 +569,7 @@
     "localPath": "/logos/tournaments/tournaments-conmebol-copa-amrica-2001-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/conmebol-copa-america-2001/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-conmebol-copa-amrica-1999-logo-high-res-png",
@@ -582,7 +582,7 @@
     "localPath": "/logos/tournaments/tournaments-conmebol-copa-amrica-1999-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/conmebol-copa-america-1999/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "tournaments-afc-champions-league-elite-logo-high-res-png",
@@ -595,7 +595,7 @@
     "localPath": "/logos/tournaments/tournaments-afc-champions-league-elite-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/afc-champions-league-elite/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "albania-albania-national-team-logo-high-res-png",
@@ -1034,10 +1034,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/argentina/argentina-argentina-primera-division-lpf-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/argentina-argentina-primera-division-lpf-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/argentina/argentina-primera-division/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "argentina-primera-nacional-logo-no-text-high-res-png",
@@ -1047,10 +1047,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/argentina/argentina-primera-nacional-logo-no-text-high-res-png.svg",
+    "localPath": "/logos/tournaments/argentina-primera-nacional-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/argentina/primera-nacional/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "argentina-primera-nacional-logo-high-res-png",
@@ -1060,10 +1060,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/argentina/argentina-primera-nacional-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/argentina-primera-nacional-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/argentina/primera-nacional/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "argentina-aldosivi-logo-high-res-png",
@@ -1840,10 +1840,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/australia/australia-a-league-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/australia-a-league-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/australia/a-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "australia-football-australia-logo-high-res-png",
@@ -2061,10 +2061,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/austria/austria-austrian-football-bundesliga-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/austria-austrian-football-bundesliga-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/austria/austrian-football-bundesliga/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "austria-admira-logo-high-res-png",
@@ -2906,10 +2906,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/belgium/belgium-belgian-pro-league-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/belgium-belgian-pro-league-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/belgium/belgian-pro-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "belgium-jupiler-pro-league-logo-no-text-high-res-png",
@@ -2919,10 +2919,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/belgium/belgium-jupiler-pro-league-logo-no-text-high-res-png.svg",
+    "localPath": "/logos/tournaments/belgium-jupiler-pro-league-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/belgium/jupiler-pro-league/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "belgium-jupiler-pro-league-logo-high-res-png",
@@ -2932,10 +2932,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/belgium/belgium-jupiler-pro-league-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/belgium-jupiler-pro-league-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/belgium/jupiler-pro-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "belgium-rsc-anderlecht-logo-high-res-png",
@@ -3491,10 +3491,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/brazil/brazil-brazilian-serie-a-brasileiro-srie-a-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/brazil-brazilian-serie-a-brasileiro-srie-a-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/brazil/brazilian-serie-a/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "brazil-brazilian-serie-b-brasileiro-srie-b-logo-high-res-png",
@@ -3504,10 +3504,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/brazil/brazil-brazilian-serie-b-brasileiro-srie-b-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/brazil-brazilian-serie-b-brasileiro-srie-b-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/brazil/brazilian-serie-b/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "brazil-copa-do-brasil-logo-no-text-high-res-png",
@@ -4466,10 +4466,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/canada/canada-canadian-premier-league-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/canada-canadian-premier-league-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/canada/canadian-premier-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "canada-forge-logo-high-res-png",
@@ -4817,10 +4817,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/china/china-chinese-super-league-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/china-chinese-super-league-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/china/chinese-super-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "china-shanghai-shenhua--logo-high-res-png",
@@ -5259,10 +5259,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/colombia/colombia-categoria-primera-a-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/colombia-categoria-primera-a-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/colombia/categoria-primera-a/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "colombia-alianza-valledupar-logo-high-res-png",
@@ -5584,10 +5584,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/cyprus/cyprus-cypriot-first-division-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/cyprus-cypriot-first-division-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/cyprus/cypriot-first-division/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "cyprus-aek-larnaca--v--logo-high-res-png",
@@ -5896,10 +5896,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/czech-republic/czech-republic-chance-liga-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/czech-republic-chance-liga-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/czech-republic/chance-liga/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "czech-republic-bank-ostrava-logo-high-res-png",
@@ -6325,10 +6325,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/denmark/denmark-danish-super-league-logo-white-high-res-png.svg",
+    "localPath": "/logos/tournaments/denmark-danish-super-league-logo-white-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/denmark/danish-super-liga/white/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "denmark-danish-super-league-logo-high-res-png",
@@ -6338,10 +6338,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/denmark/denmark-danish-super-league-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/denmark-danish-super-league-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/denmark/danish-super-liga/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "denmark-danish-cup-pokalen-logo-white-high-res-png",
@@ -6728,10 +6728,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/ecuador/ecuador-liga-pro-serie-a-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/ecuador-liga-pro-serie-a-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/ecuador/liga-pro-serie-a/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "ecuador-independiente-del-valle-logo-high-res-png",
@@ -6936,10 +6936,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/england/england-english-premier-league-epl-logo-no-text-high-res-png.svg",
+    "localPath": "/logos/tournaments/england-english-premier-league-epl-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/england/english-premier-league/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "england-english-premier-league-epl-logo-no-text-white-high-res-png",
@@ -6949,10 +6949,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/england/england-english-premier-league-epl-logo-no-text-white-high-res-png.svg",
+    "localPath": "/logos/tournaments/england-english-premier-league-epl-logo-no-text-white-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/england/english-premier-league/no-text-white/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "england-english-premier-league-epl-logo-high-res-png",
@@ -6962,10 +6962,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/england/england-english-premier-league-epl-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/england-english-premier-league-epl-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/england/english-premier-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "england-english-football-league-efl-logo-high-res-png",
@@ -6975,10 +6975,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/england/england-english-football-league-efl-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/england-english-football-league-efl-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/england/english-football-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "england-efl-championship-logo-high-res-png",
@@ -6988,10 +6988,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/england/england-efl-championship-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/england-efl-championship-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/england/efl-championship/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "england-efl-league-one-logo-high-res-png",
@@ -7001,10 +7001,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/england/england-efl-league-one-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/england-efl-league-one-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/england/efl-league-one/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "england-efl-league-two-logo-high-res-png",
@@ -7014,10 +7014,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/england/england-efl-league-two-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/england-efl-league-two-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/england/efl-league-two/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "england-emirates-fa-cup-logo-high-res-png",
@@ -7060,52 +7060,52 @@
   },
   {
     "id": "england-old-arsenal-logo-1930-1936---high-res-png-1930-1936",
-    "name": "Old Arsenal",
+    "name": "Arsenal Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1930-1936",
     "startYear": 1930,
     "endYear": 1936,
-    "localPath": "/logos/england/england-old-arsenal-logo-1930-1936---high-res-png-1930-1936.svg",
+    "localPath": "/logos/retro/england-old-arsenal-logo-1930-1936---high-res-png-1930-1936.svg",
     "pageUrl": "https://football-logos.cc/england/arsenal/1930-1936/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-arsenal-logo-1936-1949---high-res-png-1936-1949",
-    "name": "Old Arsenal",
+    "name": "Arsenal Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1936-1949",
     "startYear": 1936,
     "endYear": 1949,
-    "localPath": "/logos/england/england-old-arsenal-logo-1936-1949---high-res-png-1936-1949.svg",
+    "localPath": "/logos/retro/england-old-arsenal-logo-1936-1949---high-res-png-1936-1949.svg",
     "pageUrl": "https://football-logos.cc/england/arsenal/1936-1949/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-arsenal-logo-1949-2001---high-res-png-1949-2001",
-    "name": "Old Arsenal",
+    "name": "Arsenal Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1949-2001",
     "startYear": 1949,
     "endYear": 2001,
-    "localPath": "/logos/england/england-old-arsenal-logo-1949-2001---high-res-png-1949-2001.svg",
+    "localPath": "/logos/retro/england-old-arsenal-logo-1949-2001---high-res-png-1949-2001.svg",
     "pageUrl": "https://football-logos.cc/england/arsenal/1949-2001/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-arsenal-logo-2001-2002---high-res-png-2001-2002",
-    "name": "Old Arsenal",
+    "name": "Arsenal Retro",
     "country": "england",
     "isHistorical": true,
     "period": "2001-2002",
     "startYear": 2001,
     "endYear": 2002,
-    "localPath": "/logos/england/england-old-arsenal-logo-2001-2002---high-res-png-2001-2002.svg",
+    "localPath": "/logos/retro/england-old-arsenal-logo-2001-2002---high-res-png-2001-2002.svg",
     "pageUrl": "https://football-logos.cc/england/arsenal/2001-2002/",
     "league": null,
     "type": null
@@ -7125,169 +7125,169 @@
   },
   {
     "id": "england-old-aston-villa-logo-1880-1881---high-res-png-1880-1881",
-    "name": "Old Aston Villa",
+    "name": "Aston Villa Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1880-1881",
     "startYear": 1880,
     "endYear": 1881,
-    "localPath": "/logos/england/england-old-aston-villa-logo-1880-1881---high-res-png-1880-1881.svg",
+    "localPath": "/logos/retro/england-old-aston-villa-logo-1880-1881---high-res-png-1880-1881.svg",
     "pageUrl": "https://football-logos.cc/england/aston-villa/1880-1881/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-aston-villa-logo-1886-1956---high-res-png-1886-1956",
-    "name": "Old Aston Villa",
+    "name": "Aston Villa Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1886-1956",
     "startYear": 1886,
     "endYear": 1956,
-    "localPath": "/logos/england/england-old-aston-villa-logo-1886-1956---high-res-png-1886-1956.svg",
+    "localPath": "/logos/retro/england-old-aston-villa-logo-1886-1956---high-res-png-1886-1956.svg",
     "pageUrl": "https://football-logos.cc/england/aston-villa/1886-1956/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-aston-villa-logo-1956-1970---high-res-png-1956-1970",
-    "name": "Old Aston Villa",
+    "name": "Aston Villa Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1956-1970",
     "startYear": 1956,
     "endYear": 1970,
-    "localPath": "/logos/england/england-old-aston-villa-logo-1956-1970---high-res-png-1956-1970.svg",
+    "localPath": "/logos/retro/england-old-aston-villa-logo-1956-1970---high-res-png-1956-1970.svg",
     "pageUrl": "https://football-logos.cc/england/aston-villa/1956-1970/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-aston-villa-logo-1970-1980---high-res-png-1970-1980",
-    "name": "Old Aston Villa",
+    "name": "Aston Villa Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1970-1980",
     "startYear": 1970,
     "endYear": 1980,
-    "localPath": "/logos/england/england-old-aston-villa-logo-1970-1980---high-res-png-1970-1980.svg",
+    "localPath": "/logos/retro/england-old-aston-villa-logo-1970-1980---high-res-png-1970-1980.svg",
     "pageUrl": "https://football-logos.cc/england/aston-villa/1970-1980/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-aston-villa-logo-1980-1981---high-res-png-1980-1981",
-    "name": "Old Aston Villa",
+    "name": "Aston Villa Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1980-1981",
     "startYear": 1980,
     "endYear": 1981,
-    "localPath": "/logos/england/england-old-aston-villa-logo-1980-1981---high-res-png-1980-1981.svg",
+    "localPath": "/logos/retro/england-old-aston-villa-logo-1980-1981---high-res-png-1980-1981.svg",
     "pageUrl": "https://football-logos.cc/england/aston-villa/1980-1981/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-aston-villa-logo-1981-1990---high-res-png-1981-1990",
-    "name": "Old Aston Villa",
+    "name": "Aston Villa Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1981-1990",
     "startYear": 1981,
     "endYear": 1990,
-    "localPath": "/logos/england/england-old-aston-villa-logo-1981-1990---high-res-png-1981-1990.svg",
+    "localPath": "/logos/retro/england-old-aston-villa-logo-1981-1990---high-res-png-1981-1990.svg",
     "pageUrl": "https://football-logos.cc/england/aston-villa/1981-1990/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-aston-villa-logo-1990-1992---high-res-png-1990-1992",
-    "name": "Old Aston Villa",
+    "name": "Aston Villa Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1990-1992",
     "startYear": 1990,
     "endYear": 1992,
-    "localPath": "/logos/england/england-old-aston-villa-logo-1990-1992---high-res-png-1990-1992.svg",
+    "localPath": "/logos/retro/england-old-aston-villa-logo-1990-1992---high-res-png-1990-1992.svg",
     "pageUrl": "https://football-logos.cc/england/aston-villa/1990-1992/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-aston-villa-logo-1992-2000---high-res-png-1992-2000",
-    "name": "Old Aston Villa",
+    "name": "Aston Villa Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1992-2000",
     "startYear": 1992,
     "endYear": 2000,
-    "localPath": "/logos/england/england-old-aston-villa-logo-1992-2000---high-res-png-1992-2000.svg",
+    "localPath": "/logos/retro/england-old-aston-villa-logo-1992-2000---high-res-png-1992-2000.svg",
     "pageUrl": "https://football-logos.cc/england/aston-villa/1992-2000/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-aston-villa-logo-2000-2007---high-res-png-2000-2007",
-    "name": "Old Aston Villa",
+    "name": "Aston Villa Retro",
     "country": "england",
     "isHistorical": true,
     "period": "2000-2007",
     "startYear": 2000,
     "endYear": 2007,
-    "localPath": "/logos/england/england-old-aston-villa-logo-2000-2007---high-res-png-2000-2007.svg",
+    "localPath": "/logos/retro/england-old-aston-villa-logo-2000-2007---high-res-png-2000-2007.svg",
     "pageUrl": "https://football-logos.cc/england/aston-villa/2000-2007/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-aston-villa-logo-2007-2008---high-res-png-2007-2008",
-    "name": "Old Aston Villa",
+    "name": "Aston Villa Retro",
     "country": "england",
     "isHistorical": true,
     "period": "2007-2008",
     "startYear": 2007,
     "endYear": 2008,
-    "localPath": "/logos/england/england-old-aston-villa-logo-2007-2008---high-res-png-2007-2008.svg",
+    "localPath": "/logos/retro/england-old-aston-villa-logo-2007-2008---high-res-png-2007-2008.svg",
     "pageUrl": "https://football-logos.cc/england/aston-villa/2007-2008/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-aston-villa-logo-2008-2016---high-res-png-2008-2016",
-    "name": "Old Aston Villa",
+    "name": "Aston Villa Retro",
     "country": "england",
     "isHistorical": true,
     "period": "2008-2016",
     "startYear": 2008,
     "endYear": 2016,
-    "localPath": "/logos/england/england-old-aston-villa-logo-2008-2016---high-res-png-2008-2016.svg",
+    "localPath": "/logos/retro/england-old-aston-villa-logo-2008-2016---high-res-png-2008-2016.svg",
     "pageUrl": "https://football-logos.cc/england/aston-villa/2008-2016/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-aston-villa-logo-2016-2023---high-res-png-2016-2023",
-    "name": "Old Aston Villa",
+    "name": "Aston Villa Retro",
     "country": "england",
     "isHistorical": true,
     "period": "2016-2023",
     "startYear": 2016,
     "endYear": 2023,
-    "localPath": "/logos/england/england-old-aston-villa-logo-2016-2023---high-res-png-2016-2023.svg",
+    "localPath": "/logos/retro/england-old-aston-villa-logo-2016-2023---high-res-png-2016-2023.svg",
     "pageUrl": "https://football-logos.cc/england/aston-villa/2016-2023/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-aston-villa-logo-2023-2024---high-res-png-2023-2024",
-    "name": "Old Aston Villa",
+    "name": "Aston Villa Retro",
     "country": "england",
     "isHistorical": true,
     "period": "2023-2024",
     "startYear": 2023,
     "endYear": 2024,
-    "localPath": "/logos/england/england-old-aston-villa-logo-2023-2024---high-res-png-2023-2024.svg",
+    "localPath": "/logos/retro/england-old-aston-villa-logo-2023-2024---high-res-png-2023-2024.svg",
     "pageUrl": "https://football-logos.cc/england/aston-villa/2023-2024/",
     "league": null,
     "type": null
@@ -7307,117 +7307,117 @@
   },
   {
     "id": "england-old-chelsea-logo-1905-1952---high-res-png-1905-1952",
-    "name": "Old Chelsea",
+    "name": "Chelsea Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1905-1952",
     "startYear": 1905,
     "endYear": 1952,
-    "localPath": "/logos/england/england-old-chelsea-logo-1905-1952---high-res-png-1905-1952.svg",
+    "localPath": "/logos/retro/england-old-chelsea-logo-1905-1952---high-res-png-1905-1952.svg",
     "pageUrl": "https://football-logos.cc/england/chelsea/1905-1952/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-chelsea-logo-1952-1953---high-res-png-1952-1953",
-    "name": "Old Chelsea",
+    "name": "Chelsea Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1952-1953",
     "startYear": 1952,
     "endYear": 1953,
-    "localPath": "/logos/england/england-old-chelsea-logo-1952-1953---high-res-png-1952-1953.svg",
+    "localPath": "/logos/retro/england-old-chelsea-logo-1952-1953---high-res-png-1952-1953.svg",
     "pageUrl": "https://football-logos.cc/england/chelsea/1952-1953/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-chelsea-logo-1953-1964---high-res-png-1953-1964",
-    "name": "Old Chelsea",
+    "name": "Chelsea Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1953-1964",
     "startYear": 1953,
     "endYear": 1964,
-    "localPath": "/logos/england/england-old-chelsea-logo-1953-1964---high-res-png-1953-1964.svg",
+    "localPath": "/logos/retro/england-old-chelsea-logo-1953-1964---high-res-png-1953-1964.svg",
     "pageUrl": "https://football-logos.cc/england/chelsea/1953-1964/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-chelsea-logo-1967-1986---high-res-png-1967-1986",
-    "name": "Old Chelsea",
+    "name": "Chelsea Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1967-1986",
     "startYear": 1967,
     "endYear": 1986,
-    "localPath": "/logos/england/england-old-chelsea-logo-1967-1986---high-res-png-1967-1986.svg",
+    "localPath": "/logos/retro/england-old-chelsea-logo-1967-1986---high-res-png-1967-1986.svg",
     "pageUrl": "https://football-logos.cc/england/chelsea/1967-1986/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-chelsea-logo-1986-1995---high-res-png-1986-1995",
-    "name": "Old Chelsea",
+    "name": "Chelsea Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1986-1995",
     "startYear": 1986,
     "endYear": 1995,
-    "localPath": "/logos/england/england-old-chelsea-logo-1986-1995---high-res-png-1986-1995.svg",
+    "localPath": "/logos/retro/england-old-chelsea-logo-1986-1995---high-res-png-1986-1995.svg",
     "pageUrl": "https://football-logos.cc/england/chelsea/1986-1995/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-chelsea-logo-1995-1997---high-res-png-1995-1997",
-    "name": "Old Chelsea",
+    "name": "Chelsea Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1995-1997",
     "startYear": 1995,
     "endYear": 1997,
-    "localPath": "/logos/england/england-old-chelsea-logo-1995-1997---high-res-png-1995-1997.svg",
+    "localPath": "/logos/retro/england-old-chelsea-logo-1995-1997---high-res-png-1995-1997.svg",
     "pageUrl": "https://football-logos.cc/england/chelsea/1995-1997/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-chelsea-logo-1997-1999---high-res-png-1997-1999",
-    "name": "Old Chelsea",
+    "name": "Chelsea Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1997-1999",
     "startYear": 1997,
     "endYear": 1999,
-    "localPath": "/logos/england/england-old-chelsea-logo-1997-1999---high-res-png-1997-1999.svg",
+    "localPath": "/logos/retro/england-old-chelsea-logo-1997-1999---high-res-png-1997-1999.svg",
     "pageUrl": "https://football-logos.cc/england/chelsea/1997-1999/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-chelsea-logo-1999-2003---high-res-png-1999-2003",
-    "name": "Old Chelsea",
+    "name": "Chelsea Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1999-2003",
     "startYear": 1999,
     "endYear": 2003,
-    "localPath": "/logos/england/england-old-chelsea-logo-1999-2003---high-res-png-1999-2003.svg",
+    "localPath": "/logos/retro/england-old-chelsea-logo-1999-2003---high-res-png-1999-2003.svg",
     "pageUrl": "https://football-logos.cc/england/chelsea/1999-2003/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-chelsea-logo-2003-2005---high-res-png-2003-2005",
-    "name": "Old Chelsea",
+    "name": "Chelsea Retro",
     "country": "england",
     "isHistorical": true,
     "period": "2003-2005",
     "startYear": 2003,
     "endYear": 2005,
-    "localPath": "/logos/england/england-old-chelsea-logo-2003-2005---high-res-png-2003-2005.svg",
+    "localPath": "/logos/retro/england-old-chelsea-logo-2003-2005---high-res-png-2003-2005.svg",
     "pageUrl": "https://football-logos.cc/england/chelsea/2003-2005/",
     "league": null,
     "type": null
@@ -7450,52 +7450,52 @@
   },
   {
     "id": "england-old-liverpool-fc-lfc-logo-1955-1968---high-res-png-1955-1968",
-    "name": "Old Liverpool FC (LFC)",
+    "name": "Liverpool FC (LFC) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1955-1968",
     "startYear": 1955,
     "endYear": 1968,
-    "localPath": "/logos/england/england-old-liverpool-fc-lfc-logo-1955-1968---high-res-png-1955-1968.svg",
+    "localPath": "/logos/retro/england-old-liverpool-fc-lfc-logo-1955-1968---high-res-png-1955-1968.svg",
     "pageUrl": "https://football-logos.cc/england/liverpool/1955-1968/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-liverpool-fc-lfc-logo-1987-1992---high-res-png-1987-1992",
-    "name": "Old Liverpool FC (LFC)",
+    "name": "Liverpool FC (LFC) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1987-1992",
     "startYear": 1987,
     "endYear": 1992,
-    "localPath": "/logos/england/england-old-liverpool-fc-lfc-logo-1987-1992---high-res-png-1987-1992.svg",
+    "localPath": "/logos/retro/england-old-liverpool-fc-lfc-logo-1987-1992---high-res-png-1987-1992.svg",
     "pageUrl": "https://football-logos.cc/england/liverpool/1987-1992/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-liverpool-fc-lfc-logo-1993-1999---high-res-png-1993-1999",
-    "name": "Old Liverpool FC (LFC)",
+    "name": "Liverpool FC (LFC) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1993-1999",
     "startYear": 1993,
     "endYear": 1999,
-    "localPath": "/logos/england/england-old-liverpool-fc-lfc-logo-1993-1999---high-res-png-1993-1999.svg",
+    "localPath": "/logos/retro/england-old-liverpool-fc-lfc-logo-1993-1999---high-res-png-1993-1999.svg",
     "pageUrl": "https://football-logos.cc/england/liverpool/1993-1999/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-liverpool-fc-lfc-logo-1999-2012---high-res-png-1999-2012",
-    "name": "Old Liverpool FC (LFC)",
+    "name": "Liverpool FC (LFC) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1999-2012",
     "startYear": 1999,
     "endYear": 2012,
-    "localPath": "/logos/england/england-old-liverpool-fc-lfc-logo-1999-2012---high-res-png-1999-2012.svg",
+    "localPath": "/logos/retro/england-old-liverpool-fc-lfc-logo-1999-2012---high-res-png-1999-2012.svg",
     "pageUrl": "https://football-logos.cc/england/liverpool/1999-2012/",
     "league": null,
     "type": null
@@ -7515,104 +7515,104 @@
   },
   {
     "id": "england-old-manchester-city-man-city-logo-1880-1887---high-res-png-1880-1887",
-    "name": "Old Manchester City (Man City)",
+    "name": "Manchester City (Man City) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1880-1887",
     "startYear": 1880,
     "endYear": 1887,
-    "localPath": "/logos/england/england-old-manchester-city-man-city-logo-1880-1887---high-res-png-1880-1887.svg",
+    "localPath": "/logos/retro/england-old-manchester-city-man-city-logo-1880-1887---high-res-png-1880-1887.svg",
     "pageUrl": "https://football-logos.cc/england/manchester-city/1880-1887/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-manchester-city-man-city-logo-1887-1894---high-res-png-1887-1894",
-    "name": "Old Manchester City (Man City)",
+    "name": "Manchester City (Man City) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1887-1894",
     "startYear": 1887,
     "endYear": 1894,
-    "localPath": "/logos/england/england-old-manchester-city-man-city-logo-1887-1894---high-res-png-1887-1894.svg",
+    "localPath": "/logos/retro/england-old-manchester-city-man-city-logo-1887-1894---high-res-png-1887-1894.svg",
     "pageUrl": "https://football-logos.cc/england/manchester-city/1887-1894/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-manchester-city-man-city-logo-1894-1960---high-res-png-1894-1960",
-    "name": "Old Manchester City (Man City)",
+    "name": "Manchester City (Man City) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1894-1960",
     "startYear": 1894,
     "endYear": 1960,
-    "localPath": "/logos/england/england-old-manchester-city-man-city-logo-1894-1960---high-res-png-1894-1960.svg",
+    "localPath": "/logos/retro/england-old-manchester-city-man-city-logo-1894-1960---high-res-png-1894-1960.svg",
     "pageUrl": "https://football-logos.cc/england/manchester-city/1894-1960/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-manchester-city-man-city-logo-1969-1970---high-res-png-1969-1970",
-    "name": "Old Manchester City (Man City)",
+    "name": "Manchester City (Man City) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1969-1970",
     "startYear": 1969,
     "endYear": 1970,
-    "localPath": "/logos/england/england-old-manchester-city-man-city-logo-1969-1970---high-res-png-1969-1970.svg",
+    "localPath": "/logos/retro/england-old-manchester-city-man-city-logo-1969-1970---high-res-png-1969-1970.svg",
     "pageUrl": "https://football-logos.cc/england/manchester-city/1969-1970/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-manchester-city-man-city-logo-1970-1972---high-res-png-1970-1972",
-    "name": "Old Manchester City (Man City)",
+    "name": "Manchester City (Man City) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1970-1972",
     "startYear": 1970,
     "endYear": 1972,
-    "localPath": "/logos/england/england-old-manchester-city-man-city-logo-1970-1972---high-res-png-1970-1972.svg",
+    "localPath": "/logos/retro/england-old-manchester-city-man-city-logo-1970-1972---high-res-png-1970-1972.svg",
     "pageUrl": "https://football-logos.cc/england/manchester-city/1970-1972/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-manchester-city-man-city-logo-1972-1976---high-res-png-1972-1976",
-    "name": "Old Manchester City (Man City)",
+    "name": "Manchester City (Man City) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1972-1976",
     "startYear": 1972,
     "endYear": 1976,
-    "localPath": "/logos/england/england-old-manchester-city-man-city-logo-1972-1976---high-res-png-1972-1976.svg",
+    "localPath": "/logos/retro/england-old-manchester-city-man-city-logo-1972-1976---high-res-png-1972-1976.svg",
     "pageUrl": "https://football-logos.cc/england/manchester-city/1972-1976/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-manchester-city-man-city-logo-1981-1997---high-res-png-1981-1997",
-    "name": "Old Manchester City (Man City)",
+    "name": "Manchester City (Man City) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1981-1997",
     "startYear": 1981,
     "endYear": 1997,
-    "localPath": "/logos/england/england-old-manchester-city-man-city-logo-1981-1997---high-res-png-1981-1997.svg",
+    "localPath": "/logos/retro/england-old-manchester-city-man-city-logo-1981-1997---high-res-png-1981-1997.svg",
     "pageUrl": "https://football-logos.cc/england/manchester-city/1981-1997/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-manchester-city-man-city-logo-1997-2016---high-res-png-1997-2016",
-    "name": "Old Manchester City (Man City)",
+    "name": "Manchester City (Man City) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1997-2016",
     "startYear": 1997,
     "endYear": 2016,
-    "localPath": "/logos/england/england-old-manchester-city-man-city-logo-1997-2016---high-res-png-1997-2016.svg",
+    "localPath": "/logos/retro/england-old-manchester-city-man-city-logo-1997-2016---high-res-png-1997-2016.svg",
     "pageUrl": "https://football-logos.cc/england/manchester-city/1997-2016/",
     "league": null,
     "type": null
@@ -7632,26 +7632,26 @@
   },
   {
     "id": "england-old-manchester-united-logo-1940-1960---high-res-png-1940-1960",
-    "name": "Old Manchester United",
+    "name": "Manchester United Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1940-1960",
     "startYear": 1940,
     "endYear": 1960,
-    "localPath": "/logos/england/england-old-manchester-united-logo-1940-1960---high-res-png-1940-1960.svg",
+    "localPath": "/logos/retro/england-old-manchester-united-logo-1940-1960---high-res-png-1940-1960.svg",
     "pageUrl": "https://football-logos.cc/england/manchester-united/1940-1960/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-manchester-united-logo-1960-1970---high-res-png-1960-1970",
-    "name": "Old Manchester United",
+    "name": "Manchester United Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1960-1970",
     "startYear": 1960,
     "endYear": 1970,
-    "localPath": "/logos/england/england-old-manchester-united-logo-1960-1970---high-res-png-1960-1970.svg",
+    "localPath": "/logos/retro/england-old-manchester-united-logo-1960-1970---high-res-png-1960-1970.svg",
     "pageUrl": "https://football-logos.cc/england/manchester-united/1960-1970/",
     "league": null,
     "type": null
@@ -7684,156 +7684,156 @@
   },
   {
     "id": "england-old-tottenham-spurs-logo-1951-1967---high-res-png-1951-1967",
-    "name": "Old Tottenham (Spurs)",
+    "name": "Tottenham (Spurs) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1951-1967",
     "startYear": 1951,
     "endYear": 1967,
-    "localPath": "/logos/england/england-old-tottenham-spurs-logo-1951-1967---high-res-png-1951-1967.svg",
+    "localPath": "/logos/retro/england-old-tottenham-spurs-logo-1951-1967---high-res-png-1951-1967.svg",
     "pageUrl": "https://football-logos.cc/england/tottenham/1951-1967/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-tottenham-spurs-logo-1967-1971---high-res-png-1967-1971",
-    "name": "Old Tottenham (Spurs)",
+    "name": "Tottenham (Spurs) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1967-1971",
     "startYear": 1967,
     "endYear": 1971,
-    "localPath": "/logos/england/england-old-tottenham-spurs-logo-1967-1971---high-res-png-1967-1971.svg",
+    "localPath": "/logos/retro/england-old-tottenham-spurs-logo-1967-1971---high-res-png-1967-1971.svg",
     "pageUrl": "https://football-logos.cc/england/tottenham/1967-1971/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-tottenham-spurs-logo-1972-1981---high-res-png-1972-1981",
-    "name": "Old Tottenham (Spurs)",
+    "name": "Tottenham (Spurs) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1972-1981",
     "startYear": 1972,
     "endYear": 1981,
-    "localPath": "/logos/england/england-old-tottenham-spurs-logo-1972-1981---high-res-png-1972-1981.svg",
+    "localPath": "/logos/retro/england-old-tottenham-spurs-logo-1972-1981---high-res-png-1972-1981.svg",
     "pageUrl": "https://football-logos.cc/england/tottenham/1972-1981/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-tottenham-spurs-logo-1973-1981---high-res-png-1973-1981",
-    "name": "Old Tottenham (Spurs)",
+    "name": "Tottenham (Spurs) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1973-1981",
     "startYear": 1973,
     "endYear": 1981,
-    "localPath": "/logos/england/england-old-tottenham-spurs-logo-1973-1981---high-res-png-1973-1981.svg",
+    "localPath": "/logos/retro/england-old-tottenham-spurs-logo-1973-1981---high-res-png-1973-1981.svg",
     "pageUrl": "https://football-logos.cc/england/tottenham/1973-1981/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-tottenham-spurs-logo-1983-1984---high-res-png-1983-1984",
-    "name": "Old Tottenham (Spurs)",
+    "name": "Tottenham (Spurs) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1983-1984",
     "startYear": 1983,
     "endYear": 1984,
-    "localPath": "/logos/england/england-old-tottenham-spurs-logo-1983-1984---high-res-png-1983-1984.svg",
+    "localPath": "/logos/retro/england-old-tottenham-spurs-logo-1983-1984---high-res-png-1983-1984.svg",
     "pageUrl": "https://football-logos.cc/england/tottenham/1983-1984/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-tottenham-spurs-logo-1985-1986---high-res-png-1985-1986",
-    "name": "Old Tottenham (Spurs)",
+    "name": "Tottenham (Spurs) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1985-1986",
     "startYear": 1985,
     "endYear": 1986,
-    "localPath": "/logos/england/england-old-tottenham-spurs-logo-1985-1986---high-res-png-1985-1986.svg",
+    "localPath": "/logos/retro/england-old-tottenham-spurs-logo-1985-1986---high-res-png-1985-1986.svg",
     "pageUrl": "https://football-logos.cc/england/tottenham/1985-1986/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-tottenham-spurs-logo-1987-1988---high-res-png-1987-1988",
-    "name": "Old Tottenham (Spurs)",
+    "name": "Tottenham (Spurs) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1987-1988",
     "startYear": 1987,
     "endYear": 1988,
-    "localPath": "/logos/england/england-old-tottenham-spurs-logo-1987-1988---high-res-png-1987-1988.svg",
+    "localPath": "/logos/retro/england-old-tottenham-spurs-logo-1987-1988---high-res-png-1987-1988.svg",
     "pageUrl": "https://football-logos.cc/england/tottenham/1987-1988/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-tottenham-spurs-logo-1988-1989---high-res-png-1988-1989",
-    "name": "Old Tottenham (Spurs)",
+    "name": "Tottenham (Spurs) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1988-1989",
     "startYear": 1988,
     "endYear": 1989,
-    "localPath": "/logos/england/england-old-tottenham-spurs-logo-1988-1989---high-res-png-1988-1989.svg",
+    "localPath": "/logos/retro/england-old-tottenham-spurs-logo-1988-1989---high-res-png-1988-1989.svg",
     "pageUrl": "https://football-logos.cc/england/tottenham/1988-1989/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-tottenham-spurs-logo-1989-1995---high-res-png-1989-1995",
-    "name": "Old Tottenham (Spurs)",
+    "name": "Tottenham (Spurs) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1989-1995",
     "startYear": 1989,
     "endYear": 1995,
-    "localPath": "/logos/england/england-old-tottenham-spurs-logo-1989-1995---high-res-png-1989-1995.svg",
+    "localPath": "/logos/retro/england-old-tottenham-spurs-logo-1989-1995---high-res-png-1989-1995.svg",
     "pageUrl": "https://football-logos.cc/england/tottenham/1989-1995/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-tottenham-spurs-logo-1995-1997---high-res-png-1995-1997",
-    "name": "Old Tottenham (Spurs)",
+    "name": "Tottenham (Spurs) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1995-1997",
     "startYear": 1995,
     "endYear": 1997,
-    "localPath": "/logos/england/england-old-tottenham-spurs-logo-1995-1997---high-res-png-1995-1997.svg",
+    "localPath": "/logos/retro/england-old-tottenham-spurs-logo-1995-1997---high-res-png-1995-1997.svg",
     "pageUrl": "https://football-logos.cc/england/tottenham/1995-1997/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-tottenham-spurs-logo-1999-2006---high-res-png-1999-2006",
-    "name": "Old Tottenham (Spurs)",
+    "name": "Tottenham (Spurs) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "1999-2006",
     "startYear": 1999,
     "endYear": 2006,
-    "localPath": "/logos/england/england-old-tottenham-spurs-logo-1999-2006---high-res-png-1999-2006.svg",
+    "localPath": "/logos/retro/england-old-tottenham-spurs-logo-1999-2006---high-res-png-1999-2006.svg",
     "pageUrl": "https://football-logos.cc/england/tottenham/1999-2006/",
     "league": null,
     "type": null
   },
   {
     "id": "england-old-tottenham-spurs-logo-2006-2013---high-res-png-2006-2013",
-    "name": "Old Tottenham (Spurs)",
+    "name": "Tottenham (Spurs) Retro",
     "country": "england",
     "isHistorical": true,
     "period": "2006-2013",
     "startYear": 2006,
     "endYear": 2013,
-    "localPath": "/logos/england/england-old-tottenham-spurs-logo-2006-2013---high-res-png-2006-2013.svg",
+    "localPath": "/logos/retro/england-old-tottenham-spurs-logo-2006-2013---high-res-png-2006-2013.svg",
     "pageUrl": "https://football-logos.cc/england/tottenham/2006-2013/",
     "league": null,
     "type": null
@@ -9601,10 +9601,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/egypt/egypt-egyptian-premier-league-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/egypt-egyptian-premier-league-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/egypt/egyptian-premier-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "egypt-zamalek-sc--logo-high-res-png",
@@ -10472,10 +10472,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/france/france-ligue-1-logo-white-high-res-png.svg",
+    "localPath": "/logos/tournaments/france-ligue-1-logo-white-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/france/ligue-1/white/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "france-ligue-1-logo-high-res-png",
@@ -10485,10 +10485,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/france/france-ligue-1-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/france-ligue-1-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/france/ligue-1/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "france-ligue-2-logo-white-high-res-png",
@@ -10498,10 +10498,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/france/france-ligue-2-logo-white-high-res-png.svg",
+    "localPath": "/logos/tournaments/france-ligue-2-logo-white-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/france/ligue-2/white/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "france-ligue-2-logo-high-res-png",
@@ -10511,98 +10511,98 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/france/france-ligue-2-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/france-ligue-2-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/france/ligue-2/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "france-old-paris-saint-germain-psg-logo-1970-1972---high-res-png-1970-1972",
-    "name": "Old Paris Saint-Germain (PSG)",
+    "name": "Paris Saint-Germain (PSG) Retro",
     "country": "france",
     "isHistorical": true,
     "period": "1970-1972",
     "startYear": 1970,
     "endYear": 1972,
-    "localPath": "/logos/france/france-old-paris-saint-germain-psg-logo-1970-1972---high-res-png-1970-1972.svg",
+    "localPath": "/logos/retro/france-old-paris-saint-germain-psg-logo-1970-1972---high-res-png-1970-1972.svg",
     "pageUrl": "https://football-logos.cc/france/paris-saint-germain/1970-1972/",
     "league": null,
     "type": null
   },
   {
     "id": "france-old-paris-saint-germain-psg-logo-1972-1982---high-res-png-1972-1982",
-    "name": "Old Paris Saint-Germain (PSG)",
+    "name": "Paris Saint-Germain (PSG) Retro",
     "country": "france",
     "isHistorical": true,
     "period": "1972-1982",
     "startYear": 1972,
     "endYear": 1982,
-    "localPath": "/logos/france/france-old-paris-saint-germain-psg-logo-1972-1982---high-res-png-1972-1982.svg",
+    "localPath": "/logos/retro/france-old-paris-saint-germain-psg-logo-1972-1982---high-res-png-1972-1982.svg",
     "pageUrl": "https://football-logos.cc/france/paris-saint-germain/1972-1982/",
     "league": null,
     "type": null
   },
   {
     "id": "france-old-paris-saint-germain-psg-logo-1990-1992---high-res-png-1990-1992",
-    "name": "Old Paris Saint-Germain (PSG)",
+    "name": "Paris Saint-Germain (PSG) Retro",
     "country": "france",
     "isHistorical": true,
     "period": "1990-1992",
     "startYear": 1990,
     "endYear": 1992,
-    "localPath": "/logos/france/france-old-paris-saint-germain-psg-logo-1990-1992---high-res-png-1990-1992.svg",
+    "localPath": "/logos/retro/france-old-paris-saint-germain-psg-logo-1990-1992---high-res-png-1990-1992.svg",
     "pageUrl": "https://football-logos.cc/france/paris-saint-germain/1990-1992/",
     "league": null,
     "type": null
   },
   {
     "id": "france-old-paris-saint-germain-psg-logo-1992-1996---high-res-png-1992-1996",
-    "name": "Old Paris Saint-Germain (PSG)",
+    "name": "Paris Saint-Germain (PSG) Retro",
     "country": "france",
     "isHistorical": true,
     "period": "1992-1996",
     "startYear": 1992,
     "endYear": 1996,
-    "localPath": "/logos/france/france-old-paris-saint-germain-psg-logo-1992-1996---high-res-png-1992-1996.svg",
+    "localPath": "/logos/retro/france-old-paris-saint-germain-psg-logo-1992-1996---high-res-png-1992-1996.svg",
     "pageUrl": "https://football-logos.cc/france/paris-saint-germain/1992-1996/",
     "league": null,
     "type": null
   },
   {
     "id": "france-old-paris-saint-germain-psg-logo-1996-2002---high-res-png-1996-2002",
-    "name": "Old Paris Saint-Germain (PSG)",
+    "name": "Paris Saint-Germain (PSG) Retro",
     "country": "france",
     "isHistorical": true,
     "period": "1996-2002",
     "startYear": 1996,
     "endYear": 2002,
-    "localPath": "/logos/france/france-old-paris-saint-germain-psg-logo-1996-2002---high-res-png-1996-2002.svg",
+    "localPath": "/logos/retro/france-old-paris-saint-germain-psg-logo-1996-2002---high-res-png-1996-2002.svg",
     "pageUrl": "https://football-logos.cc/france/paris-saint-germain/1996-2002/",
     "league": null,
     "type": null
   },
   {
     "id": "france-old-paris-saint-germain-psg-logo-2002-2013---high-res-png-2002-2013",
-    "name": "Old Paris Saint-Germain (PSG)",
+    "name": "Paris Saint-Germain (PSG) Retro",
     "country": "france",
     "isHistorical": true,
     "period": "2002-2013",
     "startYear": 2002,
     "endYear": 2013,
-    "localPath": "/logos/france/france-old-paris-saint-germain-psg-logo-2002-2013---high-res-png-2002-2013.svg",
+    "localPath": "/logos/retro/france-old-paris-saint-germain-psg-logo-2002-2013---high-res-png-2002-2013.svg",
     "pageUrl": "https://football-logos.cc/france/paris-saint-germain/2002-2013/",
     "league": null,
     "type": null
   },
   {
     "id": "france-old-paris-saint-germain-psg-logo-2013-2024---high-res-png-2013-2024",
-    "name": "Old Paris Saint-Germain (PSG)",
+    "name": "Paris Saint-Germain (PSG) Retro",
     "country": "france",
     "isHistorical": true,
     "period": "2013-2024",
     "startYear": 2013,
     "endYear": 2024,
-    "localPath": "/logos/france/france-old-paris-saint-germain-psg-logo-2013-2024---high-res-png-2013-2024.svg",
+    "localPath": "/logos/retro/france-old-paris-saint-germain-psg-logo-2013-2024---high-res-png-2013-2024.svg",
     "pageUrl": "https://football-logos.cc/france/paris-saint-germain/2013-2024/",
     "league": null,
     "type": null
@@ -11376,26 +11376,26 @@
   },
   {
     "id": "germany-old-germany-national-team-logo-2008-2014---high-res-png-2008-2014",
-    "name": "Old Germany National Team",
+    "name": "Germany National Team Retro",
     "country": "germany",
     "isHistorical": true,
     "period": "2008-2014",
     "startYear": 2008,
     "endYear": 2014,
-    "localPath": "/logos/germany/germany-old-germany-national-team-logo-2008-2014---high-res-png-2008-2014.svg",
+    "localPath": "/logos/retro/germany-old-germany-national-team-logo-2008-2014---high-res-png-2008-2014.svg",
     "pageUrl": "https://football-logos.cc/germany/germany-national-team/2008-2014/",
     "league": null,
     "type": null
   },
   {
     "id": "germany-old-germany-national-team-logo-2014-2021---high-res-png-2014-2021",
-    "name": "Old Germany National Team",
+    "name": "Germany National Team Retro",
     "country": "germany",
     "isHistorical": true,
     "period": "2014-2021",
     "startYear": 2014,
     "endYear": 2021,
-    "localPath": "/logos/germany/germany-old-germany-national-team-logo-2014-2021---high-res-png-2014-2021.svg",
+    "localPath": "/logos/retro/germany-old-germany-national-team-logo-2014-2021---high-res-png-2014-2021.svg",
     "pageUrl": "https://football-logos.cc/germany/germany-national-team/2014-2021/",
     "league": null,
     "type": null
@@ -11447,10 +11447,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/germany/germany-bundesliga-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/germany-bundesliga-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/germany/bundesliga/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "germany-2-bundesliga-logo-high-res-png",
@@ -11460,10 +11460,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/germany/germany-2-bundesliga-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/germany-2-bundesliga-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/germany/2-bundesliga/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "germany-3-liga-logo-no-text-high-res-png",
@@ -11473,10 +11473,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/germany/germany-3-liga-logo-no-text-high-res-png.svg",
+    "localPath": "/logos/tournaments/germany-3-liga-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/germany/3-liga/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "germany-3-liga-logo-high-res-png",
@@ -11486,85 +11486,85 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/germany/germany-3-liga-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/germany-3-liga-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/germany/3-liga/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "germany-old-bayern-mnchen-bavaria-logo-1901-1906---high-res-png-1901-1906",
-    "name": "Old Bayern München (Bavaria)",
+    "name": "Bayern München (Bavaria) Retro",
     "country": "germany",
     "isHistorical": true,
     "period": "1901-1906",
     "startYear": 1901,
     "endYear": 1906,
-    "localPath": "/logos/germany/germany-old-bayern-mnchen-bavaria-logo-1901-1906---high-res-png-1901-1906.svg",
+    "localPath": "/logos/retro/germany-old-bayern-mnchen-bavaria-logo-1901-1906---high-res-png-1901-1906.svg",
     "pageUrl": "https://football-logos.cc/germany/bayern-munchen/1901-1906/",
     "league": null,
     "type": null
   },
   {
     "id": "germany-old-bayern-mnchen-bavaria-logo-1906-1919---high-res-png-1906-1919",
-    "name": "Old Bayern München (Bavaria)",
+    "name": "Bayern München (Bavaria) Retro",
     "country": "germany",
     "isHistorical": true,
     "period": "1906-1919",
     "startYear": 1906,
     "endYear": 1919,
-    "localPath": "/logos/germany/germany-old-bayern-mnchen-bavaria-logo-1906-1919---high-res-png-1906-1919.svg",
+    "localPath": "/logos/retro/germany-old-bayern-mnchen-bavaria-logo-1906-1919---high-res-png-1906-1919.svg",
     "pageUrl": "https://football-logos.cc/germany/bayern-munchen/1906-1919/",
     "league": null,
     "type": null
   },
   {
     "id": "germany-old-bayern-mnchen-bavaria-logo-1924-1954---high-res-png-1924-1954",
-    "name": "Old Bayern München (Bavaria)",
+    "name": "Bayern München (Bavaria) Retro",
     "country": "germany",
     "isHistorical": true,
     "period": "1924-1954",
     "startYear": 1924,
     "endYear": 1954,
-    "localPath": "/logos/germany/germany-old-bayern-mnchen-bavaria-logo-1924-1954---high-res-png-1924-1954.svg",
+    "localPath": "/logos/retro/germany-old-bayern-mnchen-bavaria-logo-1924-1954---high-res-png-1924-1954.svg",
     "pageUrl": "https://football-logos.cc/germany/bayern-munchen/1924-1954/",
     "league": null,
     "type": null
   },
   {
     "id": "germany-old-bayern-mnchen-bavaria-logo-1954-1996---high-res-png-1954-1996",
-    "name": "Old Bayern München (Bavaria)",
+    "name": "Bayern München (Bavaria) Retro",
     "country": "germany",
     "isHistorical": true,
     "period": "1954-1996",
     "startYear": 1954,
     "endYear": 1996,
-    "localPath": "/logos/germany/germany-old-bayern-mnchen-bavaria-logo-1954-1996---high-res-png-1954-1996.svg",
+    "localPath": "/logos/retro/germany-old-bayern-mnchen-bavaria-logo-1954-1996---high-res-png-1954-1996.svg",
     "pageUrl": "https://football-logos.cc/germany/bayern-munchen/1954-1996/",
     "league": null,
     "type": null
   },
   {
     "id": "germany-old-bayern-mnchen-bavaria-logo-1996-2002---high-res-png-1996-2002",
-    "name": "Old Bayern München (Bavaria)",
+    "name": "Bayern München (Bavaria) Retro",
     "country": "germany",
     "isHistorical": true,
     "period": "1996-2002",
     "startYear": 1996,
     "endYear": 2002,
-    "localPath": "/logos/germany/germany-old-bayern-mnchen-bavaria-logo-1996-2002---high-res-png-1996-2002.svg",
+    "localPath": "/logos/retro/germany-old-bayern-mnchen-bavaria-logo-1996-2002---high-res-png-1996-2002.svg",
     "pageUrl": "https://football-logos.cc/germany/bayern-munchen/1996-2002/",
     "league": null,
     "type": null
   },
   {
     "id": "germany-old-bayern-mnchen-bavaria-logo-2002-2017---high-res-png-2002-2017",
-    "name": "Old Bayern München (Bavaria)",
+    "name": "Bayern München (Bavaria) Retro",
     "country": "germany",
     "isHistorical": true,
     "period": "2002-2017",
     "startYear": 2002,
     "endYear": 2017,
-    "localPath": "/logos/germany/germany-old-bayern-mnchen-bavaria-logo-2002-2017---high-res-png-2002-2017.svg",
+    "localPath": "/logos/retro/germany-old-bayern-mnchen-bavaria-logo-2002-2017---high-res-png-2002-2017.svg",
     "pageUrl": "https://football-logos.cc/germany/bayern-munchen/2002-2017/",
     "league": null,
     "type": null
@@ -11584,91 +11584,91 @@
   },
   {
     "id": "germany-old-borussia-dortmund-bvb-logo-1913-1919---high-res-png-1913-1919",
-    "name": "Old Borussia Dortmund (BVB)",
+    "name": "Borussia Dortmund (BVB) Retro",
     "country": "germany",
     "isHistorical": true,
     "period": "1913-1919",
     "startYear": 1913,
     "endYear": 1919,
-    "localPath": "/logos/germany/germany-old-borussia-dortmund-bvb-logo-1913-1919---high-res-png-1913-1919.svg",
+    "localPath": "/logos/retro/germany-old-borussia-dortmund-bvb-logo-1913-1919---high-res-png-1913-1919.svg",
     "pageUrl": "https://football-logos.cc/germany/borussia-dortmund/1913-1919/",
     "league": null,
     "type": null
   },
   {
     "id": "germany-old-borussia-dortmund-bvb-logo-1919-1945---high-res-png-1919-1945",
-    "name": "Old Borussia Dortmund (BVB)",
+    "name": "Borussia Dortmund (BVB) Retro",
     "country": "germany",
     "isHistorical": true,
     "period": "1919-1945",
     "startYear": 1919,
     "endYear": 1945,
-    "localPath": "/logos/germany/germany-old-borussia-dortmund-bvb-logo-1919-1945---high-res-png-1919-1945.svg",
+    "localPath": "/logos/retro/germany-old-borussia-dortmund-bvb-logo-1919-1945---high-res-png-1919-1945.svg",
     "pageUrl": "https://football-logos.cc/germany/borussia-dortmund/1919-1945/",
     "league": null,
     "type": null
   },
   {
     "id": "germany-old-borussia-dortmund-bvb-logo-1945-1964---high-res-png-1945-1964",
-    "name": "Old Borussia Dortmund (BVB)",
+    "name": "Borussia Dortmund (BVB) Retro",
     "country": "germany",
     "isHistorical": true,
     "period": "1945-1964",
     "startYear": 1945,
     "endYear": 1964,
-    "localPath": "/logos/germany/germany-old-borussia-dortmund-bvb-logo-1945-1964---high-res-png-1945-1964.svg",
+    "localPath": "/logos/retro/germany-old-borussia-dortmund-bvb-logo-1945-1964---high-res-png-1945-1964.svg",
     "pageUrl": "https://football-logos.cc/germany/borussia-dortmund/1945-1964/",
     "league": null,
     "type": null
   },
   {
     "id": "germany-old-borussia-dortmund-bvb-logo-1964-1974---high-res-png-1964-1974",
-    "name": "Old Borussia Dortmund (BVB)",
+    "name": "Borussia Dortmund (BVB) Retro",
     "country": "germany",
     "isHistorical": true,
     "period": "1964-1974",
     "startYear": 1964,
     "endYear": 1974,
-    "localPath": "/logos/germany/germany-old-borussia-dortmund-bvb-logo-1964-1974---high-res-png-1964-1974.svg",
+    "localPath": "/logos/retro/germany-old-borussia-dortmund-bvb-logo-1964-1974---high-res-png-1964-1974.svg",
     "pageUrl": "https://football-logos.cc/germany/borussia-dortmund/1964-1974/",
     "league": null,
     "type": null
   },
   {
     "id": "germany-old-borussia-dortmund-bvb-logo-1974-1976---high-res-png-1974-1976",
-    "name": "Old Borussia Dortmund (BVB)",
+    "name": "Borussia Dortmund (BVB) Retro",
     "country": "germany",
     "isHistorical": true,
     "period": "1974-1976",
     "startYear": 1974,
     "endYear": 1976,
-    "localPath": "/logos/germany/germany-old-borussia-dortmund-bvb-logo-1974-1976---high-res-png-1974-1976.svg",
+    "localPath": "/logos/retro/germany-old-borussia-dortmund-bvb-logo-1974-1976---high-res-png-1974-1976.svg",
     "pageUrl": "https://football-logos.cc/germany/borussia-dortmund/1974-1976/",
     "league": null,
     "type": null
   },
   {
     "id": "germany-old-borussia-dortmund-bvb-logo-1976-1978---high-res-png-1976-1978",
-    "name": "Old Borussia Dortmund (BVB)",
+    "name": "Borussia Dortmund (BVB) Retro",
     "country": "germany",
     "isHistorical": true,
     "period": "1976-1978",
     "startYear": 1976,
     "endYear": 1978,
-    "localPath": "/logos/germany/germany-old-borussia-dortmund-bvb-logo-1976-1978---high-res-png-1976-1978.svg",
+    "localPath": "/logos/retro/germany-old-borussia-dortmund-bvb-logo-1976-1978---high-res-png-1976-1978.svg",
     "pageUrl": "https://football-logos.cc/germany/borussia-dortmund/1976-1978/",
     "league": null,
     "type": null
   },
   {
     "id": "germany-old-borussia-dortmund-bvb-logo-1978-1993---high-res-png-1978-1993",
-    "name": "Old Borussia Dortmund (BVB)",
+    "name": "Borussia Dortmund (BVB) Retro",
     "country": "germany",
     "isHistorical": true,
     "period": "1978-1993",
     "startYear": 1978,
     "endYear": 1993,
-    "localPath": "/logos/germany/germany-old-borussia-dortmund-bvb-logo-1978-1993---high-res-png-1978-1993.svg",
+    "localPath": "/logos/retro/germany-old-borussia-dortmund-bvb-logo-1978-1993---high-res-png-1978-1993.svg",
     "pageUrl": "https://football-logos.cc/germany/borussia-dortmund/1978-1993/",
     "league": null,
     "type": null
@@ -12630,10 +12630,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/greece/greece-super-league-1-gsl-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/greece-super-league-1-gsl-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/greece/super-league-1/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "greece-aek-athens---logo-high-res-png",
@@ -13657,10 +13657,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/india/india-indian-super-league-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/india-indian-super-league-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/india/indian-super-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "india-mohun-bagan-super-giant-logo-high-res-png",
@@ -13852,10 +13852,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/indonesia/indonesia-indonesian-super-league-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/indonesia-indonesian-super-league-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/indonesia/indonesian-super-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "indonesia-borneo-samarinda-logo-high-res-png",
@@ -14138,10 +14138,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/israel/israel-israeli-premier-league-ligat-haal-logo-no-text-high-res-png.svg",
+    "localPath": "/logos/tournaments/israel-israeli-premier-league-ligat-haal-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/israel/israeli-premier-league/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "israel-israeli-premier-league-ligat-haal-logo-high-res-png",
@@ -14151,10 +14151,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/israel/israel-israeli-premier-league-ligat-haal-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/israel-israeli-premier-league-ligat-haal-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/israel/israeli-premier-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "israel-ashdod----logo-high-res-png",
@@ -14476,10 +14476,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/italy/italy-serie-a-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/italy-serie-a-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/italy/serie-a/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "italy-serie-b-logo-high-res-png",
@@ -14489,10 +14489,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/italy/italy-serie-b-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/italy-serie-b-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/italy/serie-b/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "italy-serie-c-logo-high-res-png",
@@ -14502,10 +14502,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/italy/italy-serie-c-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/italy-serie-c-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/italy/serie-c/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "italy-coppa-italia-logo-high-res-png",
@@ -14522,104 +14522,104 @@
   },
   {
     "id": "italy-old-juventus-logo-1921-1929---high-res-png-1921-1929",
-    "name": "Old Juventus",
+    "name": "Juventus Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1921-1929",
     "startYear": 1921,
     "endYear": 1929,
-    "localPath": "/logos/italy/italy-old-juventus-logo-1921-1929---high-res-png-1921-1929.svg",
+    "localPath": "/logos/retro/italy-old-juventus-logo-1921-1929---high-res-png-1921-1929.svg",
     "pageUrl": "https://football-logos.cc/italy/juventus/1921-1929/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-juventus-logo-1929-1931---high-res-png-1929-1931",
-    "name": "Old Juventus",
+    "name": "Juventus Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1929-1931",
     "startYear": 1929,
     "endYear": 1931,
-    "localPath": "/logos/italy/italy-old-juventus-logo-1929-1931---high-res-png-1929-1931.svg",
+    "localPath": "/logos/retro/italy-old-juventus-logo-1929-1931---high-res-png-1929-1931.svg",
     "pageUrl": "https://football-logos.cc/italy/juventus/1929-1931/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-juventus-logo-1931-1977---high-res-png-1931-1977",
-    "name": "Old Juventus",
+    "name": "Juventus Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1931-1977",
     "startYear": 1931,
     "endYear": 1977,
-    "localPath": "/logos/italy/italy-old-juventus-logo-1931-1977---high-res-png-1931-1977.svg",
+    "localPath": "/logos/retro/italy-old-juventus-logo-1931-1977---high-res-png-1931-1977.svg",
     "pageUrl": "https://football-logos.cc/italy/juventus/1931-1977/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-juventus-logo-1977-1982---high-res-png-1977-1982",
-    "name": "Old Juventus",
+    "name": "Juventus Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1977-1982",
     "startYear": 1977,
     "endYear": 1982,
-    "localPath": "/logos/italy/italy-old-juventus-logo-1977-1982---high-res-png-1977-1982.svg",
+    "localPath": "/logos/retro/italy-old-juventus-logo-1977-1982---high-res-png-1977-1982.svg",
     "pageUrl": "https://football-logos.cc/italy/juventus/1977-1982/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-juventus-logo-1982-1989---high-res-png-1982-1989",
-    "name": "Old Juventus",
+    "name": "Juventus Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1982-1989",
     "startYear": 1982,
     "endYear": 1989,
-    "localPath": "/logos/italy/italy-old-juventus-logo-1982-1989---high-res-png-1982-1989.svg",
+    "localPath": "/logos/retro/italy-old-juventus-logo-1982-1989---high-res-png-1982-1989.svg",
     "pageUrl": "https://football-logos.cc/italy/juventus/1982-1989/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-juventus-logo-1989-2004---high-res-png-1989-2004",
-    "name": "Old Juventus",
+    "name": "Juventus Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1989-2004",
     "startYear": 1989,
     "endYear": 2004,
-    "localPath": "/logos/italy/italy-old-juventus-logo-1989-2004---high-res-png-1989-2004.svg",
+    "localPath": "/logos/retro/italy-old-juventus-logo-1989-2004---high-res-png-1989-2004.svg",
     "pageUrl": "https://football-logos.cc/italy/juventus/1989-2004/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-juventus-logo-2004-2017---high-res-png-2004-2017",
-    "name": "Old Juventus",
+    "name": "Juventus Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "2004-2017",
     "startYear": 2004,
     "endYear": 2017,
-    "localPath": "/logos/italy/italy-old-juventus-logo-2004-2017---high-res-png-2004-2017.svg",
+    "localPath": "/logos/retro/italy-old-juventus-logo-2004-2017---high-res-png-2004-2017.svg",
     "pageUrl": "https://football-logos.cc/italy/juventus/2004-2017/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-juventus-logo-2017-2020---high-res-png-2017-2020",
-    "name": "Old Juventus",
+    "name": "Juventus Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "2017-2020",
     "startYear": 2017,
     "endYear": 2020,
-    "localPath": "/logos/italy/italy-old-juventus-logo-2017-2020---high-res-png-2017-2020.svg",
+    "localPath": "/logos/retro/italy-old-juventus-logo-2017-2020---high-res-png-2017-2020.svg",
     "pageUrl": "https://football-logos.cc/italy/juventus/2017-2020/",
     "league": null,
     "type": null
@@ -14652,65 +14652,65 @@
   },
   {
     "id": "italy-old-milan-logo-1936-1939---high-res-png-1936-1939",
-    "name": "Old Milan",
+    "name": "Milan Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1936-1939",
     "startYear": 1936,
     "endYear": 1939,
-    "localPath": "/logos/italy/italy-old-milan-logo-1936-1939---high-res-png-1936-1939.svg",
+    "localPath": "/logos/retro/italy-old-milan-logo-1936-1939---high-res-png-1936-1939.svg",
     "pageUrl": "https://football-logos.cc/italy/milan/1936-1939/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-milan-logo-1946-1976---high-res-png-1946-1976",
-    "name": "Old Milan",
+    "name": "Milan Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1946-1976",
     "startYear": 1946,
     "endYear": 1976,
-    "localPath": "/logos/italy/italy-old-milan-logo-1946-1976---high-res-png-1946-1976.svg",
+    "localPath": "/logos/retro/italy-old-milan-logo-1946-1976---high-res-png-1946-1976.svg",
     "pageUrl": "https://football-logos.cc/italy/milan/1946-1976/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-milan-logo-1976-1979---high-res-png-1976-1979",
-    "name": "Old Milan",
+    "name": "Milan Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1976-1979",
     "startYear": 1976,
     "endYear": 1979,
-    "localPath": "/logos/italy/italy-old-milan-logo-1976-1979---high-res-png-1976-1979.svg",
+    "localPath": "/logos/retro/italy-old-milan-logo-1976-1979---high-res-png-1976-1979.svg",
     "pageUrl": "https://football-logos.cc/italy/milan/1976-1979/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-milan-logo-1979-1986---high-res-png-1979-1986",
-    "name": "Old Milan",
+    "name": "Milan Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1979-1986",
     "startYear": 1979,
     "endYear": 1986,
-    "localPath": "/logos/italy/italy-old-milan-logo-1979-1986---high-res-png-1979-1986.svg",
+    "localPath": "/logos/retro/italy-old-milan-logo-1979-1986---high-res-png-1979-1986.svg",
     "pageUrl": "https://football-logos.cc/italy/milan/1979-1986/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-milan-logo-1986-1994---high-res-png-1986-1994",
-    "name": "Old Milan",
+    "name": "Milan Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1986-1994",
     "startYear": 1986,
     "endYear": 1994,
-    "localPath": "/logos/italy/italy-old-milan-logo-1986-1994---high-res-png-1986-1994.svg",
+    "localPath": "/logos/retro/italy-old-milan-logo-1986-1994---high-res-png-1986-1994.svg",
     "pageUrl": "https://football-logos.cc/italy/milan/1986-1994/",
     "league": null,
     "type": null
@@ -14730,104 +14730,104 @@
   },
   {
     "id": "italy-old-inter-logo-1933-1945---high-res-png-1933-1945",
-    "name": "Old Inter",
+    "name": "Inter Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1933-1945",
     "startYear": 1933,
     "endYear": 1945,
-    "localPath": "/logos/italy/italy-old-inter-logo-1933-1945---high-res-png-1933-1945.svg",
+    "localPath": "/logos/retro/italy-old-inter-logo-1933-1945---high-res-png-1933-1945.svg",
     "pageUrl": "https://football-logos.cc/italy/inter/1933-1945/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-inter-logo-1945-1960---high-res-png-1945-1960",
-    "name": "Old Inter",
+    "name": "Inter Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1945-1960",
     "startYear": 1945,
     "endYear": 1960,
-    "localPath": "/logos/italy/italy-old-inter-logo-1945-1960---high-res-png-1945-1960.svg",
+    "localPath": "/logos/retro/italy-old-inter-logo-1945-1960---high-res-png-1945-1960.svg",
     "pageUrl": "https://football-logos.cc/italy/inter/1945-1960/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-inter-logo-1963-1979---high-res-png-1963-1979",
-    "name": "Old Inter",
+    "name": "Inter Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1963-1979",
     "startYear": 1963,
     "endYear": 1979,
-    "localPath": "/logos/italy/italy-old-inter-logo-1963-1979---high-res-png-1963-1979.svg",
+    "localPath": "/logos/retro/italy-old-inter-logo-1963-1979---high-res-png-1963-1979.svg",
     "pageUrl": "https://football-logos.cc/italy/inter/1963-1979/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-inter-logo-1979-1989---high-res-png-1979-1989",
-    "name": "Old Inter",
+    "name": "Inter Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1979-1989",
     "startYear": 1979,
     "endYear": 1989,
-    "localPath": "/logos/italy/italy-old-inter-logo-1979-1989---high-res-png-1979-1989.svg",
+    "localPath": "/logos/retro/italy-old-inter-logo-1979-1989---high-res-png-1979-1989.svg",
     "pageUrl": "https://football-logos.cc/italy/inter/1979-1989/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-inter-logo-1989-1999---high-res-png-1989-1999",
-    "name": "Old Inter",
+    "name": "Inter Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1989-1999",
     "startYear": 1989,
     "endYear": 1999,
-    "localPath": "/logos/italy/italy-old-inter-logo-1989-1999---high-res-png-1989-1999.svg",
+    "localPath": "/logos/retro/italy-old-inter-logo-1989-1999---high-res-png-1989-1999.svg",
     "pageUrl": "https://football-logos.cc/italy/inter/1989-1999/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-inter-logo-1999-2007---high-res-png-1999-2007",
-    "name": "Old Inter",
+    "name": "Inter Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1999-2007",
     "startYear": 1999,
     "endYear": 2007,
-    "localPath": "/logos/italy/italy-old-inter-logo-1999-2007---high-res-png-1999-2007.svg",
+    "localPath": "/logos/retro/italy-old-inter-logo-1999-2007---high-res-png-1999-2007.svg",
     "pageUrl": "https://football-logos.cc/italy/inter/1999-2007/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-inter-logo-2007-2014---high-res-png-2007-2014",
-    "name": "Old Inter",
+    "name": "Inter Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "2007-2014",
     "startYear": 2007,
     "endYear": 2014,
-    "localPath": "/logos/italy/italy-old-inter-logo-2007-2014---high-res-png-2007-2014.svg",
+    "localPath": "/logos/retro/italy-old-inter-logo-2007-2014---high-res-png-2007-2014.svg",
     "pageUrl": "https://football-logos.cc/italy/inter/2007-2014/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-inter-logo-2014-2021---high-res-png-2014-2021",
-    "name": "Old Inter",
+    "name": "Inter Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "2014-2021",
     "startYear": 2014,
     "endYear": 2021,
-    "localPath": "/logos/italy/italy-old-inter-logo-2014-2021---high-res-png-2014-2021.svg",
+    "localPath": "/logos/retro/italy-old-inter-logo-2014-2021---high-res-png-2014-2021.svg",
     "pageUrl": "https://football-logos.cc/italy/inter/2014-2021/",
     "league": null,
     "type": null
@@ -14847,234 +14847,234 @@
   },
   {
     "id": "italy-old-napoli-logo-1927-1940---high-res-png-1927-1940",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1927-1940",
     "startYear": 1927,
     "endYear": 1940,
-    "localPath": "/logos/italy/italy-old-napoli-logo-1927-1940---high-res-png-1927-1940.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-1927-1940---high-res-png-1927-1940.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/1927-1940/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-1940-1945---high-res-png-1940-1945",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1940-1945",
     "startYear": 1940,
     "endYear": 1945,
-    "localPath": "/logos/italy/italy-old-napoli-logo-1940-1945---high-res-png-1940-1945.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-1940-1945---high-res-png-1940-1945.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/1940-1945/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-1945-1959---high-res-png-1945-1959",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1945-1959",
     "startYear": 1945,
     "endYear": 1959,
-    "localPath": "/logos/italy/italy-old-napoli-logo-1945-1959---high-res-png-1945-1959.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-1945-1959---high-res-png-1945-1959.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/1945-1959/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-1959-1961---high-res-png-1959-1961",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1959-1961",
     "startYear": 1959,
     "endYear": 1961,
-    "localPath": "/logos/italy/italy-old-napoli-logo-1959-1961---high-res-png-1959-1961.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-1959-1961---high-res-png-1959-1961.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/1959-1961/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-1962-1964---high-res-png-1962-1964",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1962-1964",
     "startYear": 1962,
     "endYear": 1964,
-    "localPath": "/logos/italy/italy-old-napoli-logo-1962-1964---high-res-png-1962-1964.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-1962-1964---high-res-png-1962-1964.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/1962-1964/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-1964-1965---high-res-png-1964-1965",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1964-1965",
     "startYear": 1964,
     "endYear": 1965,
-    "localPath": "/logos/italy/italy-old-napoli-logo-1964-1965---high-res-png-1964-1965.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-1964-1965---high-res-png-1964-1965.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/1964-1965/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-1965-1967---high-res-png-1965-1967",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1965-1967",
     "startYear": 1965,
     "endYear": 1967,
-    "localPath": "/logos/italy/italy-old-napoli-logo-1965-1967---high-res-png-1965-1967.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-1965-1967---high-res-png-1965-1967.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/1965-1967/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-1965-1969---high-res-png-1965-1969",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1965-1969",
     "startYear": 1965,
     "endYear": 1969,
-    "localPath": "/logos/italy/italy-old-napoli-logo-1965-1969---high-res-png-1965-1969.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-1965-1969---high-res-png-1965-1969.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/1965-1969/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-1969-1973---high-res-png-1969-1973",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1969-1973",
     "startYear": 1969,
     "endYear": 1973,
-    "localPath": "/logos/italy/italy-old-napoli-logo-1969-1973---high-res-png-1969-1973.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-1969-1973---high-res-png-1969-1973.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/1969-1973/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-1973-1974---high-res-png-1973-1974",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1973-1974",
     "startYear": 1973,
     "endYear": 1974,
-    "localPath": "/logos/italy/italy-old-napoli-logo-1973-1974---high-res-png-1973-1974.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-1973-1974---high-res-png-1973-1974.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/1973-1974/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-1974-1982---high-res-png-1974-1982",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1974-1982",
     "startYear": 1974,
     "endYear": 1982,
-    "localPath": "/logos/italy/italy-old-napoli-logo-1974-1982---high-res-png-1974-1982.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-1974-1982---high-res-png-1974-1982.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/1974-1982/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-1982-1984---high-res-png-1982-1984",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1982-1984",
     "startYear": 1982,
     "endYear": 1984,
-    "localPath": "/logos/italy/italy-old-napoli-logo-1982-1984---high-res-png-1982-1984.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-1982-1984---high-res-png-1982-1984.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/1982-1984/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-1984-1985---high-res-png-1984-1985",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1984-1985",
     "startYear": 1984,
     "endYear": 1985,
-    "localPath": "/logos/italy/italy-old-napoli-logo-1984-1985---high-res-png-1984-1985.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-1984-1985---high-res-png-1984-1985.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/1984-1985/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-1985-1997---high-res-png-1985-1997",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1985-1997",
     "startYear": 1985,
     "endYear": 1997,
-    "localPath": "/logos/italy/italy-old-napoli-logo-1985-1997---high-res-png-1985-1997.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-1985-1997---high-res-png-1985-1997.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/1985-1997/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-1997-2006---high-res-png-1997-2006",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1997-2006",
     "startYear": 1997,
     "endYear": 2006,
-    "localPath": "/logos/italy/italy-old-napoli-logo-1997-2006---high-res-png-1997-2006.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-1997-2006---high-res-png-1997-2006.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/1997-2006/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-2006-2007---high-res-png-2006-2007",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "2006-2007",
     "startYear": 2006,
     "endYear": 2007,
-    "localPath": "/logos/italy/italy-old-napoli-logo-2006-2007---high-res-png-2006-2007.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-2006-2007---high-res-png-2006-2007.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/2006-2007/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-2007-2019---high-res-png-2007-2019",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "2007-2019",
     "startYear": 2007,
     "endYear": 2019,
-    "localPath": "/logos/italy/italy-old-napoli-logo-2007-2019---high-res-png-2007-2019.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-2007-2019---high-res-png-2007-2019.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/2007-2019/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-napoli-logo-2019-2024---high-res-png-2019-2024",
-    "name": "Old Napoli",
+    "name": "Napoli Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "2019-2024",
     "startYear": 2019,
     "endYear": 2024,
-    "localPath": "/logos/italy/italy-old-napoli-logo-2019-2024---high-res-png-2019-2024.svg",
+    "localPath": "/logos/retro/italy-old-napoli-logo-2019-2024---high-res-png-2019-2024.svg",
     "pageUrl": "https://football-logos.cc/italy/napoli/2019-2024/",
     "league": null,
     "type": null
@@ -15094,143 +15094,143 @@
   },
   {
     "id": "italy-old-roma-logo-1930-1934---high-res-png-1930-1934",
-    "name": "Old Roma",
+    "name": "Roma Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1930-1934",
     "startYear": 1930,
     "endYear": 1934,
-    "localPath": "/logos/italy/italy-old-roma-logo-1930-1934---high-res-png-1930-1934.svg",
+    "localPath": "/logos/retro/italy-old-roma-logo-1930-1934---high-res-png-1930-1934.svg",
     "pageUrl": "https://football-logos.cc/italy/roma/1930-1934/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-roma-logo-1945-1949---high-res-png-1945-1949",
-    "name": "Old Roma",
+    "name": "Roma Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1945-1949",
     "startYear": 1945,
     "endYear": 1949,
-    "localPath": "/logos/italy/italy-old-roma-logo-1945-1949---high-res-png-1945-1949.svg",
+    "localPath": "/logos/retro/italy-old-roma-logo-1945-1949---high-res-png-1945-1949.svg",
     "pageUrl": "https://football-logos.cc/italy/roma/1945-1949/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-roma-logo-1949-1950---high-res-png-1949-1950",
-    "name": "Old Roma",
+    "name": "Roma Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1949-1950",
     "startYear": 1949,
     "endYear": 1950,
-    "localPath": "/logos/italy/italy-old-roma-logo-1949-1950---high-res-png-1949-1950.svg",
+    "localPath": "/logos/retro/italy-old-roma-logo-1949-1950---high-res-png-1949-1950.svg",
     "pageUrl": "https://football-logos.cc/italy/roma/1949-1950/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-roma-logo-1950-1960---high-res-png-1950-1960",
-    "name": "Old Roma",
+    "name": "Roma Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1950-1960",
     "startYear": 1950,
     "endYear": 1960,
-    "localPath": "/logos/italy/italy-old-roma-logo-1950-1960---high-res-png-1950-1960.svg",
+    "localPath": "/logos/retro/italy-old-roma-logo-1950-1960---high-res-png-1950-1960.svg",
     "pageUrl": "https://football-logos.cc/italy/roma/1950-1960/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-roma-logo-1960-1970---high-res-png-1960-1970",
-    "name": "Old Roma",
+    "name": "Roma Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1960-1970",
     "startYear": 1960,
     "endYear": 1970,
-    "localPath": "/logos/italy/italy-old-roma-logo-1960-1970---high-res-png-1960-1970.svg",
+    "localPath": "/logos/retro/italy-old-roma-logo-1960-1970---high-res-png-1960-1970.svg",
     "pageUrl": "https://football-logos.cc/italy/roma/1960-1970/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-roma-logo-1970-1979---high-res-png-1970-1979",
-    "name": "Old Roma",
+    "name": "Roma Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1970-1979",
     "startYear": 1970,
     "endYear": 1979,
-    "localPath": "/logos/italy/italy-old-roma-logo-1970-1979---high-res-png-1970-1979.svg",
+    "localPath": "/logos/retro/italy-old-roma-logo-1970-1979---high-res-png-1970-1979.svg",
     "pageUrl": "https://football-logos.cc/italy/roma/1970-1979/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-roma-logo-1979-1997---high-res-png-1979-1997",
-    "name": "Old Roma",
+    "name": "Roma Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1979-1997",
     "startYear": 1979,
     "endYear": 1997,
-    "localPath": "/logos/italy/italy-old-roma-logo-1979-1997---high-res-png-1979-1997.svg",
+    "localPath": "/logos/retro/italy-old-roma-logo-1979-1997---high-res-png-1979-1997.svg",
     "pageUrl": "https://football-logos.cc/italy/roma/1979-1997/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-roma-logo-1997-2000---high-res-png-1997-2000",
-    "name": "Old Roma",
+    "name": "Roma Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1997-2000",
     "startYear": 1997,
     "endYear": 2000,
-    "localPath": "/logos/italy/italy-old-roma-logo-1997-2000---high-res-png-1997-2000.svg",
+    "localPath": "/logos/retro/italy-old-roma-logo-1997-2000---high-res-png-1997-2000.svg",
     "pageUrl": "https://football-logos.cc/italy/roma/1997-2000/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-roma-logo-2000-2013---high-res-png-2000-2013",
-    "name": "Old Roma",
+    "name": "Roma Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "2000-2013",
     "startYear": 2000,
     "endYear": 2013,
-    "localPath": "/logos/italy/italy-old-roma-logo-2000-2013---high-res-png-2000-2013.svg",
+    "localPath": "/logos/retro/italy-old-roma-logo-2000-2013---high-res-png-2000-2013.svg",
     "pageUrl": "https://football-logos.cc/italy/roma/2000-2013/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-roma-logo-2013-2016---high-res-png-2013-2016",
-    "name": "Old Roma",
+    "name": "Roma Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "2013-2016",
     "startYear": 2013,
     "endYear": 2016,
-    "localPath": "/logos/italy/italy-old-roma-logo-2013-2016---high-res-png-2013-2016.svg",
+    "localPath": "/logos/retro/italy-old-roma-logo-2013-2016---high-res-png-2013-2016.svg",
     "pageUrl": "https://football-logos.cc/italy/roma/2013-2016/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-roma-logo-2016-2025---high-res-png-2016-2025",
-    "name": "Old Roma",
+    "name": "Roma Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "2016-2025",
     "startYear": 2016,
     "endYear": 2025,
-    "localPath": "/logos/italy/italy-old-roma-logo-2016-2025---high-res-png-2016-2025.svg",
+    "localPath": "/logos/retro/italy-old-roma-logo-2016-2025---high-res-png-2016-2025.svg",
     "pageUrl": "https://football-logos.cc/italy/roma/2016-2025/",
     "league": null,
     "type": null
@@ -15250,130 +15250,130 @@
   },
   {
     "id": "italy-old-lazio-logo-1900-1905---high-res-png-1900-1905",
-    "name": "Old Lazio",
+    "name": "Lazio Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1900-1905",
     "startYear": 1900,
     "endYear": 1905,
-    "localPath": "/logos/italy/italy-old-lazio-logo-1900-1905---high-res-png-1900-1905.svg",
+    "localPath": "/logos/retro/italy-old-lazio-logo-1900-1905---high-res-png-1900-1905.svg",
     "pageUrl": "https://football-logos.cc/italy/lazio/1900-1905/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-lazio-logo-1905-1914---high-res-png-1905-1914",
-    "name": "Old Lazio",
+    "name": "Lazio Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1905-1914",
     "startYear": 1905,
     "endYear": 1914,
-    "localPath": "/logos/italy/italy-old-lazio-logo-1905-1914---high-res-png-1905-1914.svg",
+    "localPath": "/logos/retro/italy-old-lazio-logo-1905-1914---high-res-png-1905-1914.svg",
     "pageUrl": "https://football-logos.cc/italy/lazio/1905-1914/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-lazio-logo-1936-1948---high-res-png-1936-1948",
-    "name": "Old Lazio",
+    "name": "Lazio Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1936-1948",
     "startYear": 1936,
     "endYear": 1948,
-    "localPath": "/logos/italy/italy-old-lazio-logo-1936-1948---high-res-png-1936-1948.svg",
+    "localPath": "/logos/retro/italy-old-lazio-logo-1936-1948---high-res-png-1936-1948.svg",
     "pageUrl": "https://football-logos.cc/italy/lazio/1936-1948/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-lazio-logo-1968-1979---high-res-png-1968-1979",
-    "name": "Old Lazio",
+    "name": "Lazio Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1968-1979",
     "startYear": 1968,
     "endYear": 1979,
-    "localPath": "/logos/italy/italy-old-lazio-logo-1968-1979---high-res-png-1968-1979.svg",
+    "localPath": "/logos/retro/italy-old-lazio-logo-1968-1979---high-res-png-1968-1979.svg",
     "pageUrl": "https://football-logos.cc/italy/lazio/1968-1979/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-lazio-logo-1979-1982---high-res-png-1979-1982",
-    "name": "Old Lazio",
+    "name": "Lazio Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1979-1982",
     "startYear": 1979,
     "endYear": 1982,
-    "localPath": "/logos/italy/italy-old-lazio-logo-1979-1982---high-res-png-1979-1982.svg",
+    "localPath": "/logos/retro/italy-old-lazio-logo-1979-1982---high-res-png-1979-1982.svg",
     "pageUrl": "https://football-logos.cc/italy/lazio/1979-1982/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-lazio-logo-1982-1983---high-res-png-1982-1983",
-    "name": "Old Lazio",
+    "name": "Lazio Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1982-1983",
     "startYear": 1982,
     "endYear": 1983,
-    "localPath": "/logos/italy/italy-old-lazio-logo-1982-1983---high-res-png-1982-1983.svg",
+    "localPath": "/logos/retro/italy-old-lazio-logo-1982-1983---high-res-png-1982-1983.svg",
     "pageUrl": "https://football-logos.cc/italy/lazio/1982-1983/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-lazio-logo-1983-1984---high-res-png-1983-1984",
-    "name": "Old Lazio",
+    "name": "Lazio Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1983-1984",
     "startYear": 1983,
     "endYear": 1984,
-    "localPath": "/logos/italy/italy-old-lazio-logo-1983-1984---high-res-png-1983-1984.svg",
+    "localPath": "/logos/retro/italy-old-lazio-logo-1983-1984---high-res-png-1983-1984.svg",
     "pageUrl": "https://football-logos.cc/italy/lazio/1983-1984/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-lazio-logo-1984-1987---high-res-png-1984-1987",
-    "name": "Old Lazio",
+    "name": "Lazio Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1984-1987",
     "startYear": 1984,
     "endYear": 1987,
-    "localPath": "/logos/italy/italy-old-lazio-logo-1984-1987---high-res-png-1984-1987.svg",
+    "localPath": "/logos/retro/italy-old-lazio-logo-1984-1987---high-res-png-1984-1987.svg",
     "pageUrl": "https://football-logos.cc/italy/lazio/1984-1987/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-lazio-logo-1987-1992---high-res-png-1987-1992",
-    "name": "Old Lazio",
+    "name": "Lazio Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1987-1992",
     "startYear": 1987,
     "endYear": 1992,
-    "localPath": "/logos/italy/italy-old-lazio-logo-1987-1992---high-res-png-1987-1992.svg",
+    "localPath": "/logos/retro/italy-old-lazio-logo-1987-1992---high-res-png-1987-1992.svg",
     "pageUrl": "https://football-logos.cc/italy/lazio/1987-1992/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-lazio-logo-2000-2001---high-res-png-2000-2001",
-    "name": "Old Lazio",
+    "name": "Lazio Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "2000-2001",
     "startYear": 2000,
     "endYear": 2001,
-    "localPath": "/logos/italy/italy-old-lazio-logo-2000-2001---high-res-png-2000-2001.svg",
+    "localPath": "/logos/retro/italy-old-lazio-logo-2000-2001---high-res-png-2000-2001.svg",
     "pageUrl": "https://football-logos.cc/italy/lazio/2000-2001/",
     "league": null,
     "type": null
@@ -15393,117 +15393,117 @@
   },
   {
     "id": "italy-old-fiorentina-logo-1926-1951---high-res-png-1926-1951",
-    "name": "Old Fiorentina",
+    "name": "Fiorentina Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1926-1951",
     "startYear": 1926,
     "endYear": 1951,
-    "localPath": "/logos/italy/italy-old-fiorentina-logo-1926-1951---high-res-png-1926-1951.svg",
+    "localPath": "/logos/retro/italy-old-fiorentina-logo-1926-1951---high-res-png-1926-1951.svg",
     "pageUrl": "https://football-logos.cc/italy/fiorentina/1926-1951/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-fiorentina-logo-1951-1963---high-res-png-1951-1963",
-    "name": "Old Fiorentina",
+    "name": "Fiorentina Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1951-1963",
     "startYear": 1951,
     "endYear": 1963,
-    "localPath": "/logos/italy/italy-old-fiorentina-logo-1951-1963---high-res-png-1951-1963.svg",
+    "localPath": "/logos/retro/italy-old-fiorentina-logo-1951-1963---high-res-png-1951-1963.svg",
     "pageUrl": "https://football-logos.cc/italy/fiorentina/1951-1963/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-fiorentina-logo-1963-1967---high-res-png-1963-1967",
-    "name": "Old Fiorentina",
+    "name": "Fiorentina Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1963-1967",
     "startYear": 1963,
     "endYear": 1967,
-    "localPath": "/logos/italy/italy-old-fiorentina-logo-1963-1967---high-res-png-1963-1967.svg",
+    "localPath": "/logos/retro/italy-old-fiorentina-logo-1963-1967---high-res-png-1963-1967.svg",
     "pageUrl": "https://football-logos.cc/italy/fiorentina/1963-1967/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-fiorentina-logo-1967-1974---high-res-png-1967-1974",
-    "name": "Old Fiorentina",
+    "name": "Fiorentina Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1967-1974",
     "startYear": 1967,
     "endYear": 1974,
-    "localPath": "/logos/italy/italy-old-fiorentina-logo-1967-1974---high-res-png-1967-1974.svg",
+    "localPath": "/logos/retro/italy-old-fiorentina-logo-1967-1974---high-res-png-1967-1974.svg",
     "pageUrl": "https://football-logos.cc/italy/fiorentina/1967-1974/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-fiorentina-logo-1974-1977---high-res-png-1974-1977",
-    "name": "Old Fiorentina",
+    "name": "Fiorentina Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1974-1977",
     "startYear": 1974,
     "endYear": 1977,
-    "localPath": "/logos/italy/italy-old-fiorentina-logo-1974-1977---high-res-png-1974-1977.svg",
+    "localPath": "/logos/retro/italy-old-fiorentina-logo-1974-1977---high-res-png-1974-1977.svg",
     "pageUrl": "https://football-logos.cc/italy/fiorentina/1974-1977/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-fiorentina-logo-1977-1980---high-res-png-1977-1980",
-    "name": "Old Fiorentina",
+    "name": "Fiorentina Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1977-1980",
     "startYear": 1977,
     "endYear": 1980,
-    "localPath": "/logos/italy/italy-old-fiorentina-logo-1977-1980---high-res-png-1977-1980.svg",
+    "localPath": "/logos/retro/italy-old-fiorentina-logo-1977-1980---high-res-png-1977-1980.svg",
     "pageUrl": "https://football-logos.cc/italy/fiorentina/1977-1980/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-fiorentina-logo-1981-1991---high-res-png-1981-1991",
-    "name": "Old Fiorentina",
+    "name": "Fiorentina Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1981-1991",
     "startYear": 1981,
     "endYear": 1991,
-    "localPath": "/logos/italy/italy-old-fiorentina-logo-1981-1991---high-res-png-1981-1991.svg",
+    "localPath": "/logos/retro/italy-old-fiorentina-logo-1981-1991---high-res-png-1981-1991.svg",
     "pageUrl": "https://football-logos.cc/italy/fiorentina/1981-1991/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-fiorentina-logo-1991-2002---high-res-png-1991-2002",
-    "name": "Old Fiorentina",
+    "name": "Fiorentina Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "1991-2002",
     "startYear": 1991,
     "endYear": 2002,
-    "localPath": "/logos/italy/italy-old-fiorentina-logo-1991-2002---high-res-png-1991-2002.svg",
+    "localPath": "/logos/retro/italy-old-fiorentina-logo-1991-2002---high-res-png-1991-2002.svg",
     "pageUrl": "https://football-logos.cc/italy/fiorentina/1991-2002/",
     "league": null,
     "type": null
   },
   {
     "id": "italy-old-fiorentina-logo-2003-2022---high-res-png-2003-2022",
-    "name": "Old Fiorentina",
+    "name": "Fiorentina Retro",
     "country": "italy",
     "isHistorical": true,
     "period": "2003-2022",
     "startYear": 2003,
     "endYear": 2022,
-    "localPath": "/logos/italy/italy-old-fiorentina-logo-2003-2022---high-res-png-2003-2022.svg",
+    "localPath": "/logos/retro/italy-old-fiorentina-logo-2003-2022---high-res-png-2003-2022.svg",
     "pageUrl": "https://football-logos.cc/italy/fiorentina/2003-2022/",
     "league": null,
     "type": null
@@ -16530,10 +16530,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/japan/japan-j1-league-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/japan-j1-league-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/japan/j-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "japan-kashima-antlers--logo-high-res-png",
@@ -18051,10 +18051,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/mexico/mexico-liga-mx-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/mexico-liga-mx-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/mexico/liga-mx/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "mexico-copa-mx-logo-high-res-png",
@@ -18818,10 +18818,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/netherlands/netherlands-eredivisie-logo-no-text-high-res-png.svg",
+    "localPath": "/logos/tournaments/netherlands-eredivisie-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/netherlands/eredivisie/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "netherlands-eredivisie-logo-no-text-white-high-res-png",
@@ -18831,10 +18831,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/netherlands/netherlands-eredivisie-logo-no-text-white-high-res-png.svg",
+    "localPath": "/logos/tournaments/netherlands-eredivisie-logo-no-text-white-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/netherlands/eredivisie/no-text-white/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "netherlands-eredivisie-logo-white-high-res-png",
@@ -18844,10 +18844,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/netherlands/netherlands-eredivisie-logo-white-high-res-png.svg",
+    "localPath": "/logos/tournaments/netherlands-eredivisie-logo-white-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/netherlands/eredivisie/white/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "netherlands-eredivisie-logo-high-res-png",
@@ -18857,10 +18857,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/netherlands/netherlands-eredivisie-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/netherlands-eredivisie-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/netherlands/eredivisie/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "netherlands-eerste-divisie-logo-high-res-png",
@@ -18890,52 +18890,52 @@
   },
   {
     "id": "netherlands-old-ajax-logo-1900-1911---high-res-png-1900-1911",
-    "name": "Old Ajax",
+    "name": "Ajax Retro",
     "country": "netherlands",
     "isHistorical": true,
     "period": "1900-1911",
     "startYear": 1900,
     "endYear": 1911,
-    "localPath": "/logos/netherlands/netherlands-old-ajax-logo-1900-1911---high-res-png-1900-1911.svg",
+    "localPath": "/logos/retro/netherlands-old-ajax-logo-1900-1911---high-res-png-1900-1911.svg",
     "pageUrl": "https://football-logos.cc/netherlands/ajax/1900-1911/",
     "league": null,
     "type": null
   },
   {
     "id": "netherlands-old-ajax-logo-1911-1928---high-res-png-1911-1928",
-    "name": "Old Ajax",
+    "name": "Ajax Retro",
     "country": "netherlands",
     "isHistorical": true,
     "period": "1911-1928",
     "startYear": 1911,
     "endYear": 1928,
-    "localPath": "/logos/netherlands/netherlands-old-ajax-logo-1911-1928---high-res-png-1911-1928.svg",
+    "localPath": "/logos/retro/netherlands-old-ajax-logo-1911-1928---high-res-png-1911-1928.svg",
     "pageUrl": "https://football-logos.cc/netherlands/ajax/1911-1928/",
     "league": null,
     "type": null
   },
   {
     "id": "netherlands-old-ajax-logo-1928-1991---high-res-png-1928-1991",
-    "name": "Old Ajax",
+    "name": "Ajax Retro",
     "country": "netherlands",
     "isHistorical": true,
     "period": "1928-1991",
     "startYear": 1928,
     "endYear": 1991,
-    "localPath": "/logos/netherlands/netherlands-old-ajax-logo-1928-1991---high-res-png-1928-1991.svg",
+    "localPath": "/logos/retro/netherlands-old-ajax-logo-1928-1991---high-res-png-1928-1991.svg",
     "pageUrl": "https://football-logos.cc/netherlands/ajax/1928-1991/",
     "league": null,
     "type": null
   },
   {
     "id": "netherlands-old-ajax-logo-1991-2025---high-res-png-1991-2025",
-    "name": "Old Ajax",
+    "name": "Ajax Retro",
     "country": "netherlands",
     "isHistorical": true,
     "period": "1991-2025",
     "startYear": 1991,
     "endYear": 2025,
-    "localPath": "/logos/netherlands/netherlands-old-ajax-logo-1991-2025---high-res-png-1991-2025.svg",
+    "localPath": "/logos/retro/netherlands-old-ajax-logo-1991-2025---high-res-png-1991-2025.svg",
     "pageUrl": "https://football-logos.cc/netherlands/ajax/1991-2025/",
     "league": null,
     "type": null
@@ -19845,10 +19845,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/norway/norway-eliteserien-logo-no-text-high-res-png.svg",
+    "localPath": "/logos/tournaments/norway-eliteserien-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/norway/eliteserien/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "norway-eliteserien-logo-high-res-png",
@@ -19858,10 +19858,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/norway/norway-eliteserien-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/norway-eliteserien-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/norway/eliteserien/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "norway-aalesund-logo-high-res-png",
@@ -20859,10 +20859,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/peru/peru-peruvian-primera-divisin-logo-no-text-high-res-png.svg",
+    "localPath": "/logos/tournaments/peru-peruvian-primera-divisin-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/peru/peruvian-primera-division/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "peru-peruvian-primera-divisin-logo-high-res-png",
@@ -20872,10 +20872,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/peru/peru-peruvian-primera-divisin-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/peru-peruvian-primera-divisin-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/peru/peruvian-primera-division/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "peru-universitario-de-deportes-logo-high-res-png",
@@ -21119,10 +21119,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/portugal/portugal-primeira-liga-liga-portugal-logo-horizontal-high-res-png.svg",
+    "localPath": "/logos/tournaments/portugal-primeira-liga-liga-portugal-logo-horizontal-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/portugal/primeira-liga/horizontal/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "portugal-primeira-liga-liga-portugal-logo-horizontal-white-high-res-png",
@@ -21132,10 +21132,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/portugal/portugal-primeira-liga-liga-portugal-logo-horizontal-white-high-res-png.svg",
+    "localPath": "/logos/tournaments/portugal-primeira-liga-liga-portugal-logo-horizontal-white-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/portugal/primeira-liga/horizontal-white/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "portugal-primeira-liga-liga-portugal-logo-white-high-res-png",
@@ -21145,10 +21145,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/portugal/portugal-primeira-liga-liga-portugal-logo-white-high-res-png.svg",
+    "localPath": "/logos/tournaments/portugal-primeira-liga-liga-portugal-logo-white-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/portugal/primeira-liga/white/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "portugal-primeira-liga-liga-portugal-logo-high-res-png",
@@ -21158,10 +21158,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/portugal/portugal-primeira-liga-liga-portugal-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/portugal-primeira-liga-liga-portugal-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/portugal/primeira-liga/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "portugal-liga-portugal-2-logo-high-res-png",
@@ -21171,10 +21171,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/portugal/portugal-liga-portugal-2-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/portugal-liga-portugal-2-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/portugal/liga-portugal-2/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "portugal-taa-de-portugal-logo-high-res-png",
@@ -22536,10 +22536,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/romania/romania-superliga-liga-i-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/romania-superliga-liga-i-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/romania/superliga/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "romania-arge-piteti-logo-high-res-png",
@@ -22848,10 +22848,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/russia/russia-russian-premier-league-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/russia-russian-premier-league-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/russia/russian-premier-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "russia-krasnodar--logo-high-res-png",
@@ -23485,10 +23485,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/saudi-arabia/saudi-arabia-saudi-professional-league-spl-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/saudi-arabia-saudi-professional-league-spl-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/saudi-arabia/saudi-professional-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "saudi-arabia-saudi-first-division-league-sdl----logo-high-res-png",
@@ -23498,10 +23498,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/saudi-arabia/saudi-arabia-saudi-first-division-league-sdl----logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/saudi-arabia-saudi-first-division-league-sdl----logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/saudi-arabia/saudi-first-division-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "saudi-arabia-al-ittihad--logo-high-res-png",
@@ -23713,26 +23713,26 @@
   },
   {
     "id": "saudi-arabia-old-al-fateh--logo-2009-2015---high-res-png-2009-2015",
-    "name": "Old Al Fateh (الفتح)",
+    "name": "Al Fateh (الفتح) Retro",
     "country": "saudi-arabia",
     "isHistorical": true,
     "period": "2009-2015",
     "startYear": 2009,
     "endYear": 2015,
-    "localPath": "/logos/saudi-arabia/saudi-arabia-old-al-fateh--logo-2009-2015---high-res-png-2009-2015.svg",
+    "localPath": "/logos/retro/saudi-arabia-old-al-fateh--logo-2009-2015---high-res-png-2009-2015.svg",
     "pageUrl": "https://football-logos.cc/saudi-arabia/al-fateh/2009-2015/",
     "league": null,
     "type": null
   },
   {
     "id": "saudi-arabia-old-al-fateh--logo-2015-2022---high-res-png-2015-2022",
-    "name": "Old Al Fateh (الفتح)",
+    "name": "Al Fateh (الفتح) Retro",
     "country": "saudi-arabia",
     "isHistorical": true,
     "period": "2015-2022",
     "startYear": 2015,
     "endYear": 2022,
-    "localPath": "/logos/saudi-arabia/saudi-arabia-old-al-fateh--logo-2015-2022---high-res-png-2015-2022.svg",
+    "localPath": "/logos/retro/saudi-arabia-old-al-fateh--logo-2015-2022---high-res-png-2015-2022.svg",
     "pageUrl": "https://football-logos.cc/saudi-arabia/al-fateh/2015-2022/",
     "league": null,
     "type": null
@@ -24798,10 +24798,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/serbia/serbia-serbian-superliga-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/serbia-serbian-superliga-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/serbia/serbian-superliga/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "serbia-crvena-zvezda-logo-high-res-png",
@@ -25318,10 +25318,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/slovenia/slovenia-slovenian-prvaliga-logo-no-text-high-res-png.svg",
+    "localPath": "/logos/tournaments/slovenia-slovenian-prvaliga-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/slovenia/slovenian-prvaliga/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "slovenia-slovenian-prvaliga-logo-high-res-png",
@@ -25331,10 +25331,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/slovenia/slovenia-slovenian-prvaliga-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/slovenia-slovenian-prvaliga-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/slovenia/slovenian-prvaliga/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "slovenia-aluminij-logo-high-res-png",
@@ -25552,10 +25552,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/south-africa/south-africa-premier-soccer-league-psl-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/south-africa-premier-soccer-league-psl-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/south-africa/premier-soccer-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "south-africa-mamelodi-sundowns-logo-high-res-png",
@@ -25669,10 +25669,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/south-korea/south-korea-k-league-1-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/south-korea-k-league-1-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/south-korea/k-league-1/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "south-korea-jeonbuk----logo-high-res-png",
@@ -25851,10 +25851,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/spain/spain-la-liga-primera-divisin-logo-no-text-high-res-png.svg",
+    "localPath": "/logos/tournaments/spain-la-liga-primera-divisin-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/spain/la-liga/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "spain-la-liga-primera-divisin-logo-high-res-png",
@@ -25864,10 +25864,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/spain/spain-la-liga-primera-divisin-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/spain-la-liga-primera-divisin-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/spain/la-liga/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "spain-la-liga-2-segunda-divisin-logo-no-text-high-res-png",
@@ -25877,10 +25877,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/spain/spain-la-liga-2-segunda-divisin-logo-no-text-high-res-png.svg",
+    "localPath": "/logos/tournaments/spain-la-liga-2-segunda-divisin-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/spain/la-liga-2/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "spain-la-liga-2-segunda-divisin-logo-high-res-png",
@@ -25890,10 +25890,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/spain/spain-la-liga-2-segunda-divisin-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/spain-la-liga-2-segunda-divisin-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/spain/la-liga-2/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "spain-primera-federacin-logo-no-text-high-res-png",
@@ -25903,10 +25903,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/spain/spain-primera-federacin-logo-no-text-high-res-png.svg",
+    "localPath": "/logos/tournaments/spain-primera-federacin-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/spain/primera-federacion/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "spain-primera-federacin-logo-high-res-png",
@@ -25916,10 +25916,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/spain/spain-primera-federacin-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/spain-primera-federacin-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/spain/primera-federacion/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "spain-segunda-federacin-logo-no-text-high-res-png",
@@ -25929,10 +25929,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/spain/spain-segunda-federacin-logo-no-text-high-res-png.svg",
+    "localPath": "/logos/tournaments/spain-segunda-federacin-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/spain/segunda-federacion/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "spain-segunda-federacin-logo-high-res-png",
@@ -25942,10 +25942,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/spain/spain-segunda-federacin-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/spain-segunda-federacin-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/spain/segunda-federacion/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "spain-tercera-federacin-logo-no-text-high-res-png",
@@ -26001,52 +26001,52 @@
   },
   {
     "id": "spain-old-barcelona-logo-1906-1941---high-res-png-1906-1941",
-    "name": "Old Barcelona",
+    "name": "Barcelona Retro",
     "country": "spain",
     "isHistorical": true,
     "period": "1906-1941",
     "startYear": 1906,
     "endYear": 1941,
-    "localPath": "/logos/spain/spain-old-barcelona-logo-1906-1941---high-res-png-1906-1941.svg",
+    "localPath": "/logos/retro/spain-old-barcelona-logo-1906-1941---high-res-png-1906-1941.svg",
     "pageUrl": "https://football-logos.cc/spain/barcelona/1906-1941/",
     "league": null,
     "type": null
   },
   {
     "id": "spain-old-barcelona-logo-1941-1949---high-res-png-1941-1949",
-    "name": "Old Barcelona",
+    "name": "Barcelona Retro",
     "country": "spain",
     "isHistorical": true,
     "period": "1941-1949",
     "startYear": 1941,
     "endYear": 1949,
-    "localPath": "/logos/spain/spain-old-barcelona-logo-1941-1949---high-res-png-1941-1949.svg",
+    "localPath": "/logos/retro/spain-old-barcelona-logo-1941-1949---high-res-png-1941-1949.svg",
     "pageUrl": "https://football-logos.cc/spain/barcelona/1941-1949/",
     "league": null,
     "type": null
   },
   {
     "id": "spain-old-barcelona-logo-1949-1974---high-res-png-1949-1974",
-    "name": "Old Barcelona",
+    "name": "Barcelona Retro",
     "country": "spain",
     "isHistorical": true,
     "period": "1949-1974",
     "startYear": 1949,
     "endYear": 1974,
-    "localPath": "/logos/spain/spain-old-barcelona-logo-1949-1974---high-res-png-1949-1974.svg",
+    "localPath": "/logos/retro/spain-old-barcelona-logo-1949-1974---high-res-png-1949-1974.svg",
     "pageUrl": "https://football-logos.cc/spain/barcelona/1949-1974/",
     "league": null,
     "type": null
   },
   {
     "id": "spain-old-barcelona-logo-1978-2002---high-res-png-1978-2002",
-    "name": "Old Barcelona",
+    "name": "Barcelona Retro",
     "country": "spain",
     "isHistorical": true,
     "period": "1978-2002",
     "startYear": 1978,
     "endYear": 2002,
-    "localPath": "/logos/spain/spain-old-barcelona-logo-1978-2002---high-res-png-1978-2002.svg",
+    "localPath": "/logos/retro/spain-old-barcelona-logo-1978-2002---high-res-png-1978-2002.svg",
     "pageUrl": "https://football-logos.cc/spain/barcelona/1978-2002/",
     "league": null,
     "type": null
@@ -26066,65 +26066,65 @@
   },
   {
     "id": "spain-old-real-madrid-logo-1902-1908---high-res-png-1902-1908",
-    "name": "Old Real Madrid",
+    "name": "Real Madrid Retro",
     "country": "spain",
     "isHistorical": true,
     "period": "1902-1908",
     "startYear": 1902,
     "endYear": 1908,
-    "localPath": "/logos/spain/spain-old-real-madrid-logo-1902-1908---high-res-png-1902-1908.svg",
+    "localPath": "/logos/retro/spain-old-real-madrid-logo-1902-1908---high-res-png-1902-1908.svg",
     "pageUrl": "https://football-logos.cc/spain/real-madrid/1902-1908/",
     "league": null,
     "type": null
   },
   {
     "id": "spain-old-real-madrid-logo-1908-1920---high-res-png-1908-1920",
-    "name": "Old Real Madrid",
+    "name": "Real Madrid Retro",
     "country": "spain",
     "isHistorical": true,
     "period": "1908-1920",
     "startYear": 1908,
     "endYear": 1920,
-    "localPath": "/logos/spain/spain-old-real-madrid-logo-1908-1920---high-res-png-1908-1920.svg",
+    "localPath": "/logos/retro/spain-old-real-madrid-logo-1908-1920---high-res-png-1908-1920.svg",
     "pageUrl": "https://football-logos.cc/spain/real-madrid/1908-1920/",
     "league": null,
     "type": null
   },
   {
     "id": "spain-old-real-madrid-logo-1920-1931---high-res-png-1920-1931",
-    "name": "Old Real Madrid",
+    "name": "Real Madrid Retro",
     "country": "spain",
     "isHistorical": true,
     "period": "1920-1931",
     "startYear": 1920,
     "endYear": 1931,
-    "localPath": "/logos/spain/spain-old-real-madrid-logo-1920-1931---high-res-png-1920-1931.svg",
+    "localPath": "/logos/retro/spain-old-real-madrid-logo-1920-1931---high-res-png-1920-1931.svg",
     "pageUrl": "https://football-logos.cc/spain/real-madrid/1920-1931/",
     "league": null,
     "type": null
   },
   {
     "id": "spain-old-real-madrid-logo-1931-1941---high-res-png-1931-1941",
-    "name": "Old Real Madrid",
+    "name": "Real Madrid Retro",
     "country": "spain",
     "isHistorical": true,
     "period": "1931-1941",
     "startYear": 1931,
     "endYear": 1941,
-    "localPath": "/logos/spain/spain-old-real-madrid-logo-1931-1941---high-res-png-1931-1941.svg",
+    "localPath": "/logos/retro/spain-old-real-madrid-logo-1931-1941---high-res-png-1931-1941.svg",
     "pageUrl": "https://football-logos.cc/spain/real-madrid/1931-1941/",
     "league": null,
     "type": null
   },
   {
     "id": "spain-old-real-madrid-logo-1941-1997---high-res-png-1941-1997",
-    "name": "Old Real Madrid",
+    "name": "Real Madrid Retro",
     "country": "spain",
     "isHistorical": true,
     "period": "1941-1997",
     "startYear": 1941,
     "endYear": 1997,
-    "localPath": "/logos/spain/spain-old-real-madrid-logo-1941-1997---high-res-png-1941-1997.svg",
+    "localPath": "/logos/retro/spain-old-real-madrid-logo-1941-1997---high-res-png-1941-1997.svg",
     "pageUrl": "https://football-logos.cc/spain/real-madrid/1941-1997/",
     "league": null,
     "type": null
@@ -26144,78 +26144,78 @@
   },
   {
     "id": "spain-old-atletico-madrid-logo-1909-1912---high-res-png-1909-1912",
-    "name": "Old Atletico Madrid",
+    "name": "Atletico Madrid Retro",
     "country": "spain",
     "isHistorical": true,
     "period": "1909-1912",
     "startYear": 1909,
     "endYear": 1912,
-    "localPath": "/logos/spain/spain-old-atletico-madrid-logo-1909-1912---high-res-png-1909-1912.svg",
+    "localPath": "/logos/retro/spain-old-atletico-madrid-logo-1909-1912---high-res-png-1909-1912.svg",
     "pageUrl": "https://football-logos.cc/spain/atletico-madrid/1909-1912/",
     "league": null,
     "type": null
   },
   {
     "id": "spain-old-atletico-madrid-logo-1912-1917---high-res-png-1912-1917",
-    "name": "Old Atletico Madrid",
+    "name": "Atletico Madrid Retro",
     "country": "spain",
     "isHistorical": true,
     "period": "1912-1917",
     "startYear": 1912,
     "endYear": 1917,
-    "localPath": "/logos/spain/spain-old-atletico-madrid-logo-1912-1917---high-res-png-1912-1917.svg",
+    "localPath": "/logos/retro/spain-old-atletico-madrid-logo-1912-1917---high-res-png-1912-1917.svg",
     "pageUrl": "https://football-logos.cc/spain/atletico-madrid/1912-1917/",
     "league": null,
     "type": null
   },
   {
     "id": "spain-old-atletico-madrid-logo-1969-1997---high-res-png-1969-1997",
-    "name": "Old Atletico Madrid",
+    "name": "Atletico Madrid Retro",
     "country": "spain",
     "isHistorical": true,
     "period": "1969-1997",
     "startYear": 1969,
     "endYear": 1997,
-    "localPath": "/logos/spain/spain-old-atletico-madrid-logo-1969-1997---high-res-png-1969-1997.svg",
+    "localPath": "/logos/retro/spain-old-atletico-madrid-logo-1969-1997---high-res-png-1969-1997.svg",
     "pageUrl": "https://football-logos.cc/spain/atletico-madrid/1969-1997/",
     "league": null,
     "type": null
   },
   {
     "id": "spain-old-atletico-madrid-logo-1997-2000---high-res-png-1997-2000",
-    "name": "Old Atletico Madrid",
+    "name": "Atletico Madrid Retro",
     "country": "spain",
     "isHistorical": true,
     "period": "1997-2000",
     "startYear": 1997,
     "endYear": 2000,
-    "localPath": "/logos/spain/spain-old-atletico-madrid-logo-1997-2000---high-res-png-1997-2000.svg",
+    "localPath": "/logos/retro/spain-old-atletico-madrid-logo-1997-2000---high-res-png-1997-2000.svg",
     "pageUrl": "https://football-logos.cc/spain/atletico-madrid/1997-2000/",
     "league": null,
     "type": null
   },
   {
     "id": "spain-old-atletico-madrid-logo-2000-2017---high-res-png-2000-2017",
-    "name": "Old Atletico Madrid",
+    "name": "Atletico Madrid Retro",
     "country": "spain",
     "isHistorical": true,
     "period": "2000-2017",
     "startYear": 2000,
     "endYear": 2017,
-    "localPath": "/logos/spain/spain-old-atletico-madrid-logo-2000-2017---high-res-png-2000-2017.svg",
+    "localPath": "/logos/retro/spain-old-atletico-madrid-logo-2000-2017---high-res-png-2000-2017.svg",
     "pageUrl": "https://football-logos.cc/spain/atletico-madrid/2000-2017/",
     "league": null,
     "type": null
   },
   {
     "id": "spain-old-atletico-madrid-logo-2017-2024---high-res-png-2017-2024",
-    "name": "Old Atletico Madrid",
+    "name": "Atletico Madrid Retro",
     "country": "spain",
     "isHistorical": true,
     "period": "2017-2024",
     "startYear": 2017,
     "endYear": 2024,
-    "localPath": "/logos/spain/spain-old-atletico-madrid-logo-2017-2024---high-res-png-2017-2024.svg",
+    "localPath": "/logos/retro/spain-old-atletico-madrid-logo-2017-2024---high-res-png-2017-2024.svg",
     "pageUrl": "https://football-logos.cc/spain/atletico-madrid/2017-2024/",
     "league": null,
     "type": null
@@ -27138,10 +27138,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/sweden/sweden-allsvenskan-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/sweden-allsvenskan-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/sweden/allsvenskan/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "sweden-aik-logo-high-res-png",
@@ -27528,10 +27528,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/switzerland/switzerland-swiss-football-league-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/switzerland-swiss-football-league-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/switzerland/swiss-football-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "switzerland-aarau-logo-high-res-png",
@@ -28321,10 +28321,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/ukraine/ukraine-ukrainian-premier-league-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/ukraine-ukrainian-premier-league-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/ukraine/ukrainian-premier-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "ukraine-dynamo-kyiv---logo-high-res-png",
@@ -28841,10 +28841,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/usa/usa-mls---major-league-soccer-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/usa-mls---major-league-soccer-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/usa/mls/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "usa-usl-championship-logo-high-res-png",
@@ -28854,10 +28854,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/usa/usa-usl-championship-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/usa-usl-championship-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/usa/usl-championship/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "usa-atlanta-united-logo-high-res-png",
@@ -29556,10 +29556,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/uzbekistan/uzbekistan-uzbekistan-super-league-uzsl-logo-no-text-high-res-png.svg",
+    "localPath": "/logos/tournaments/uzbekistan-uzbekistan-super-league-uzsl-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/uzbekistan/uzbekistan-super-league/no-text/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "uzbekistan-uzbekistan-super-league-uzsl-logo-no-text-white-high-res-png",
@@ -29569,10 +29569,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/uzbekistan/uzbekistan-uzbekistan-super-league-uzsl-logo-no-text-white-high-res-png.svg",
+    "localPath": "/logos/tournaments/uzbekistan-uzbekistan-super-league-uzsl-logo-no-text-white-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/uzbekistan/uzbekistan-super-league/no-text-white/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "uzbekistan-uzbekistan-super-league-uzsl-logo-white-high-res-png",
@@ -29582,10 +29582,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/uzbekistan/uzbekistan-uzbekistan-super-league-uzsl-logo-white-high-res-png.svg",
+    "localPath": "/logos/tournaments/uzbekistan-uzbekistan-super-league-uzsl-logo-white-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/uzbekistan/uzbekistan-super-league/white/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "uzbekistan-uzbekistan-super-league-uzsl-logo-high-res-png",
@@ -29595,10 +29595,10 @@
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/uzbekistan/uzbekistan-uzbekistan-super-league-uzsl-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/uzbekistan-uzbekistan-super-league-uzsl-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/uzbekistan/uzbekistan-super-league/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "uzbekistan-neftchi-fergana-logo-high-res-png",
