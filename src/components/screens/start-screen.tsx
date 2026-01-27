@@ -65,7 +65,9 @@ export const StartScreen = ({
             <div className="flex flex-col items-center space-y-4">
                 <img
                     src={APP_LOGO_PATH}
-                    alt="ESCUDLE"
+                    alt="Logo oficial de Escudle - Juego de adivinar escudos"
+                    fetchPriority="high"
+                    loading="eager"
                     className="h-24 md:h-32 w-auto drop-shadow-[4px_4px_0px_#000]"
                 />
                 <h1 className="text-6xl md:text-8xl font-['Permanent_Marker'] text-white uppercase tracking-wider drop-shadow-[6px_6px_0px_#000] rotate-[-2deg]">

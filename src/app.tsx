@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { CountrySelector } from './components/country-selector';
 import { DailyStatsModal } from './components/daily-stats-modal';
 import { GameFooter } from './components/game-footer';
@@ -6,10 +7,20 @@ import { HelpModal } from './components/help-modal';
 import { InfiniteStatsModal } from './components/infinite-stats-modal';
 import { MainLayout } from './components/layout/main-layout';
 import { GameScreen } from './components/screens/game-screen';
+import { NotFoundScreen } from './components/screens/not-found-screen';
 import { StartScreen } from './components/screens/start-screen';
 import { useGameLogic } from './hooks/use-game-logic';
 
 export const App = () => {
+    const [isNotFound, setIsNotFound] = useState(false);
+
+    useEffect(() => {
+        const path = window.location.pathname;
+        if (path !== '/' && path !== '') {
+            setIsNotFound(true);
+        }
+    }, []);
+
     const {
         gameMode,
         difficulty,
@@ -59,7 +70,7 @@ export const App = () => {
         <>
             <MainLayout
                 header={
-                    gameState !== 'not_started' ? (
+                    gameState !== 'not_started' && !isNotFound ? (
                         <GameHeader
                             onExitGame={exitGame}
                             setShowHelp={setShowHelp}
@@ -77,7 +88,12 @@ export const App = () => {
                     />
                 }
             >
-                {gameState === 'not_started' ? (
+                {isNotFound ? (
+                    <NotFoundScreen onBackHome={() => {
+                        window.history.pushState({}, '', '/');
+                        setIsNotFound(false);
+                    }} />
+                ) : gameState === 'not_started' ? (
                     <StartScreen
                         onStartGame={(m, d, ds, showStats) => {
                             startNewGame(m, d, ds);

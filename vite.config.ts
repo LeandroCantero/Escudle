@@ -1,9 +1,44 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
+import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [react()],
+    plugins: [
+        react(),
+        VitePWA({
+            registerType: 'autoUpdate',
+            includeAssets: ['favicon/*'],
+            manifest: {
+                name: 'Escudle - Adivina el Escudo',
+                short_name: 'Escudle',
+                description: 'Adivina el escudo de fútbol oculto',
+                theme_color: '#4ADE80',
+                icons: [
+                    {
+                        src: 'favicon/pwa-192x192.png',
+                        sizes: '192x192',
+                        type: 'image/png'
+                    },
+                    {
+                        src: 'favicon/pwa-512x512.png',
+                        sizes: '512x512',
+                        type: 'image/png'
+                    },
+                    {
+                        src: 'favicon/maskable-icon-512x512.png',
+                        sizes: '512x512',
+                        type: 'image/png',
+                        purpose: 'maskable'
+                    }
+                ]
+            },
+            workbox: {
+                globPatterns: ['**/*.{js,css,html,ico,png,svg,json,webp}'],
+                // Caching strategy for external assets if needed
+            }
+        })
+    ],
     build: {
         rollupOptions: {
             output: {

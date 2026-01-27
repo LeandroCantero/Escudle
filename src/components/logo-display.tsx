@@ -65,7 +65,9 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
                     {difficulty === 'easy' && (
                         <img
                             src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
-                            alt="Escudo a adivinar"
+                            alt="Escudo de fútbol oculto para adivinar"
+                            fetchPriority="high"
+                            loading="eager"
                             className={cn(
                                 "object-contain filter drop-shadow-lg pointer-events-none select-none transition-all duration-300",
                                 targetLogo.isHistorical ? "w-64 h-64 contrast-110 saturate-110" : "w-48 h-48"
@@ -80,7 +82,7 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
                             {/* The Silhouette Layer */}
                             <img
                                 src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
-                                alt="Silhouette"
+                                alt="Silueta del escudo de fútbol"
                                 className={cn(
                                     "absolute inset-0 w-full h-full object-contain pointer-events-none select-none transition-opacity duration-700",
                                     (gameState === 'won' || gameState === 'lost') ? "opacity-0" : "opacity-100 blur-sm"
@@ -93,7 +95,7 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
                             {/* The Result Layer (Colors) */}
                             <img
                                 src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
-                                alt="Resultado"
+                                alt="Escudo de fútbol revelado"
                                 className={cn(
                                     "w-full h-full object-contain pointer-events-none select-none transition-opacity duration-700",
                                     (gameState === 'won' || gameState === 'lost') ? "opacity-100" : "opacity-0",
@@ -166,7 +168,7 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
-                                    alt="Resultado"
+                                    alt="Escudo de fútbol revelado"
                                     className={cn(
                                         "absolute inset-0 w-full h-full object-contain z-30 pointer-events-none select-none",
                                         targetLogo.isHistorical && "contrast-110 saturate-110"
