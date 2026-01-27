@@ -107,6 +107,7 @@ export const App = () => {
                             onNextGame={() => startNewGame()}
                             infiniteModeScore={infiniteSession?.score}
                             infiniteModeHighScore={infiniteStats?.highScore}
+                            isModalOpen={showInfiniteStats || showDailyStats || showHelp || showCountrySelector}
                         />
                     )
                 )}

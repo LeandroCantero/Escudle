@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useDailyState } from '../../hooks/use-daily-state';
 import { Dataset, Difficulty, GameMode } from '../../hooks/use-game-logic';
+import { APP_LOGO_PATH } from '../../utils/constants';
 
 interface StartScreenProps {
     onStartGame: (mode: GameMode, difficulty: Difficulty, dataset: Dataset, showStats?: boolean) => void;
@@ -63,7 +64,7 @@ export const StartScreen = ({
 
             <div className="flex flex-col items-center space-y-4">
                 <img
-                    src="/escudle-logo.png"
+                    src={APP_LOGO_PATH}
                     alt="ESCUDLE"
                     className="h-24 md:h-32 w-auto drop-shadow-[4px_4px_0px_#000]"
                 />

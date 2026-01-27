@@ -29,7 +29,7 @@ export interface DailyStats {
 const DAILY_STATE_KEY_PREFIX = 'escudle_daily_state_';
 const DAILY_STATS_KEY_PREFIX = 'escudle_daily_stats_';
 
-const defaultStats: DailyStats = {
+const getDefaultStats = (): DailyStats => ({
     currentStreak: 0,
     maxStreak: 0,
     totalPlayed: 0,
@@ -41,6 +41,17 @@ const defaultStats: DailyStats = {
     lastGuesses: [],
     targetName: '',
     gameState: 'playing'
+});
+
+const sanitizeStats = (stats: DailyStats): DailyStats => {
+    const totalDistWins = Object.values(stats.guessDistribution).reduce((a, b) => a + b, 0);
+    if (totalDistWins > stats.totalWins) {
+        return {
+            ...stats,
+            guessDistribution: { ...getDefaultStats().guessDistribution }
+        };
+    }
+    return stats;
 };
 
 export function useDailyState(selectedDifficulty: 'easy' | 'medium' | 'hard' = 'easy') {
@@ -59,7 +70,7 @@ export function useDailyState(selectedDifficulty: 'easy' | 'medium' | 'hard' = '
 
     const [stats, setStats] = useState<DailyStats>(() => {
         const savedStats = localStorage.getItem(`${DAILY_STATS_KEY_PREFIX}${selectedDifficulty}`);
-        return savedStats ? JSON.parse(savedStats) : defaultStats;
+        return savedStats ? sanitizeStats(JSON.parse(savedStats)) : getDefaultStats();
     });
 
     const [timeUntilNext, setTimeUntilNext] = useState<number>(0);
@@ -77,7 +88,7 @@ export function useDailyState(selectedDifficulty: 'easy' | 'medium' | 'hard' = '
             setDailyState(null);
         }
         const savedStats = localStorage.getItem(`${DAILY_STATS_KEY_PREFIX}${selectedDifficulty}`);
-        setStats(savedStats ? JSON.parse(savedStats) : defaultStats);
+        setStats(savedStats ? sanitizeStats(JSON.parse(savedStats)) : getDefaultStats());
     }
 
     const getDailyStateKey = useCallback((diff: string) => `${DAILY_STATE_KEY_PREFIX}${diff}`, []);
@@ -104,7 +115,10 @@ export function useDailyState(selectedDifficulty: 'easy' | 'medium' | 'hard' = '
 
     const updateStats = useCallback((won: boolean, numGuesses: number, date: string) => {
         setStats(prev => {
-            const newStats = { ...prev };
+            const newStats = {
+                ...prev,
+                guessDistribution: { ...prev.guessDistribution }
+            };
             newStats.totalPlayed += 1;
 
             if (won) {

@@ -13,19 +13,6 @@
     "type": "tournament"
   },
   {
-    "id": "tournaments-fifa-world-cup-2026-logo-white-high-res-png",
-    "name": "FIFA World Cup 2026 White",
-    "country": "tournaments",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/tournaments-fifa-world-cup-2026-logo-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/tournaments/fifa-world-cup-2026/white/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
     "id": "tournaments-fifa-world-cup-2026-logo-high-res-png",
     "name": "FIFA World Cup 2026",
     "country": "tournaments",
@@ -48,19 +35,6 @@
     "endYear": null,
     "localPath": "/logos/tournaments/tournaments-africa-cup-of-nations-2025-afcon-2025-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/africa-cup-of-nations-2025/no-text/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "tournaments-africa-cup-of-nations-2025-afcon-2025-logo-high-res-png",
-    "name": "Africa Cup of Nations 2025 (AFCON 2025)",
-    "country": "tournaments",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/tournaments-africa-cup-of-nations-2025-afcon-2025-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/tournaments/africa-cup-of-nations-2025/",
     "league": null,
     "type": "tournament"
   },
@@ -104,32 +78,6 @@
     "type": "tournament"
   },
   {
-    "id": "tournaments-uefa-champions-league-ucl-logo-no-text-white-high-res-png",
-    "name": "UEFA Champions League (UCL) No Text White",
-    "country": "tournaments",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/tournaments-uefa-champions-league-ucl-logo-no-text-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/tournaments/uefa-champions-league/no-text-white/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "tournaments-uefa-champions-league-ucl-logo-high-res-png",
-    "name": "UEFA Champions League (UCL)",
-    "country": "tournaments",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/tournaments-uefa-champions-league-ucl-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/tournaments/uefa-champions-league/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
     "id": "tournaments-uefa-europa-league-logo-no-text-high-res-png",
     "name": "UEFA Europa League No Text",
     "country": "tournaments",
@@ -139,19 +87,6 @@
     "endYear": null,
     "localPath": "/logos/tournaments/tournaments-uefa-europa-league-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-europa-league/no-text/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "tournaments-uefa-europa-league-logo-high-res-png",
-    "name": "UEFA Europa League",
-    "country": "tournaments",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/tournaments-uefa-europa-league-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/tournaments/uefa-europa-league/",
     "league": null,
     "type": "tournament"
   },
@@ -169,32 +104,6 @@
     "type": "tournament"
   },
   {
-    "id": "tournaments-uefa-conference-league-logo-high-res-png",
-    "name": "UEFA Conference League",
-    "country": "tournaments",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/tournaments-uefa-conference-league-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/tournaments/uefa-conference-league/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "tournaments-uefa-super-cup-logo-white-high-res-png",
-    "name": "UEFA Super Cup White",
-    "country": "tournaments",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/tournaments-uefa-super-cup-logo-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/tournaments/uefa-super-cup/white/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
     "id": "tournaments-uefa-super-cup-logo-high-res-png",
     "name": "UEFA Super Cup",
     "country": "tournaments",
@@ -204,19 +113,6 @@
     "endYear": null,
     "localPath": "/logos/tournaments/tournaments-uefa-super-cup-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/tournaments/uefa-super-cup/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "tournaments-fifa-intercontinental-cup-logo-white-high-res-png",
-    "name": "FIFA Intercontinental Cup White",
-    "country": "tournaments",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/tournaments-fifa-intercontinental-cup-logo-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/tournaments/fifa-intercontinental-cup/white/",
     "league": null,
     "type": "tournament"
   },
@@ -1029,7 +925,7 @@
   {
     "id": "argentina-argentina-primera-division-lpf-logo-high-res-png",
     "name": "Argentina Primera Division (LPF)",
-    "country": "argentina",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -1042,26 +938,13 @@
   {
     "id": "argentina-primera-nacional-logo-no-text-high-res-png",
     "name": "Primera Nacional No Text",
-    "country": "argentina",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
     "localPath": "/logos/tournaments/argentina-primera-nacional-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/argentina/primera-nacional/no-text/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "argentina-primera-nacional-logo-high-res-png",
-    "name": "Primera Nacional",
-    "country": "argentina",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/argentina-primera-nacional-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/argentina/primera-nacional/",
     "league": null,
     "type": "tournament"
   },
@@ -1835,7 +1718,7 @@
   {
     "id": "australia-a-league-logo-high-res-png",
     "name": "A-League",
-    "country": "australia",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -2056,7 +1939,7 @@
   {
     "id": "austria-austrian-football-bundesliga-logo-high-res-png",
     "name": "Austrian Football Bundesliga",
-    "country": "austria",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -2901,7 +2784,7 @@
   {
     "id": "belgium-belgian-pro-league-logo-high-res-png",
     "name": "Belgian Pro League",
-    "country": "belgium",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -2914,26 +2797,13 @@
   {
     "id": "belgium-jupiler-pro-league-logo-no-text-high-res-png",
     "name": "Jupiler Pro League No Text",
-    "country": "belgium",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
     "localPath": "/logos/tournaments/belgium-jupiler-pro-league-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/belgium/jupiler-pro-league/no-text/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "belgium-jupiler-pro-league-logo-high-res-png",
-    "name": "Jupiler Pro League",
-    "country": "belgium",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/belgium-jupiler-pro-league-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/belgium/jupiler-pro-league/",
     "league": null,
     "type": "tournament"
   },
@@ -3486,7 +3356,7 @@
   {
     "id": "brazil-brazilian-serie-a-brasileiro-srie-a-logo-high-res-png",
     "name": "Brazilian Serie A (Brasileirão Série a)",
-    "country": "brazil",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -3499,7 +3369,7 @@
   {
     "id": "brazil-brazilian-serie-b-brasileiro-srie-b-logo-high-res-png",
     "name": "Brazilian Serie B (Brasileirão Série B)",
-    "country": "brazil",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -3512,28 +3382,15 @@
   {
     "id": "brazil-copa-do-brasil-logo-no-text-high-res-png",
     "name": "Copa do Brasil No Text",
-    "country": "brazil",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/brazil/brazil-copa-do-brasil-logo-no-text-high-res-png.svg",
+    "localPath": "/logos/tournaments/brazil-copa-do-brasil-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/brazil/copa-do-brasil/no-text/",
     "league": null,
-    "type": null
-  },
-  {
-    "id": "brazil-copa-do-brasil-logo-high-res-png",
-    "name": "Copa do Brasil",
-    "country": "brazil",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/brazil/brazil-copa-do-brasil-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/brazil/copa-do-brasil/",
-    "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "brazil-amrica-mineiro-coelho-logo-high-res-png",
@@ -4069,19 +3926,6 @@
     "type": null
   },
   {
-    "id": "bulgaria-bulgaria-national-team-logo-white-high-res-png",
-    "name": "Bulgaria National Team White",
-    "country": "bulgaria",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/bulgaria/bulgaria-bulgaria-national-team-logo-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/bulgaria/bulgaria-national-team/white/",
-    "league": null,
-    "type": null
-  },
-  {
     "id": "bulgaria-bulgaria-national-team-logo-high-res-png",
     "name": "Bulgaria National Team",
     "country": "bulgaria",
@@ -4461,7 +4305,7 @@
   {
     "id": "canada-canadian-premier-league-logo-high-res-png",
     "name": "Canadian Premier League",
-    "country": "canada",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -4812,7 +4656,7 @@
   {
     "id": "china-chinese-super-league-logo-high-res-png",
     "name": "Chinese Super League",
-    "country": "china",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -5254,7 +5098,7 @@
   {
     "id": "colombia-categoria-primera-a-logo-high-res-png",
     "name": "Categoria Primera A",
-    "country": "colombia",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -5579,7 +5423,7 @@
   {
     "id": "cyprus-cypriot-first-division-logo-high-res-png",
     "name": "Cypriot First Division",
-    "country": "cyprus",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -5891,7 +5735,7 @@
   {
     "id": "czech-republic-chance-liga-logo-high-res-png",
     "name": "Chance Liga",
-    "country": "czech-republic",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -6318,22 +6162,9 @@
     "type": null
   },
   {
-    "id": "denmark-danish-super-league-logo-white-high-res-png",
-    "name": "Danish Super League White",
-    "country": "denmark",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/denmark-danish-super-league-logo-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/denmark/danish-super-liga/white/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
     "id": "denmark-danish-super-league-logo-high-res-png",
     "name": "Danish Super League",
-    "country": "denmark",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -6344,30 +6175,17 @@
     "type": "tournament"
   },
   {
-    "id": "denmark-danish-cup-pokalen-logo-white-high-res-png",
-    "name": "Danish Cup (Pokalen) White",
-    "country": "denmark",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/denmark/denmark-danish-cup-pokalen-logo-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/denmark/danish-cup/white/",
-    "league": null,
-    "type": null
-  },
-  {
     "id": "denmark-danish-cup-pokalen-logo-high-res-png",
     "name": "Danish Cup (Pokalen)",
-    "country": "denmark",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/denmark/denmark-danish-cup-pokalen-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/denmark-danish-cup-pokalen-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/denmark/danish-cup/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "denmark-fc-copenhagen-fc-kbenhavn-logo-high-res-png",
@@ -6723,7 +6541,7 @@
   {
     "id": "ecuador-liga-pro-serie-a-logo-high-res-png",
     "name": "Liga Pro Serie A",
-    "country": "ecuador",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -6931,7 +6749,7 @@
   {
     "id": "england-english-premier-league-epl-logo-no-text-high-res-png",
     "name": "English Premier League (EPL) No Text",
-    "country": "england",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -6942,35 +6760,9 @@
     "type": "tournament"
   },
   {
-    "id": "england-english-premier-league-epl-logo-no-text-white-high-res-png",
-    "name": "English Premier League (EPL) No Text White",
-    "country": "england",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/england-english-premier-league-epl-logo-no-text-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/england/english-premier-league/no-text-white/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "england-english-premier-league-epl-logo-high-res-png",
-    "name": "English Premier League (EPL)",
-    "country": "england",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/england-english-premier-league-epl-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/england/english-premier-league/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
     "id": "england-english-football-league-efl-logo-high-res-png",
     "name": "English Football League (EFL)",
-    "country": "england",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -6983,7 +6775,7 @@
   {
     "id": "england-efl-championship-logo-high-res-png",
     "name": "EFL Championship",
-    "country": "england",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -6996,7 +6788,7 @@
   {
     "id": "england-efl-league-one-logo-high-res-png",
     "name": "EFL League One",
-    "country": "england",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -7009,7 +6801,7 @@
   {
     "id": "england-efl-league-two-logo-high-res-png",
     "name": "EFL League Two",
-    "country": "england",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -7022,41 +6814,41 @@
   {
     "id": "england-emirates-fa-cup-logo-high-res-png",
     "name": "Emirates FA Cup",
-    "country": "england",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/england/england-emirates-fa-cup-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/england-emirates-fa-cup-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/england/emirates-fa-cup/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "england-efl-carabao-cup-logo-high-res-png",
     "name": "EFL Carabao Cup",
-    "country": "england",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/england/england-efl-carabao-cup-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/england-efl-carabao-cup-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/england/efl-cup/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "england-fa-community-shield-logo-high-res-png",
     "name": "FA Community Shield",
-    "country": "england",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/england/england-fa-community-shield-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/england-fa-community-shield-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/england/fa-community-shield/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "england-old-arsenal-logo-1930-1936---high-res-png-1930-1936",
@@ -9596,7 +9388,7 @@
   {
     "id": "egypt-egyptian-premier-league-logo-high-res-png",
     "name": "Egyptian Premier League",
-    "country": "egypt",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -10454,33 +10246,20 @@
   {
     "id": "france-french-cup-coupe-de-france-logo-high-res-png",
     "name": "French Cup (Coupe de France)",
-    "country": "france",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/france/france-french-cup-coupe-de-france-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/france-french-cup-coupe-de-france-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/france/french-cup/",
-    "league": null,
-    "type": null
-  },
-  {
-    "id": "france-ligue-1-logo-white-high-res-png",
-    "name": "Ligue 1 White",
-    "country": "france",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/france-ligue-1-logo-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/france/ligue-1/white/",
     "league": null,
     "type": "tournament"
   },
   {
     "id": "france-ligue-1-logo-high-res-png",
     "name": "Ligue 1",
-    "country": "france",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -10491,22 +10270,9 @@
     "type": "tournament"
   },
   {
-    "id": "france-ligue-2-logo-white-high-res-png",
-    "name": "Ligue 2 White",
-    "country": "france",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/france-ligue-2-logo-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/france/ligue-2/white/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
     "id": "france-ligue-2-logo-high-res-png",
     "name": "Ligue 2",
-    "country": "france",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -11429,20 +11195,20 @@
   {
     "id": "germany-dfb-pokal-logo-high-res-png",
     "name": "DFB Pokal",
-    "country": "germany",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/germany/germany-dfb-pokal-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/germany-dfb-pokal-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/germany/dfb-pokal/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "germany-bundesliga-logo-high-res-png",
     "name": "Bundesliga",
-    "country": "germany",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -11455,7 +11221,7 @@
   {
     "id": "germany-2-bundesliga-logo-high-res-png",
     "name": "2. Bundesliga",
-    "country": "germany",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -11468,26 +11234,13 @@
   {
     "id": "germany-3-liga-logo-no-text-high-res-png",
     "name": "3. Liga No Text",
-    "country": "germany",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
     "localPath": "/logos/tournaments/germany-3-liga-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/germany/3-liga/no-text/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "germany-3-liga-logo-high-res-png",
-    "name": "3. Liga",
-    "country": "germany",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/germany-3-liga-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/germany/3-liga/",
     "league": null,
     "type": "tournament"
   },
@@ -12625,7 +12378,7 @@
   {
     "id": "greece-super-league-1-gsl-logo-high-res-png",
     "name": "Super League 1 (GSL)",
-    "country": "greece",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -13652,7 +13405,7 @@
   {
     "id": "india-indian-super-league-logo-high-res-png",
     "name": "Indian Super League",
-    "country": "india",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -13847,7 +13600,7 @@
   {
     "id": "indonesia-indonesian-super-league-logo-high-res-png",
     "name": "Indonesian Super League",
-    "country": "indonesia",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -14133,26 +13886,13 @@
   {
     "id": "israel-israeli-premier-league-ligat-haal-logo-no-text-high-res-png",
     "name": "Israeli Premier League (Ligat HaAl) No Text",
-    "country": "israel",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
     "localPath": "/logos/tournaments/israel-israeli-premier-league-ligat-haal-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/israel/israeli-premier-league/no-text/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "israel-israeli-premier-league-ligat-haal-logo-high-res-png",
-    "name": "Israeli Premier League (Ligat HaAl)",
-    "country": "israel",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/israel-israeli-premier-league-ligat-haal-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/israel/israeli-premier-league/",
     "league": null,
     "type": "tournament"
   },
@@ -14471,7 +14211,7 @@
   {
     "id": "italy-serie-a-logo-high-res-png",
     "name": "Serie A",
-    "country": "italy",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -14484,7 +14224,7 @@
   {
     "id": "italy-serie-b-logo-high-res-png",
     "name": "Serie B",
-    "country": "italy",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -14497,7 +14237,7 @@
   {
     "id": "italy-serie-c-logo-high-res-png",
     "name": "Serie C",
-    "country": "italy",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -14510,15 +14250,15 @@
   {
     "id": "italy-coppa-italia-logo-high-res-png",
     "name": "Coppa Italia",
-    "country": "italy",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/italy/italy-coppa-italia-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/italy-coppa-italia-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/italy/coppa-italia/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "italy-old-juventus-logo-1921-1929---high-res-png-1921-1929",
@@ -14621,19 +14361,6 @@
     "endYear": 2020,
     "localPath": "/logos/retro/italy-old-juventus-logo-2017-2020---high-res-png-2017-2020.svg",
     "pageUrl": "https://football-logos.cc/italy/juventus/2017-2020/",
-    "league": null,
-    "type": null
-  },
-  {
-    "id": "italy-juventus-logo-white-high-res-png",
-    "name": "Juventus White",
-    "country": "italy",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/italy/italy-juventus-logo-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/italy/juventus/white/",
     "league": null,
     "type": null
   },
@@ -16525,7 +16252,7 @@
   {
     "id": "japan-j1-league-logo-high-res-png",
     "name": "J1 League",
-    "country": "japan",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -18046,7 +17773,7 @@
   {
     "id": "mexico-liga-mx-logo-high-res-png",
     "name": "Liga MX",
-    "country": "mexico",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -18059,15 +17786,15 @@
   {
     "id": "mexico-copa-mx-logo-high-res-png",
     "name": "Copa MX",
-    "country": "mexico",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/mexico/mexico-copa-mx-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/mexico-copa-mx-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/mexico/copa-mx/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "mexico-cruz-azul-logo-high-res-png",
@@ -18800,20 +18527,20 @@
   {
     "id": "netherlands-knvb-logo-high-res-png",
     "name": "KNVB",
-    "country": "netherlands",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/netherlands/netherlands-knvb-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/netherlands-knvb-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/netherlands/knvb/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "netherlands-eredivisie-logo-no-text-high-res-png",
     "name": "Eredivisie No Text",
-    "country": "netherlands",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -18822,58 +18549,6 @@
     "pageUrl": "https://football-logos.cc/netherlands/eredivisie/no-text/",
     "league": null,
     "type": "tournament"
-  },
-  {
-    "id": "netherlands-eredivisie-logo-no-text-white-high-res-png",
-    "name": "Eredivisie No Text White",
-    "country": "netherlands",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/netherlands-eredivisie-logo-no-text-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/netherlands/eredivisie/no-text-white/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "netherlands-eredivisie-logo-white-high-res-png",
-    "name": "Eredivisie White",
-    "country": "netherlands",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/netherlands-eredivisie-logo-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/netherlands/eredivisie/white/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "netherlands-eredivisie-logo-high-res-png",
-    "name": "Eredivisie",
-    "country": "netherlands",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/netherlands-eredivisie-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/netherlands/eredivisie/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "netherlands-eerste-divisie-logo-high-res-png",
-    "name": "Eerste Divisie",
-    "country": "netherlands",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/netherlands/netherlands-eerste-divisie-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/netherlands/eerste-divisie/",
-    "league": null,
-    "type": null
   },
   {
     "id": "netherlands-psv-eindhoven-logo-high-res-png",
@@ -19370,19 +19045,6 @@
     "type": null
   },
   {
-    "id": "netherlands-helmond-sport-logo-high-res-png",
-    "name": "Helmond Sport",
-    "country": "netherlands",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/netherlands/netherlands-helmond-sport-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/netherlands/helmond-sport/",
-    "league": null,
-    "type": null
-  },
-  {
     "id": "netherlands-mvv-maastricht-logo-high-res-png",
     "name": "MVV Maastricht",
     "country": "netherlands",
@@ -19840,26 +19502,13 @@
   {
     "id": "norway-eliteserien-logo-no-text-high-res-png",
     "name": "Eliteserien No Text",
-    "country": "norway",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
     "localPath": "/logos/tournaments/norway-eliteserien-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/norway/eliteserien/no-text/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "norway-eliteserien-logo-high-res-png",
-    "name": "Eliteserien",
-    "country": "norway",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/norway-eliteserien-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/norway/eliteserien/",
     "league": null,
     "type": "tournament"
   },
@@ -19964,19 +19613,6 @@
     "endYear": null,
     "localPath": "/logos/norway/norway-haugesund-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/norway/haugesund/no-text/",
-    "league": null,
-    "type": null
-  },
-  {
-    "id": "norway-haugesund-logo-high-res-png",
-    "name": "Haugesund",
-    "country": "norway",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/norway/norway-haugesund-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/norway/haugesund/",
     "league": null,
     "type": null
   },
@@ -20854,26 +20490,13 @@
   {
     "id": "peru-peruvian-primera-divisin-logo-no-text-high-res-png",
     "name": "Peruvian Primera División No Text",
-    "country": "peru",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
     "localPath": "/logos/tournaments/peru-peruvian-primera-divisin-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/peru/peruvian-primera-division/no-text/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "peru-peruvian-primera-divisin-logo-high-res-png",
-    "name": "Peruvian Primera División",
-    "country": "peru",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/peru-peruvian-primera-divisin-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/peru/peruvian-primera-division/",
     "league": null,
     "type": "tournament"
   },
@@ -21112,48 +20735,9 @@
     "type": null
   },
   {
-    "id": "portugal-primeira-liga-liga-portugal-logo-horizontal-high-res-png",
-    "name": "Primeira Liga (Liga Portugal) Horizontal",
-    "country": "portugal",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/portugal-primeira-liga-liga-portugal-logo-horizontal-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/portugal/primeira-liga/horizontal/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "portugal-primeira-liga-liga-portugal-logo-horizontal-white-high-res-png",
-    "name": "Primeira Liga (Liga Portugal) Horizontal White",
-    "country": "portugal",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/portugal-primeira-liga-liga-portugal-logo-horizontal-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/portugal/primeira-liga/horizontal-white/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "portugal-primeira-liga-liga-portugal-logo-white-high-res-png",
-    "name": "Primeira Liga (Liga Portugal) White",
-    "country": "portugal",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/portugal-primeira-liga-liga-portugal-logo-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/portugal/primeira-liga/white/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
     "id": "portugal-primeira-liga-liga-portugal-logo-high-res-png",
     "name": "Primeira Liga (Liga Portugal)",
-    "country": "portugal",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -21166,7 +20750,7 @@
   {
     "id": "portugal-liga-portugal-2-logo-high-res-png",
     "name": "Liga Portugal 2",
-    "country": "portugal",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -21179,15 +20763,15 @@
   {
     "id": "portugal-taa-de-portugal-logo-high-res-png",
     "name": "Taça de Portugal",
-    "country": "portugal",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/portugal/portugal-taa-de-portugal-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/portugal-taa-de-portugal-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/portugal/taca-de-portugal/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "portugal-sporting-cp-lisbon-logo-high-res-png",
@@ -22531,7 +22115,7 @@
   {
     "id": "romania-superliga-liga-i-logo-high-res-png",
     "name": "Superliga (Liga I)",
-    "country": "romania",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -22843,7 +22427,7 @@
   {
     "id": "russia-russian-premier-league-logo-high-res-png",
     "name": "Russian Premier League",
-    "country": "russia",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -23480,7 +23064,7 @@
   {
     "id": "saudi-arabia-saudi-professional-league-spl-logo-high-res-png",
     "name": "Saudi Professional League (SPL)",
-    "country": "saudi-arabia",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -23493,7 +23077,7 @@
   {
     "id": "saudi-arabia-saudi-first-division-league-sdl----logo-high-res-png",
     "name": "Saudi First Division League SDL (دوري الدرجة الأولى)",
-    "country": "saudi-arabia",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -23825,19 +23409,6 @@
     "endYear": null,
     "localPath": "/logos/saudi-arabia/saudi-arabia-neom-sc--logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/saudi-arabia/neom/no-text/",
-    "league": null,
-    "type": null
-  },
-  {
-    "id": "saudi-arabia-neom-sc--logo-high-res-png",
-    "name": "Neom SC (نيوم)",
-    "country": "saudi-arabia",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/saudi-arabia/saudi-arabia-neom-sc--logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/saudi-arabia/neom/",
     "league": null,
     "type": null
   },
@@ -24793,7 +24364,7 @@
   {
     "id": "serbia-serbian-superliga-logo-high-res-png",
     "name": "Serbian SuperLiga",
-    "country": "serbia",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -25313,26 +24884,13 @@
   {
     "id": "slovenia-slovenian-prvaliga-logo-no-text-high-res-png",
     "name": "Slovenian PrvaLiga No Text",
-    "country": "slovenia",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
     "localPath": "/logos/tournaments/slovenia-slovenian-prvaliga-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/slovenia/slovenian-prvaliga/no-text/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "slovenia-slovenian-prvaliga-logo-high-res-png",
-    "name": "Slovenian PrvaLiga",
-    "country": "slovenia",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/slovenia-slovenian-prvaliga-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/slovenia/slovenian-prvaliga/",
     "league": null,
     "type": "tournament"
   },
@@ -25547,7 +25105,7 @@
   {
     "id": "south-africa-premier-soccer-league-psl-logo-high-res-png",
     "name": "Premier Soccer League (PSL)",
-    "country": "south-africa",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -25664,7 +25222,7 @@
   {
     "id": "south-korea-k-league-1-logo-high-res-png",
     "name": "K League 1",
-    "country": "south-korea",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -25846,7 +25404,7 @@
   {
     "id": "spain-la-liga-primera-divisin-logo-no-text-high-res-png",
     "name": "La Liga (Primera División) No Text",
-    "country": "spain",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -25857,22 +25415,9 @@
     "type": "tournament"
   },
   {
-    "id": "spain-la-liga-primera-divisin-logo-high-res-png",
-    "name": "La Liga (Primera División)",
-    "country": "spain",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/spain-la-liga-primera-divisin-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/spain/la-liga/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
     "id": "spain-la-liga-2-segunda-divisin-logo-no-text-high-res-png",
     "name": "La Liga 2 (Segunda División) No Text",
-    "country": "spain",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -25883,22 +25428,9 @@
     "type": "tournament"
   },
   {
-    "id": "spain-la-liga-2-segunda-divisin-logo-high-res-png",
-    "name": "La Liga 2 (Segunda División)",
-    "country": "spain",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/spain-la-liga-2-segunda-divisin-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/spain/la-liga-2/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
     "id": "spain-primera-federacin-logo-no-text-high-res-png",
     "name": "Primera Federación No Text",
-    "country": "spain",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -25909,41 +25441,15 @@
     "type": "tournament"
   },
   {
-    "id": "spain-primera-federacin-logo-high-res-png",
-    "name": "Primera Federación",
-    "country": "spain",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/spain-primera-federacin-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/spain/primera-federacion/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
     "id": "spain-segunda-federacin-logo-no-text-high-res-png",
     "name": "Segunda Federación No Text",
-    "country": "spain",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
     "localPath": "/logos/tournaments/spain-segunda-federacin-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/spain/segunda-federacion/no-text/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "spain-segunda-federacin-logo-high-res-png",
-    "name": "Segunda Federación",
-    "country": "spain",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/spain-segunda-federacin-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/spain/segunda-federacion/",
     "league": null,
     "type": "tournament"
   },
@@ -25961,43 +25467,30 @@
     "type": null
   },
   {
-    "id": "spain-tercera-federacin-logo-high-res-png",
-    "name": "Tercera Federación",
-    "country": "spain",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/spain/spain-tercera-federacin-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/spain/tercera-federacion/",
-    "league": null,
-    "type": null
-  },
-  {
     "id": "spain-copa-del-rey-logo-high-res-png",
     "name": "Copa del Rey",
-    "country": "spain",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/spain/spain-copa-del-rey-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/spain-copa-del-rey-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/spain/copa-del-rey/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "spain-supercopa-de-espaa-logo-high-res-png",
     "name": "Supercopa de España",
-    "country": "spain",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
-    "localPath": "/logos/spain/spain-supercopa-de-espaa-logo-high-res-png.svg",
+    "localPath": "/logos/tournaments/spain-supercopa-de-espaa-logo-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/spain/supercopa-de-espana/",
     "league": null,
-    "type": null
+    "type": "tournament"
   },
   {
     "id": "spain-old-barcelona-logo-1906-1941---high-res-png-1906-1941",
@@ -27133,7 +26626,7 @@
   {
     "id": "sweden-allsvenskan-logo-high-res-png",
     "name": "Allsvenskan",
-    "country": "sweden",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -27523,7 +27016,7 @@
   {
     "id": "switzerland-swiss-football-league-logo-high-res-png",
     "name": "Swiss Football League",
-    "country": "switzerland",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -28316,7 +27809,7 @@
   {
     "id": "ukraine-ukrainian-premier-league-logo-high-res-png",
     "name": "Ukrainian Premier League",
-    "country": "ukraine",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -28836,7 +28329,7 @@
   {
     "id": "usa-mls---major-league-soccer-logo-high-res-png",
     "name": "MLS - Major League Soccer",
-    "country": "usa",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -28849,7 +28342,7 @@
   {
     "id": "usa-usl-championship-logo-high-res-png",
     "name": "USL Championship",
-    "country": "usa",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
@@ -29551,52 +29044,13 @@
   {
     "id": "uzbekistan-uzbekistan-super-league-uzsl-logo-no-text-high-res-png",
     "name": "Uzbekistan Super League (UZSL) No Text",
-    "country": "uzbekistan",
+    "country": "tournaments",
     "isHistorical": false,
     "period": null,
     "startYear": null,
     "endYear": null,
     "localPath": "/logos/tournaments/uzbekistan-uzbekistan-super-league-uzsl-logo-no-text-high-res-png.svg",
     "pageUrl": "https://football-logos.cc/uzbekistan/uzbekistan-super-league/no-text/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "uzbekistan-uzbekistan-super-league-uzsl-logo-no-text-white-high-res-png",
-    "name": "Uzbekistan Super League (UZSL) No Text White",
-    "country": "uzbekistan",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/uzbekistan-uzbekistan-super-league-uzsl-logo-no-text-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/uzbekistan/uzbekistan-super-league/no-text-white/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "uzbekistan-uzbekistan-super-league-uzsl-logo-white-high-res-png",
-    "name": "Uzbekistan Super League (UZSL) White",
-    "country": "uzbekistan",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/uzbekistan-uzbekistan-super-league-uzsl-logo-white-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/uzbekistan/uzbekistan-super-league/white/",
-    "league": null,
-    "type": "tournament"
-  },
-  {
-    "id": "uzbekistan-uzbekistan-super-league-uzsl-logo-high-res-png",
-    "name": "Uzbekistan Super League (UZSL)",
-    "country": "uzbekistan",
-    "isHistorical": false,
-    "period": null,
-    "startYear": null,
-    "endYear": null,
-    "localPath": "/logos/tournaments/uzbekistan-uzbekistan-super-league-uzsl-logo-high-res-png.svg",
-    "pageUrl": "https://football-logos.cc/uzbekistan/uzbekistan-super-league/",
     "league": null,
     "type": "tournament"
   },
@@ -30613,5 +30067,31 @@
     "pageUrl": "https://football-logos.cc/pakistan/pakistan-national-team/",
     "league": null,
     "type": null
+  },
+  {
+    "id": "netherlands-eerste-divisie-logo-high-res-png",
+    "name": "Eerste Divisie",
+    "country": "tournaments",
+    "isHistorical": false,
+    "period": null,
+    "startYear": null,
+    "endYear": null,
+    "localPath": "/logos/tournaments/netherlands-eerste-divisie-logo-high-res-png.svg",
+    "pageUrl": "https://football-logos.cc/netherlands/eerste-divisie/",
+    "league": null,
+    "type": "tournament"
+  },
+  {
+    "id": "netherlands-knvb-cup-logo-high-res-png",
+    "name": "KNVB Cup",
+    "country": "tournaments",
+    "isHistorical": false,
+    "period": null,
+    "startYear": null,
+    "endYear": null,
+    "localPath": "/logos/tournaments/netherlands-knvb-cup-logo-high-res-png.svg",
+    "pageUrl": "https://football-logos.cc/netherlands/knvb-cup/",
+    "league": null,
+    "type": "tournament"
   }
 ]

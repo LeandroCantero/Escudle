@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { Trophy, XCircle } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { Difficulty, GameState } from '../hooks/use-game-logic';
 import { Logo } from '../hooks/use-logo-search';
 import { cn } from '../utils/cn';
@@ -35,14 +36,29 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
     const revealOrder = getRevealOrder(targetLogo.name); // Using name as ID proxy
     const tilesToReveal = revealOrder.slice(0, guesses.length);
 
+    // Shake animation state
+    const [shake, setShake] = useState(false);
+
+    // Trigger shake when guesses change and game is still playing (wrong guess)
+    useEffect(() => {
+        if (gameState === 'playing' && guesses.length > 0) {
+            setShake(true);
+            const timer = setTimeout(() => setShake(false), 500);
+            return () => clearTimeout(timer);
+        }
+    }, [guesses.length, gameState]);
+
     return (
-        <div
+        <motion.div
+            animate={shake ? { x: [-10, 10, -10, 10, 0] } : {}}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
             className="neo-card rounded-3xl p-6 flex flex-col items-center justify-center relative aspect-square overflow-hidden bg-white max-w-xs mx-auto select-none"
             onContextMenu={(e) => e.preventDefault()}
         >
+
             {targetLogo.isHistorical && (
                 <div className="absolute top-4 right-4 z-20">
-                    <span className="bg-neo-orange text-neo-black text-xs font-black px-3 py-1 rounded-md border-2 border-neo-black shadow-neo-sm">
+                    <span className="bg-neo-purple text-white text-sm font-black px-4 py-1.5 rounded-lg border-2 border-neo-black shadow-neo tracking-wider uppercase transform rotate-2">
                         {targetLogo.period || 'RETRO'}
                     </span>
                 </div>
@@ -62,14 +78,17 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
                         <img
                             src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
                             alt="Escudo a adivinar"
-                            className="w-48 h-48 object-contain filter drop-shadow-lg pointer-events-none select-none"
+                            className={cn(
+                                "object-contain filter drop-shadow-lg pointer-events-none select-none transition-all duration-300",
+                                targetLogo.isHistorical ? "w-64 h-64 contrast-110 saturate-110" : "w-48 h-48"
+                            )}
                             draggable={false}
                         />
                     )}
 
                     {/* HARD MODE: Perfect Silhouette using Filters */}
                     {difficulty === 'hard' && (
-                        <div className="relative w-48 h-48 flex items-center justify-center">
+                        <div className={cn("relative flex items-center justify-center", targetLogo.isHistorical ? "w-64 h-64" : "w-48 h-48")}>
                             {/* The Silhouette Layer */}
                             <img
                                 src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
@@ -89,7 +108,8 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
                                 alt="Resultado"
                                 className={cn(
                                     "w-full h-full object-contain pointer-events-none select-none transition-opacity duration-700",
-                                    (gameState === 'won' || gameState === 'lost') ? "opacity-100" : "opacity-0"
+                                    (gameState === 'won' || gameState === 'lost') ? "opacity-100" : "opacity-0",
+                                    targetLogo.isHistorical && "contrast-110 saturate-110"
                                 )}
                                 draggable={false}
                             />
@@ -98,7 +118,7 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
 
                     {/* MEDIUM MODE: Silhouette Base + Grid Reveal */}
                     {difficulty === 'medium' && (
-                        <div className="relative w-48 h-48">
+                        <div className={cn("relative", targetLogo.isHistorical ? "w-64 h-64" : "w-48 h-48")}>
                             {/* Base Layer: Perfect Silhouette using Filters */}
                             <img
                                 src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
@@ -139,7 +159,10 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
                                                             top: `${-row * 100}%`,
                                                             left: `${-col * 100}%`
                                                         }}
-                                                        className="absolute max-w-none w-[200%] h-[300%] object-contain pointer-events-none select-none"
+                                                        className={cn(
+                                                            "absolute max-w-none w-[200%] h-[300%] object-contain pointer-events-none select-none",
+                                                            targetLogo.isHistorical && "contrast-110 saturate-110"
+                                                        )}
                                                         draggable={false}
                                                     />
                                                 )}
@@ -156,7 +179,10 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
                                     animate={{ opacity: 1 }}
                                     src={targetLogo.localPath || targetLogo.svgUrl || targetLogo.pngUrl || ''}
                                     alt="Resultado"
-                                    className="absolute inset-0 w-full h-full object-contain z-30 pointer-events-none select-none"
+                                    className={cn(
+                                        "absolute inset-0 w-full h-full object-contain z-30 pointer-events-none select-none",
+                                        targetLogo.isHistorical && "contrast-110 saturate-110"
+                                    )}
                                     draggable={false}
                                 />
                             )}
@@ -196,6 +222,6 @@ export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }:
                     <p className="text-neo-black font-medium">Era: <span className="font-bold">{targetLogo.name}</span></p>
                 </motion.div>
             )}
-        </div>
+        </motion.div>
     );
 };

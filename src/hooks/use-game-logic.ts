@@ -72,6 +72,32 @@ export function useGameLogic() {
         return logos;
     }, [allLogos, dataset, selectedCountries]);
 
+    const [nextLogo, setNextLogo] = useState<Logo | null>(null);
+
+    // Helper to pick a random logo from a pool
+    const pickRandomLogo = useCallback((pool: Logo[]) => {
+        return pool[Math.floor(Math.random() * pool.length)];
+    }, []);
+
+    // Preload next image when target changes or game starts
+    useEffect(() => {
+        if (targetLogo) {
+            // In Infinite Mode, we want to preload the NEXT one.
+            // We can pick a random one from the SAME pool as currently active.
+            // To simplify, we just pick one from filteredLogos (ignoring playedLogos just for preloading is fine for cache warming)
+            // Ideally we replicate the "available" logic, but just picking a random one from the current dataset helps cache.
+
+            // Let's rely on the pool logic in startNewGame? 
+            // Actually, we need to know the *next* one. 
+            // Let's just pick a random one from filteredLogos to preload. 
+            // Even if it's not the exact next one (since that's determined at click time), 
+            // picking a few randoms might help, but ideally we determine nextLogo state.
+
+            // Better approach: When startNewGame runs, if we have a nextLogo, use it.
+            // Then immediately pick a NEW nextLogo and preload it.
+        }
+    }, [targetLogo]);
+
     const startNewGame = useCallback((newGameMode?: GameMode, newDifficulty?: Difficulty, newDataset?: Dataset) => {
         const activeGameMode = newGameMode || gameMode;
         const activeDifficulty = newDifficulty || difficulty;
@@ -99,6 +125,7 @@ export function useGameLogic() {
 
         const today = new Date().toISOString().split('T')[0];
         let seededTarget: Logo | null = null;
+
         if (activeGameMode === 'daily') {
             const seedString = `${today}-${activeDifficulty}`;
             let hash = 0;
@@ -160,7 +187,18 @@ export function useGameLogic() {
                 }
             }
 
-            setTargetLogo(gamePool[Math.floor(Math.random() * gamePool.length)]);
+            // SELECTION LOGIC WITH PRELOADING
+            let newTarget: Logo;
+
+            // If we have a nextLogo ready and valid for current pool, use it
+            // We check if nextLogo is in gamePool just to be safe (e.g. if filters changed)
+            if (nextLogo && gamePool.some(l => l.id === nextLogo.id)) {
+                newTarget = nextLogo;
+            } else {
+                newTarget = gamePool[Math.floor(Math.random() * gamePool.length)];
+            }
+
+            setTargetLogo(newTarget);
             setGuesses([]);
             setGameState('playing');
 
@@ -172,8 +210,20 @@ export function useGameLogic() {
                     resetInfiniteSession();
                 }
             }
+
+            // PICK AND PRELOAD NEXT
+            // We need to pick a potential next logo from the pool (excluding the one we just picked)
+            const remainingPool = gamePool.filter(l => l.id !== newTarget.id);
+            if (remainingPool.length > 0) {
+                const next = remainingPool[Math.floor(Math.random() * remainingPool.length)];
+                setNextLogo(next);
+
+                // Preload Image
+                const img = new Image();
+                img.src = next.localPath || next.svgUrl || next.pngUrl || '';
+            }
         }
-    }, [allLogos, gameMode, difficulty, dataset, selectedCountries, initDailyGame, gameState, infiniteSession, resetInfiniteSession]);
+    }, [allLogos, gameMode, difficulty, dataset, selectedCountries, initDailyGame, gameState, infiniteSession, resetInfiniteSession, nextLogo]); // Added nextLogo dependency
 
     useEffect(() => {
         fetch('/data/logos.json')

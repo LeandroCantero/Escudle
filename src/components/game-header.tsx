@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { BarChart2, LogOut } from 'lucide-react';
+import { APP_LOGO_PATH } from '../utils/constants';
 
 interface GameHeaderProps {
     setShowHelp: (show: boolean) => void;
@@ -18,16 +19,21 @@ export const GameHeader = ({
             animate={{ opacity: 1, y: 0 }}
             className="w-full flex items-center justify-between py-2 relative z-30"
         >
-            <div className="flex items-center space-x-2 md:space-x-3">
+            <motion.div
+                className="flex items-center space-x-2 md:space-x-3 cursor-pointer select-none"
+                onClick={onExitGame}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+            >
                 <img
-                    src="/escudle-logo.png"
+                    src={APP_LOGO_PATH}
                     alt="Escudle Logo"
                     className="h-10 md:h-12 w-auto drop-shadow-[2px_2px_0px_#000]"
                 />
                 <h1 className="text-2xl md:text-3xl font-['Permanent_Marker'] text-white uppercase tracking-wider drop-shadow-[3px_3px_0px_#000] rotate-[-2deg]">
                     Escudle
                 </h1>
-            </div>
+            </motion.div>
 
             <div className="flex items-center space-x-2">
                 <motion.button

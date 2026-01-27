@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronRight, Search } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { GameState } from '../hooks/use-game-logic';
+import { useEffect, useRef, useState } from 'react';
+import { Difficulty, GameState } from '../hooks/use-game-logic';
 import { Logo } from '../hooks/use-logo-search';
 import { cn } from '../utils/cn';
 
@@ -13,6 +13,7 @@ interface GuessInputProps {
     suggestions: Logo[];
     gameState: GameState;
     handleGuess: (name: string) => void;
+    difficulty: Difficulty;
 }
 
 export const GuessInput = ({
@@ -22,14 +23,32 @@ export const GuessInput = ({
     setShowSuggestions,
     suggestions,
     gameState,
-    handleGuess
+    handleGuess,
+    difficulty
 }: GuessInputProps) => {
     const [highlightedIndex, setHighlightedIndex] = useState(-1);
 
     // Reset highlight when suggestions change
     useEffect(() => {
-        setHighlightedIndex(-1);
+        setHighlightedIndex(suggestions.length > 0 ? 0 : -1);
     }, [suggestions]);
+
+    const listRef = useRef<HTMLDivElement>(null);
+
+    // Scroll highlighted item into view
+    useEffect(() => {
+        if (highlightedIndex >= 0 && listRef.current) {
+            const listElement = listRef.current;
+            const highlightedElement = listElement.children[highlightedIndex] as HTMLElement;
+
+            if (highlightedElement) {
+                highlightedElement.scrollIntoView({
+                    block: 'nearest',
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }, [highlightedIndex]);
 
     const handleKeyDown = (e: React.KeyboardEvent) => {
         if (gameState !== 'playing') return;
@@ -41,8 +60,9 @@ export const GuessInput = ({
             );
         } else if (e.key === 'ArrowUp') {
             e.preventDefault();
-            setHighlightedIndex(prev => (prev > 0 ? prev - 1 : -1));
+            setHighlightedIndex(prev => (prev > 0 ? prev - 1 : 0));
         } else if (e.key === 'Enter') {
+            e.stopPropagation();
             if (highlightedIndex >= 0 && suggestions[highlightedIndex]) {
                 handleGuess(suggestions[highlightedIndex].name);
                 setHighlightedIndex(-1);
@@ -54,11 +74,25 @@ export const GuessInput = ({
         }
     };
 
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    // Auto-focus input when game starts or resets
+    useEffect(() => {
+        if (gameState === 'playing') {
+            // Small timeout to ensure DOM is ready and prevent potential race conditions
+            const timer = setTimeout(() => {
+                inputRef.current?.focus();
+            }, 10);
+            return () => clearTimeout(timer);
+        }
+    }, [gameState, inputValue]); // Re-run when input clears (new game)
+
     return (
         <div className="relative">
             <div className="relative group">
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-neo-black transition-colors" />
                 <input
+                    ref={inputRef}
                     type="text"
                     placeholder="ESCRIBÍ EL EQUIPO..."
                     value={inputValue}
@@ -75,10 +109,11 @@ export const GuessInput = ({
             <AnimatePresence>
                 {showSuggestions && suggestions.length > 0 && (
                     <motion.div
-                        initial={{ opacity: 0, y: -10 }}
+                        ref={listRef}
+                        initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        className="absolute top-full left-0 right-0 mt-3 bg-white border-[3px] border-neo-black rounded-xl overflow-hidden z-50 shadow-neo max-h-[300px] overflow-y-auto"
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute bottom-full left-0 right-0 mb-3 bg-white border-[3px] border-neo-black rounded-xl overflow-hidden z-50 shadow-neo max-h-[300px] overflow-y-auto"
                     >
                         {suggestions.map((logo, index) => (
                             <button
@@ -95,7 +130,11 @@ export const GuessInput = ({
                                     </div>
                                     <div className="flex flex-col items-start">
                                         <span className="font-bold text-neo-black uppercase">{logo.name}</span>
-                                        {logo.isHistorical && <span className="text-xs bg-neo-purple text-white px-3 py-1 rounded-full font-bold uppercase mt-1">{logo.period}</span>}
+                                        {logo.isHistorical && difficulty !== 'hard' && (
+                                            <span className="text-xs bg-neo-purple text-white px-3 py-1 rounded-full font-bold uppercase mt-1">
+                                                {logo.period}
+                                            </span>
+                                        )}
                                     </div>
                                 </div>
                                 <ChevronRight className="w-5 h-5 text-neo-black group-hover:translate-x-1 transition-transform" />

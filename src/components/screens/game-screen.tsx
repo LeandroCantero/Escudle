@@ -23,6 +23,7 @@ interface GameScreenProps {
     // New props for Infinite Mode feedback
     infiniteModeScore?: number;
     infiniteModeHighScore?: number;
+    isModalOpen?: boolean;
 }
 
 export const GameScreen = ({
@@ -39,7 +40,8 @@ export const GameScreen = ({
     guesses,
     onNextGame,
     infiniteModeScore,
-    infiniteModeHighScore
+    infiniteModeHighScore,
+    isModalOpen = false
 }: GameScreenProps) => {
 
     const suggestions = useLogoSearch(filteredLogos, inputValue, {
@@ -50,7 +52,7 @@ export const GameScreen = ({
     // Global keyboard listener for Enter (Next Game)
     useEffect(() => {
         const handleGlobalKeyDown = (e: KeyboardEvent) => {
-            if (gameState !== 'playing' && e.key === 'Enter') {
+            if (gameState !== 'playing' && !isModalOpen && e.key === 'Enter') {
                 // Only trigger if not typing in some input
                 const activeElement = document.activeElement;
                 if (activeElement?.tagName !== 'INPUT' && activeElement?.tagName !== 'TEXTAREA') {
@@ -104,6 +106,7 @@ export const GameScreen = ({
                 suggestions={suggestions}
                 gameState={gameState}
                 handleGuess={handleGuess}
+                difficulty={difficulty}
             />
 
             <GuessList
