@@ -1,5 +1,5 @@
 ---
-last_update: 19-01-2026
+last_update: 27-01-2026
 context: Arquitectura del Proyecto Escudle
 purpose: Documento maestro que define la arquitectura modular, stack tecnológico y estructura siguiendo los Global Engineering Standards
 ---
@@ -68,7 +68,7 @@ Escudle/
 │   └── logos/               # ~1976 archivos de logos locales
 ├── scraper-download.js      # Script para descargar logos desde football-logos.cc
 ├── sanitize-logos.js        # Script para limpiar y validar logos
-├── debug_logos.js           # Utilidad de debugging
+├── debug-logos.js           # Utilidad de debugging
 └── docs/                    # Documentación técnica
 ```
 
@@ -142,6 +142,8 @@ interface Logo {
   pngUrl?: string | null;  // URL remota (no usada en runtime)
   localPath?: string;      // "/logos/england-arsenal-1930-1936.png"
   pageUrl: string;         // URL de referencia
+  league: string | null;   // Liga del equipo
+  type: string | null;     // "club" o "tournament"
 }
 ```
 
@@ -166,6 +168,11 @@ interface Logo {
 - ❌ Renderizar UI
 
 ## Decision Log
+
+### 27-01-2026: Navegación y Favicons
+- **Cambio**: Header interactivo (logo clickable) para volver al inicio.
+- **Cambio**: Configuración completa de favicons y PWA manifest.
+- **Cambio**: Exclusión de torneos (`type: 'tournament'`) del pool del Modo Diario para enfocarlo en clubes.
 
 ### 19-01-2026: Refactor de Estado (Hooks Split)
 - **Cambio**: Extracción de lógica específica a `use-daily-state` y `use-infinite-state`.
@@ -214,11 +221,16 @@ name.toLowerCase() === targetLogo?.name.toLowerCase()
 **Mitigación**: `useMemo` en el hook + threshold mínimo de 2 caracteres antes de buscar.
 
 ### 4. Modos de juego y pool de logos
-**IMPORTANTE**: Al cambiar de modo, `startNewGame()` debe recalcular el pool:
+**IMPORTANTE**: Al cambiar de modo o dataset, `startNewGame()` debe recalcular el pool. En el Modo Diario, el pool excluye torneos por diseño.
 ```typescript
-const pool = allLogos.filter(l => activeMode === 'easy' ? !l.isHistorical : l.isHistorical)
+if (activeGameMode === 'daily') {
+    pool = allLogos.filter(l => l.type !== 'tournament');
+} else {
+    if (activeDataset === 'current') pool = pool.filter(l => !l.isHistorical);
+    // ...
+}
 ```
-NO usar `filteredLogos` useMemo porque se actualiza DESPUÉS del state change.
+NO usar el useMemo `filteredLogos` para esto porque se actualiza DESPUÉS del cambio de estado.
 
 ## Referencias
 

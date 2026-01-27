@@ -8,24 +8,30 @@
 
 ## ✨ Características
 
-- 🎯 **Dos modos de juego**
-  - **Modo Fácil**: Escudos actuales completamente visibles
-  - **Modo Difícil**: Escudos históricos oscurecidos y borrosos
+- 🎯 **Varios modos de juego**
+  - **Modo Diario**: Un escudo único por día para todos.
+  - **Modo Infinito**: Jugá sin parar y acumulá tu mejor racha.
+  - **Modo Práctica**: Entrená sin presión.
+  
+- ⚡ **Niveles de dificultad**
+  - **Fácil**: Escudo completamente visible.
+  - **Medio**: Silueta que se revela gradualmente con cada error.
+  - **Difícil**: Solo la silueta del escudo.
   
 - 🔍 **Búsqueda inteligente**
-  - Fuzzy search con Fuse.js para tolerar typos
-  - Sugerencias en tiempo real con vista previa de logos
-  - Búsqueda case-insensitive
+  - Fuzzy search con Fuse.js para tolerar typos.
+  - Sugerencias en tiempo real con vista previa de logos.
+  - Búsqueda case-insensitive y sin acentos.
   
-- 🎨 **Diseño Neobrutalism**
-  - Estética vibrante con colores bold
-  - Animaciones fluidas con Framer Motion
-  - Bordes gruesos y sombras hard
+- 🎨 **Diseño Neobrutalist**
+  - Estética vibrante con colores bold.
+  - Animaciones fluidas con Framer Motion.
+  - Bordes gruesos y sombras hard.
   
 - 📊 **Base de datos masiva**
-  - ~3200 logos de equipos de todo el mundo
-  - Logos históricos desde 1900+
-  - Metadata completa (país, período, URLs)
+  - ~3200 logos de equipos de todo el mundo.
+  - Logos históricos (Retros) y actuales.
+  - Filtros por país para personalizar tu experiencia.
 
 ## 🚀 Instalación
 
@@ -88,21 +94,19 @@ npm run download-logos  # Re-scrapea logos desde football-logos.cc
 Escudle/
 ├── src/
 │   ├── app.tsx              # Componente principal (Orquestador)
-│   ├── main.tsx             # Entry point
-│   ├── index.css            # Design system + estilos globales
-│   ├── components/          # Componentes modulares
+│   ├── components/          # UI Components modulares
 │   ├── hooks/
-│   │   ├── use-game-logic.ts   # Lógica central del juego
-│   │   └── use-logo-search.ts  # Hook de búsqueda con Fuse.js
+│   │   ├── use-game-logic.ts   # Orquestador de lógica
+│   │   ├── use-daily-state.ts  # Persistencia y lógica diaria
+│   │   ├── use-infinite-state.ts # Scoring y persistencia infinita
+│   │   └── use-logo-search.ts  # Hook de búsqueda fuzzy
 │   └── utils/
-│       └── cn.ts               # Utilidad de Tailwind merge
+│       └── string-utils.ts     # Normalización y limpieza
 ├── public/
-│   └── logos/               # 1976 logos descargados localmente
+│   ├── data/
+│   │   └── logos.json       # Metadata de ~3200 logos
+│   └── logos/               # Logos descargados localmente
 ├── docs/                    # 📚 Documentación técnica
-│   ├── arquitectura.md      # Arquitectura y stack
-│   ├── busqueda-logos.md    # Sistema de búsqueda
-│   ├── sistema-diseno.md    # Design system neobrutalism
-│   └── scraper-sistema.md   # Sistema de scraping
 ├── scraper-download.js      # Script de scraping
 ├── sanitize-logos.js        # Validación de datos
 └── debug-logos.js           # Debugging utilities
@@ -119,11 +123,11 @@ La documentación completa del proyecto está en [`/docs`](./docs):
 
 ## 🎲 Cómo Jugar
 
-1. **Elegí un modo**: Fácil (logos actuales) o Difícil (logos históricos)
-2. **Observá el escudo**: En modo fácil está visible, en difícil está oscurecido
-3. **Escribí el nombre del equipo**: Usa el buscador con sugerencias
-4. **Tenés 6 intentos**: Cada intento incorrecto se marca en rojo
-5. **¡Adiviná el equipo!**: Gana descubriendo el escudo correcto
+1. **Elegí tu modo y dificultad**: Desde la pantalla de inicio.
+2. **Observá el escudo**: Dependiendo de la dificultad verás el logo o su silueta.
+3. **Escribí el nombre del equipo**: Usa el buscador inteligente.
+4. **Tenés 6 intentos**: En modo medio, cada error revela una parte del escudo.
+5. **¡Compartí tus resultados!**: Especialmente en el Modo Diario.
 
 ### Ejemplo de Búsqueda
 

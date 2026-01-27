@@ -12,7 +12,7 @@ export type Dataset = 'all' | 'current' | 'historic';
 export const MAX_ATTEMPTS = 6;
 
 export function useGameLogic() {
-    const [gameMode, setGameMode] = useState<GameMode>('daily'); // Set daily as default as requested
+    const [gameMode, setGameMode] = useState<GameMode>('daily');
     const [difficulty, setDifficulty] = useState<Difficulty>('easy');
     const [dataset, setDataset] = useState<Dataset>('current');
 
@@ -61,6 +61,11 @@ export function useGameLogic() {
 
     const filteredLogos = useMemo(() => {
         let logos = allLogos;
+
+        if (gameMode === 'daily') {
+            return logos.filter(l => l.type !== 'tournament');
+        }
+
         if (dataset === 'current') {
             logos = logos.filter(l => !l.isHistorical);
         } else if (dataset === 'historic') {
@@ -70,7 +75,7 @@ export function useGameLogic() {
             logos = logos.filter(l => selectedCountries.includes(l.country));
         }
         return logos;
-    }, [allLogos, dataset, selectedCountries]);
+    }, [allLogos, gameMode, dataset, selectedCountries]);
 
     const [nextLogo, setNextLogo] = useState<Logo | null>(null);
 
@@ -79,23 +84,9 @@ export function useGameLogic() {
         return pool[Math.floor(Math.random() * pool.length)];
     }, []);
 
-    // Preload next image when target changes or game starts
+    // Preload next image when target changes to improve UX transitions
     useEffect(() => {
-        if (targetLogo) {
-            // In Infinite Mode, we want to preload the NEXT one.
-            // We can pick a random one from the SAME pool as currently active.
-            // To simplify, we just pick one from filteredLogos (ignoring playedLogos just for preloading is fine for cache warming)
-            // Ideally we replicate the "available" logic, but just picking a random one from the current dataset helps cache.
-
-            // Let's rely on the pool logic in startNewGame? 
-            // Actually, we need to know the *next* one. 
-            // Let's just pick a random one from filteredLogos to preload. 
-            // Even if it's not the exact next one (since that's determined at click time), 
-            // picking a few randoms might help, but ideally we determine nextLogo state.
-
-            // Better approach: When startNewGame runs, if we have a nextLogo, use it.
-            // Then immediately pick a NEW nextLogo and preload it.
-        }
+        // Preloading logic is handled within startNewGame for better sync with state
     }, [targetLogo]);
 
     const startNewGame = useCallback((newGameMode?: GameMode, newDifficulty?: Difficulty, newDataset?: Dataset) => {
@@ -109,7 +100,7 @@ export function useGameLogic() {
 
         let pool = allLogos;
         if (activeGameMode === 'daily') {
-            pool = allLogos;
+            pool = allLogos.filter(l => l.type !== 'tournament');
         } else {
             if (activeDataset === 'current') pool = pool.filter(l => !l.isHistorical);
             if (activeDataset === 'historic') pool = pool.filter(l => l.isHistorical);

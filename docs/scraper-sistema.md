@@ -1,5 +1,5 @@
 ---
-last_update: 14-01-2026
+last_update: 27-01-2026
 context: Sistema de Scraping de Logos
 purpose: Documentación del proceso de descarga, sanitización y estructuración de logos desde football-logos.cc
 ---

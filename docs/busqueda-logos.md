@@ -1,5 +1,5 @@
 ---
-last_update: 14-01-2026
+last_update: 27-01-2026
 context: Sistema de Búsqueda de Logos
 purpose: Documentación del hook useLogoSearch y el algoritmo de fuzzy matching con Fuse.js
 ---
@@ -39,6 +39,8 @@ interface Logo {
   period: string | null;   
   localPath?: string;      
   pageUrl: string;
+  league: string | null;
+  type: string | null;
 }
 ```
 
@@ -169,20 +171,20 @@ const suggestions = useLogoSearch(filteredLogos, inputValue, {
 **Estado actual**: Implementado mediante `normalizeString`. La búsqueda es insensible a acentos ("São Paulo" == "sao paulo").
 
 ### 4. Dependencia de filteredLogos
-**IMPORTANTE**: En app.tsx, el hook recibe `filteredLogos` (ya filtrado por modo):
+**IMPORTANTE**: En `app.tsx`, el hook recibe `filteredLogos`, que ya viene filtrado por el orquestador según el modo y dataset activo:
 
 ```typescript
 const filteredLogos = useMemo(() => {
-  return allLogos.filter(l => mode === 'easy' ? !l.isHistorical : l.isHistorical);
-}, [mode]);
-
-const suggestions = useLogoSearch(filteredLogos, inputValue, {...});
+    if (gameMode === 'daily') {
+        return logos.filter(l => l.type !== 'tournament');
+    }
+    // ... filtros por dataset y país
+}, [gameMode, dataset, selectedCountries]);
 ```
 
-Esto es correcto porque:
-- ✅ Evita mostrar logos históricos en modo fácil
-- ✅ Reduce el espacio de búsqueda (mejora performance)
-- ⚠️ Si se pasa `allLogos` por error, el usuario verá sugerencias de logos que no están en el juego actual
+Esto asegura que:
+- ✅ Las sugerencias coincidan siempre con el pool de logos posible.
+- ✅ No se sugieran torneos en el modo diario.
 
 ## Testing Manual
 

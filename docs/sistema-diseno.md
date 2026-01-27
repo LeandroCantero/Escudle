@@ -1,5 +1,5 @@
 ---
-last_update: 19-01-2026
+last_update: 27-01-2026
 context: Sistema de Diseño Neobrutalism
 purpose: Documentación del design system, paleta de colores, componentes reutilizables y tokens de diseño
 ---
@@ -103,7 +103,7 @@ rounded-full: 50%  /* Badges, avatares */
 
 ```css
 font-family: 'Outfit', sans-serif;  /* Primary font */
-font-family: 'Permanent Marker', cursive;  /* Accent font (no usada actualmente) */
+font-family: 'Permanent Marker', cursive;  /* Accent font (usada en branding y títulos) */
 ```
 
 **Outfit** fue elegida por:

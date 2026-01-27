@@ -13,19 +13,7 @@ interface LogoDisplayProps {
 }
 
 export const LogoDisplay = ({ targetLogo, difficulty, gameState, guesses = [] }: LogoDisplayProps) => {
-    // Determine how many tiles to reveal for Medium mode
-    // guesses.length = number of wrong attempts (usually).
-    // We want to reveal 1 tile per wrong guess?
-    // Max attempts = 6. 2x3 grid = 6 tiles.
-    // If guesses.length = 0, 0 tiles revealed.
-    // If guesses.length = 1, 1 tile revealed.
-    // ...
-    // Note: We need a deterministic but "random-looking" way to reveal tiles so they don't always open in order 1,2,3...
-    // We can use a seeded shuffle based on targetLogo.id to keep it consistent for that logo?
-    // Or just simple index mapping since the grid is abstract.
-    // Let's just reveal in order 0-5 for simplicity first, or shuffle indices.
-
-    // Simple shuffle based on logo name length to be pseudo-random but consistent per logo
+    // Determine how many tiles to reveal for Medium mode based on guesses
     const getRevealOrder = (id: string) => {
         const order = [0, 1, 2, 3, 4, 5];
         const seed = id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);

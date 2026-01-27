@@ -1,5 +1,5 @@
 ---
-last_update: 19-01-2026
+last_update: 27-01-2026
 context: Registro de Features e Ideas (Backlog)
 purpose: Listado centralizado de funcionalidades implementadas e ideas para desarrollo futuro (DRY alignment)
 ---
@@ -32,7 +32,7 @@ Este documento centraliza todas las funcionalidades del proyecto, separando lo q
 - **Silhouette Rendering Fix**: Mejora en el renderizado de siluetas (dificultad media y difícil) usando filtros CSS para eliminar líneas internas.
 
 ### Modos de Juego
-- **Modo Diario (Daily Challenge)**: Un escudo único por día con persistencia total de intentos y estado, incluso al cambiar de dificultad o recargar la página.
+- **Modo Diario (Daily Challenge)**: Un escudo único por día con persistencia total (excluye torneos para enfocar en clubes). Soporta cambio de dificultad sin perder progreso.
 - **Modo Infinito**: Juego continuo sin límites. **[NUEVO]** Sistema de Puntos y High Score persistente.
 - **Modo Práctica**: Jugar sin afectar estadísticas.
 - **Dificultad**: Fácil, Medio, Difícil.
@@ -53,6 +53,7 @@ Este documento centraliza todas las funcionalidades del proyecto, separando lo q
 
 
 ## Decision Log (Feature Level)
+- **27-01-2026**: Implementación de navegación rápida al inicio tocando el logo del header. Configuración de favicons y web manifest.
 - **19-01-2026**: Implementación de sistema de puntaje y persistencia para Modo Infinito. Feedback inmediato y modal de estadísticas. Se corrigió la persistencia del Modo Diario al cambiar dificultad y se automatizó la apertura de estadísticas.
 - **19-01-2026**: Reemplazo global de emojis por iconos de Lucide y mejora en el renderizado de siluetas de escudos.
 - **14-01-2026**: Centralización de features y roadmap en este documento para seguir el principio DRY en la documentación técnica.
