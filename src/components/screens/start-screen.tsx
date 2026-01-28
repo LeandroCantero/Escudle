@@ -52,14 +52,24 @@ export const StartScreen = ({
                     />
                 </a>
 
-                <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ x: 2, y: 2 }}
-                    onClick={() => setShowHelp(true)}
-                    className="bg-white text-neo-black rounded-full border-[3px] border-neo-black shadow-[2px_2px_0px_#000] hover:bg-neo-yellow transition-colors active:shadow-none active:translate-x-[2px] active:translate-y-[2px] w-10 h-10 flex items-center justify-center rotate-[10deg]"
-                >
-                    <span className="font-['Permanent_Marker'] text-2xl">?</span>
-                </motion.button>
+                <div className="flex items-center gap-4">
+                    <a
+                        href="https://leandrocantero.github.io/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white font-bold hover:scale-105 transition-transform text-sm drop-shadow-[1px_1px_0px_#000]"
+                    >
+                        Contacto
+                    </a>
+                    <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ x: 2, y: 2 }}
+                        onClick={() => setShowHelp(true)}
+                        className="bg-white text-neo-black rounded-full border-[3px] border-neo-black shadow-[2px_2px_0px_#000] hover:bg-neo-yellow transition-colors active:shadow-none active:translate-x-[2px] active:translate-y-[2px] w-10 h-10 flex items-center justify-center rotate-[10deg]"
+                    >
+                        <span className="font-['Permanent_Marker'] text-2xl">?</span>
+                    </motion.button>
+                </div>
             </div>
 
             <div className="flex flex-col items-center space-y-4">
@@ -121,7 +131,7 @@ export const StartScreen = ({
                 {/* Dataset Selector */}
                 <div className={`space-y-2 transition-opacity ${selectedMode === 'daily' ? 'opacity-50 pointer-events-none' : ''}`}>
                     <label className="text-lg font-black uppercase tracking-wider block text-center">
-                        Colección {selectedMode === 'daily' && <span className="text-[10px] lowercase font-normal">(desactivados en diario)</span>}
+                        Colección {selectedMode === 'daily' && <span className="text-xs lowercase font-normal">(desactivados en diario)</span>}
                     </label>
                     <div className="grid grid-cols-3 gap-2">
                         {(['all', 'current', 'historic'] as Dataset[]).map((ds) => (
@@ -143,7 +153,7 @@ export const StartScreen = ({
                 {/* Filters */}
                 <div className={`space-y-2 transition-opacity ${selectedMode === 'daily' ? 'opacity-50 pointer-events-none' : ''}`}>
                     <label className="text-lg font-black uppercase tracking-wider block text-center">
-                        Filtros {selectedMode === 'daily' && <span className="text-[10px] lowercase font-normal">(desactivados en diario)</span>}
+                        Filtros {selectedMode === 'daily' && <span className="text-xs lowercase font-normal">(desactivados en diario)</span>}
                     </label>
                     <button
                         onClick={onOpenCountrySelector}

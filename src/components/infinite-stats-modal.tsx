@@ -78,7 +78,7 @@ export const InfiniteStatsModal = ({
 
                             {/* Main Score Display */}
                             <div className="bg-neo-white p-6 rounded-xl border-2 border-neo-black shadow-neo-sm text-center transform rotate-1">
-                                <p className="text-[10px] font-bold uppercase opacity-60 mb-2">Puntaje</p>
+                                <p className="text-xs font-bold uppercase opacity-60 mb-2">Puntaje</p>
                                 <div className="flex items-center justify-center gap-3">
                                     <span className="text-5xl font-black text-neo-black">{currentScore}</span>
                                     <Flame size={32} className="text-neo-orange animate-bounce" />
@@ -97,9 +97,9 @@ export const InfiniteStatsModal = ({
                                         />
                                     </div>
                                     <div>
-                                        <p className="text-[10px] font-bold uppercase opacity-60">Era el:</p>
+                                        <p className="text-xs font-bold uppercase opacity-60">Era el:</p>
                                         <p className="font-black text-neo-black leading-tight">{targetLogo.name}</p>
-                                        <p className="text-[10px] font-bold text-neo-blue uppercase">{targetLogo.country}</p>
+                                        <p className="text-xs font-bold text-neo-blue uppercase">{targetLogo.country}</p>
                                     </div>
                                 </div>
                             )}
@@ -111,14 +111,14 @@ export const InfiniteStatsModal = ({
                                         <Medal size={20} className="text-neo-yellow drop-shadow-sm" />
                                     </div>
                                     <p className="text-xl font-black">{stats.highScore}</p>
-                                    <p className="text-[10px] font-bold uppercase opacity-60">Mejor Racha</p>
+                                    <p className="text-xs font-bold uppercase opacity-60">Mejor Racha</p>
                                 </div>
                                 <div className="bg-gray-50 p-3 rounded-xl border border-neo-black/20 text-center">
                                     <div className="flex justify-center mb-1">
                                         <Trophy size={20} className="text-neo-blue drop-shadow-sm" />
                                     </div>
                                     <p className="text-xl font-black">{stats.totalCorrect}</p>
-                                    <p className="text-[10px] font-bold uppercase opacity-60">Aciertos Totales</p>
+                                    <p className="text-xs font-bold uppercase opacity-60">Aciertos Totales</p>
                                 </div>
                             </div>
 

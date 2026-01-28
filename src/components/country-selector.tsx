@@ -137,7 +137,7 @@ export const CountrySelector = ({
                                                 {country.name}
                                             </span>
                                             <span className={cn(
-                                                "text-[10px] font-bold",
+                                                "text-xs font-bold",
                                                 isSelected ? "text-neo-green" : "text-gray-400"
                                             )}>
                                                 {country.count} ESCUDOS

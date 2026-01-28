@@ -78,21 +78,21 @@ export const DailyStatsModal = ({ isOpen, onClose, stats, timeUntilNext, difficu
                             <div className="grid grid-cols-4 gap-2">
                                 <div className="text-center">
                                     <p className="text-2xl font-black">{stats.totalPlayed}</p>
-                                    <p className="text-[10px] font-bold uppercase opacity-60">Jugados</p>
+                                    <p className="text-xs font-bold uppercase opacity-60">Jugados</p>
                                 </div>
                                 <div className="text-center">
                                     <p className="text-2xl font-black">{winRate}%</p>
-                                    <p className="text-[10px] font-bold uppercase opacity-60">Victorias</p>
+                                    <p className="text-xs font-bold uppercase opacity-60">Victorias</p>
                                 </div>
                                 <div className="text-center">
                                     <p className="text-2xl font-black flex items-center justify-center gap-1">
                                         {stats.currentStreak} <Flame size={16} className="text-neo-orange" />
                                     </p>
-                                    <p className="text-[10px] font-bold uppercase opacity-60">Racha</p>
+                                    <p className="text-xs font-bold uppercase opacity-60">Racha</p>
                                 </div>
                                 <div className="text-center">
                                     <p className="text-2xl font-black">{stats.maxStreak}</p>
-                                    <p className="text-[10px] font-bold uppercase opacity-60">Máxima</p>
+                                    <p className="text-xs font-bold uppercase opacity-60">Máxima</p>
                                 </div>
                             </div>
 
@@ -111,7 +111,7 @@ export const DailyStatsModal = ({ isOpen, onClose, stats, timeUntilNext, difficu
                                                         minWidth: '24px'
                                                     }}
                                                 >
-                                                    <span className="text-[10px] font-black text-white">{stats.guessDistribution[num] || 0}</span>
+                                                    <span className="text-xs font-black text-white">{stats.guessDistribution[num] || 0}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -122,7 +122,7 @@ export const DailyStatsModal = ({ isOpen, onClose, stats, timeUntilNext, difficu
                             {/* Footer Information */}
                             <div className="grid grid-cols-2 gap-4 pt-4 border-t-2 border-neo-black/10">
                                 <div className="text-center">
-                                    <p className="text-[10px] font-bold uppercase opacity-60">Siguiente Escudo</p>
+                                    <p className="text-xs font-bold uppercase opacity-60">Siguiente Escudo</p>
                                     <p className="text-xl font-black font-mono">{formatTime(timeUntilNext)}</p>
                                 </div>
                                 <div className="flex flex-col gap-2">
