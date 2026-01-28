@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Flame, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { DailyStats } from '../hooks/use-daily-state';
+import { LAUNCH_DATE } from '../utils/constants';
 
 interface DailyStatsModalProps {
     isOpen: boolean;
@@ -129,8 +130,8 @@ export const DailyStatsModal = ({ isOpen, onClose, stats, timeUntilNext, difficu
                                     <button
                                         onClick={() => {
                                             // Calculate game number based on a launch date (Day 1)
-                                            // You can set VITE_LAUNCH_DATE in your .env file (e.g., 2026-01-15)
-                                            const launchDateStr = import.meta.env.VITE_LAUNCH_DATE || '2026-01-15';
+                                            // You can set VITE_LAUNCH_DATE in your .env file
+                                            const launchDateStr = import.meta.env.VITE_LAUNCH_DATE || LAUNCH_DATE;
                                             const startDate = new Date(launchDateStr).getTime();
                                             const today = new Date().setHours(0, 0, 0, 0);
                                             const gameNumber = Math.max(1, Math.floor((today - startDate) / (1000 * 60 * 60 * 24)) + 1);
