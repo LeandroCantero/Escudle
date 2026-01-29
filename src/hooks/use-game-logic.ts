@@ -248,7 +248,7 @@ export function useGameLogic() {
             setGameState('won');
             if (gameMode === 'daily') {
                 completeGame(true, newGuesses);
-                setTimeout(() => setShowDailyStats(true), 1500); // Small delay for user to see result
+                setTimeout(() => setShowDailyStats(true), 500); // Small delay for user to see result
             }
             if (gameMode === 'infinite') {
                 incrementInfiniteScore();
@@ -258,7 +258,7 @@ export function useGameLogic() {
             setGameState('lost');
             if (gameMode === 'daily') {
                 completeGame(false, newGuesses);
-                setTimeout(() => setShowDailyStats(true), 1500);
+                setTimeout(() => setShowDailyStats(true), 500);
             }
             if (gameMode === 'infinite') {
                 endInfiniteSession(infiniteSession.score);

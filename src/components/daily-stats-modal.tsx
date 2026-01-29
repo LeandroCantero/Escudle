@@ -142,7 +142,8 @@ export const DailyStatsModal = ({ isOpen, onClose, stats, timeUntilNext, difficu
                                             ).join('\n');
 
                                             const result = stats.gameState === 'won' ? `${stats.lastGuesses.length}/6` : 'X/6';
-                                            const text = `Escudle #${gameNumber} ${result}\n${emojiGrid}\n\nhttps://escudle.netlify.app/`;
+                                            const difficultyLabel = getDifficultyLabel(difficulty);
+                                            const text = `Escudle #${gameNumber} (${difficultyLabel}) ${result}\n${emojiGrid}\n\nhttps://escudle.netlify.app/`;
 
                                             navigator.clipboard.writeText(text).then(() => {
                                                 setShowToast(true);
